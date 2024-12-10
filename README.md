@@ -8,6 +8,9 @@ rural que busca desmitificar la salud mental en un pueblo.
 - Unity 6 (6000.0.30f1)
 - Cualquier IDE (Visual Studio 2022, Visual Studio Code, Rider, ...)
 
+## Assets de Terceros
+
+
 ## Integrantes
 - Emmanuel Vanegas Carmona (ximandiv@gmail.com)
 - Juana María Rodas Álvarez (jrodas033@gmail.com)
