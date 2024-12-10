@@ -1,8 +1,12 @@
-# Proyecto Alma G3
+# Proyecto Alma G2
 
 Proyecto práctico y final del curso Desarrollo de Videojuegos con Academy.
 Consistente en una protagonista del mismo nombre que del juego, psicóloga
 rural que busca desmitificar la salud mental en un pueblo.
+
+## Herramientas
+- Unity 6 (6000.0.30f1)
+- Cualquier IDE (Visual Studio 2022, Visual Studio Code, Rider, ...)
 
 ## Integrantes
 - Emmanuel Vanegas Carmona (ximandiv@gmail.com)
@@ -15,6 +19,8 @@ rural que busca desmitificar la salud mental en un pueblo.
 
 ## Documentos
 - [Documentos Grupales](https://drive.google.com/drive/u/1/folders/1BFTzKYWurZSedsXv4HuVGfB7Crc_83wp)
+- [GDD](https://docs.google.com/document/d/1c_LRxygZxJ7mgLa41zeE9S62p9FzXL7W0LxeGT6vOPU/edit?usp=sharing)
+- [Ideas Iniciales](https://docs.google.com/document/d/1drn2SEzIfjNAMbwFOVutIBCGx5wWuJiZxX3pGG7jDxE/edit?tab=t.0)
 
 ## Convenciones
 
