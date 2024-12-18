@@ -30,8 +30,6 @@ namespace Scripts.Common
 
         public void SetMovingStatus() => isMoving = !isMoving;
 
-        public void PauseCharacter() => isGamePaused = !isGamePaused;
-
         #endregion
 
         #region Get Methods
@@ -48,7 +46,6 @@ namespace Scripts.Common
 
         [Header("Status")]
 
-        [SerializeField] private bool isGamePaused = false;
         [SerializeField] private bool isMoving = false;
 
         [Header("Current Variables")]
