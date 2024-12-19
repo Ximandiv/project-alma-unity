@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &409136288
+--- !u!1 &723132557
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,37 +127,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 409136290}
-  - component: {fileID: 409136289}
+  - component: {fileID: 723132559}
+  - component: {fileID: 723132558}
   m_Layer: 0
-  m_Name: HitpointsUIController
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &409136289
+--- !u!114 &723132558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409136288}
+  m_GameObject: {fileID: 723132557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f68450096136674fb835c1f945bfc32, type: 3}
+  m_Script: {fileID: 11500000, guid: 38a517246d2c57b429a2e2c3d7412efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanvasNPCMindLevel: {fileID: 1893338790}
-  SpriteHeart: {fileID: 3621410204291783827, guid: e7559bb758c86fd46b987e90ce95ef03, type: 3}
-  AmountSpriteHeart: 3
---- !u!4 &409136290
+  isMoving: 0
+  currentHitpoints: 5
+  currentSpeed: 5
+  minHitPoints: 1
+  maxHitPoints: 10
+  minSpeed: 1
+  maxSpeed: 10
+--- !u!4 &723132559
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409136288}
+  m_GameObject: {fileID: 723132557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 294, y: 165.5, z: 0}
@@ -484,11 +488,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
---- !u!223 &1893338790 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 5678746100634207567, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
-  m_PrefabInstance: {fileID: 1893338789}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127688587
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,5 +574,5 @@ SceneRoots:
   - {fileID: 1591637460}
   - {fileID: 2127688590}
   - {fileID: 1628043478}
-  - {fileID: 409136290}
   - {fileID: 1893338789}
+  - {fileID: 723132559}
