@@ -15,7 +15,11 @@ MonoBehaviour:
   currentSpeed: 8
   minSpeed: 1
   maxSpeed: 10
+<<<<<<< HEAD
   currentHitPoints: 1
+=======
+  currentHitPoints: 2
+>>>>>>> 562540152fb705239e8ace7835ccc0d271608cd1
   minHitPoints: 1
   maxHitPoints: 2
   isMoving: 0
