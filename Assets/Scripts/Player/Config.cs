@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    [RequireComponent(typeof(CharacterVariablesConfig))]
+    [RequireComponent(typeof(CharacterConfig))]
     public class Config: MonoBehaviour
     {
         #region Private Variables
 
-        [SerializeField] private CharacterVariablesConfig variablesConfig;
+        [SerializeField] private CharacterConfig config;
 
         [SerializeField] private int maxHitpoints = 10;
         [SerializeField] private int currHitPoints = 10;
@@ -21,7 +21,7 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            config = GetComponent<CharacterVariablesConfig>();
+            config = GetComponent<CharacterConfig>();
         }
 
         private void Start()

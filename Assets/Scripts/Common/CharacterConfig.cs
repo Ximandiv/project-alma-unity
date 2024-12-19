@@ -5,10 +5,9 @@ namespace Scripts.Common
     /// <summary>
     /// Use this only to configure all max and current variables at once in Start() method
     /// </summary>
-    [RequireComponent(typeof(CharacterStatus))]
     [RequireComponent(typeof(CharacterHitpoints))]
     [RequireComponent(typeof(CharacterSpeed))]
-    public class CharacterVariablesConfig : MonoBehaviour
+    public class CharacterConfig : MonoBehaviour
     {
         #region Public Methods
 
@@ -28,7 +27,6 @@ namespace Scripts.Common
 
         #region Private Variables
 
-        [SerializeField] private CharacterStatus status;
         [SerializeField] private CharacterHitpoints hitpoints;
         [SerializeField] private CharacterSpeed speed;
 
@@ -38,7 +36,6 @@ namespace Scripts.Common
 
         private void Awake()
         {
-            status = GetComponent<CharacterStatus>();
             hitpoints = GetComponent<CharacterHitpoints>();
             speed = GetComponent<CharacterSpeed>();
         }
