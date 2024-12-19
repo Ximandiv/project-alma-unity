@@ -1,3 +1,4 @@
+using Scripts.Scriptables;
 using UnityEngine;
 
 namespace Scripts.Common
@@ -11,20 +12,20 @@ namespace Scripts.Common
         // Use this to configure the character's speed on start
         public void SetCurrentSpeed(float amount)
         {
-            if (!RangeHelper.IsMinRangeCorrect(minSpeed, amount))
-                amount = minSpeed;
-            else if (!RangeHelper.IsMaxRangeCorrect(maxSpeed, amount))
-                amount = maxSpeed;
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinSpeed, amount))
+                amount = characterStats.MinSpeed;
+            else if (!RangeHelper.IsMaxRangeCorrect(characterStats.MaxSpeed, amount))
+                amount = characterStats.MaxSpeed;
 
-            currentSpeed = amount;
+            characterStats.CurrentSpeed = amount;
         }
 
         public void SetMaxSpeed(float amount)
         {
-            if (!RangeHelper.IsMinRangeCorrect(minSpeed, amount))
-                amount = minSpeed;
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinSpeed, amount))
+                amount = characterStats.MinSpeed;
 
-            maxSpeed = amount;
+            characterStats.MaxSpeed = amount;
         }
 
         #endregion
@@ -32,23 +33,25 @@ namespace Scripts.Common
         // Use this to increment or decrement current speed
         public void SumCurrentSpeed(float amount)
         {
-            currentSpeed += amount;
+            characterStats.CurrentSpeed += amount;
 
-            if (!RangeHelper.IsMinRangeCorrect(minSpeed, currentSpeed))
-                currentSpeed = minSpeed;
-            else if (!RangeHelper.IsMaxRangeCorrect(maxSpeed, currentSpeed))
-                currentSpeed = maxSpeed;
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinSpeed, characterStats.CurrentSpeed))
+                characterStats.CurrentSpeed = characterStats.MinSpeed;
+            else if (!RangeHelper.IsMaxRangeCorrect(characterStats.MaxSpeed, characterStats.CurrentSpeed))
+                characterStats.CurrentSpeed = characterStats.MaxSpeed;
         }
-        public float GetCurrentSpeed() => currentSpeed;
+
+        #region Get Methods
+
+        public float GetCurrentSpeed() => characterStats.CurrentSpeed;
+
+        #endregion
 
         #endregion
 
         #region Private Variables
 
-        [SerializeField] private float currentSpeed = 5f;
-
-        [SerializeField] private float minSpeed = 1f;
-        [SerializeField] private float maxSpeed = 10f;
+        [SerializeField] private CharacterStats characterStats;
 
         #endregion
     }

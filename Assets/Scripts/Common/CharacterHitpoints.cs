@@ -1,3 +1,4 @@
+using Scripts.Scriptables;
 using UnityEngine;
 
 namespace Scripts.Common
@@ -11,21 +12,21 @@ namespace Scripts.Common
         // Use this to configure the character's hitpoints on start
         public void SetCurrentHitpoints(int amount)
         {
-            if (!RangeHelper.IsMinRangeCorrect(minHitPoints, amount))
-                amount = minHitPoints;
-            else if (!RangeHelper.IsMaxRangeCorrect(maxHitPoints, amount))
-                amount = maxHitPoints;
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinHitPoints, amount))
+                amount = characterStats.MinHitPoints;
+            else if (!RangeHelper.IsMaxRangeCorrect(characterStats.MaxHitPoints, amount))
+                amount = characterStats.MaxHitPoints;
 
-            currentHitpoints = amount;
+            characterStats.CurrentHitPoints = amount;
         }
 
         // Use this to configure the character's hitpoints on start
         public void SetMaxHitpoints(int amount)
         {
-            if (!RangeHelper.IsMinRangeCorrect(minHitPoints, amount))
-                amount = minHitPoints;
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinHitPoints, amount))
+                amount = characterStats.MinHitPoints;
 
-            maxHitPoints = amount;
+            characterStats.MaxHitPoints = amount;
         }
 
         #endregion
@@ -33,19 +34,19 @@ namespace Scripts.Common
         // Use this to increment or decrement current hitpoints
         public void SumCurrentHitpoints(int amount)
         {
-            currentHitpoints += amount;
+            characterStats.CurrentHitPoints += amount;
 
-            if (!RangeHelper.IsMinRangeCorrect(minHitPoints, currentHitpoints))
-                currentHitpoints = minHitPoints;
-            else if (!RangeHelper.IsMaxRangeCorrect(maxHitPoints, currentHitpoints))
-                currentHitpoints = maxHitPoints;
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinHitPoints, characterStats.CurrentHitPoints))
+                characterStats.CurrentHitPoints = characterStats.MinHitPoints;
+            else if (!RangeHelper.IsMaxRangeCorrect(characterStats.MaxHitPoints, characterStats.CurrentHitPoints))
+                characterStats.CurrentHitPoints = characterStats.MaxHitPoints;
         }
 
         #region Get Methods
 
-        public int GetCurrentHitpoints() => currentHitpoints;
-        public int GetMaxHitPoints() => maxHitPoints;
-        public int GetMinHitPoints() => minHitPoints;
+        public int GetCurrentHitpoints() => characterStats.CurrentHitPoints;
+        public int GetMaxHitPoints() => characterStats.MaxHitPoints;
+        public int GetMinHitPoints() => characterStats.MinHitPoints;
 
         #endregion
 
@@ -53,10 +54,7 @@ namespace Scripts.Common
 
         #region Private Variables
 
-        [SerializeField] private int currentHitpoints = 2;
-
-        [SerializeField] private int minHitPoints = 1;
-        [SerializeField] private int maxHitPoints = 2;
+        [SerializeField] private CharacterStats characterStats;
 
         #endregion
     }

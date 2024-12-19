@@ -1,4 +1,5 @@
 using Scripts.Common;
+using Scripts.Scriptables;
 using UnityEngine;
 
 namespace Scripts.Player
@@ -11,6 +12,7 @@ namespace Scripts.Player
         #region Private Variables
 
         [SerializeField] private CharacterStatus status;
+        [SerializeField] private GameStatus gameStatus;
         [SerializeField] private CharacterSpeed speed;
         [SerializeField] private Rigidbody2D rb;
 
@@ -31,7 +33,7 @@ namespace Scripts.Player
 
         private void Update()
         {
-            if (status.IsCapableOfMovement())
+            if (status.IsCapableOfMovement() && !gameStatus.IsPaused)
             {
                 getInputMovement();
 

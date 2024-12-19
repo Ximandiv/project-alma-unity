@@ -1,3 +1,4 @@
+using Scripts.Scriptables;
 using UnityEngine;
 
 namespace Scripts.Common
@@ -6,20 +7,17 @@ namespace Scripts.Common
     {
         #region Public Methods
 
-        public void SetMovingStatus(bool status) => isMoving = status;
-        public void SetCanMoveStatus(bool status) => canMove = status;
+        public void SetMovingStatus(bool status) => characterStats.IsMoving = status;
+        public void SetCanMoveStatus(bool status) => characterStats.CanMove = status;
 
-        public bool IsMoving() => isMoving;
-        public bool IsCapableOfMovement() => canMove;
+        public bool IsMoving() => characterStats.IsMoving;
+        public bool IsCapableOfMovement() => characterStats.CanMove;
 
         #endregion
 
         #region Private Variables
 
-        [Header("Status")]
-
-        [SerializeField] private bool isMoving = false;
-        [SerializeField] private bool canMove = true;
+        [SerializeField] private CharacterStats characterStats;
 
         #endregion
     }
