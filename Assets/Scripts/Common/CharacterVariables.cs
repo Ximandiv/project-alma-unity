@@ -8,27 +8,52 @@ namespace Scripts.Common
 
         #region Set Methods
 
+        // Use this to configure the character's hitpoints on start
         public void SetCurrentHitpoints(int amount)
         {
-            if(amount < minHitPoints)
+            if(!isMinRangeCorrect(minHitPoints, amount))
                 amount = minHitPoints;
-            else if(amount > maxHitPoints)
+            else if(!isMaxRangeCorrect(maxHitPoints, amount))
                 amount = maxHitPoints;
 
             currentHitpoints = amount;
         }
 
+        // Use this to increment or decrement current hitpoints
+        public void SumCurrentHitpoints(int amount)
+        {
+            currentHitpoints += amount;
+
+            if (!isMinRangeCorrect(minHitPoints, currentHitpoints))
+                currentHitpoints = minHitPoints;
+            else if(!isMaxRangeCorrect(maxHitPoints, currentHitpoints))
+                currentHitpoints = maxHitPoints;
+        }
+
+        // Use this to configure the character's speed on start
         public void SetCurrentSpeed(float amount)
         {
-            if (amount < minSpeed)
+            if (!isMinRangeCorrect((int)minSpeed, (int)amount))
                 amount = minSpeed;
-            else if (amount > maxSpeed)
+            else if (!isMaxRangeCorrect((int)maxSpeed, (int)amount))
                 amount = maxSpeed;
 
             currentSpeed = amount;
         }
 
-        public void SetMovingStatus() => isMoving = !isMoving;
+        // Use this to increment or decrement current speed
+        public void SumCurrentSpeed(float amount)
+        {
+            currentSpeed += amount;
+
+            if (!isMinRangeCorrect((int)minSpeed, (int)currentSpeed))
+                currentSpeed = minSpeed;
+            else if (!isMaxRangeCorrect((int)maxSpeed, (int)currentSpeed))
+                currentSpeed = maxSpeed;
+        }
+
+        public void SetMovingStatus(bool status) => isMoving = status;
+        public void SetCanMoveStatus(bool status) => canMove = status;
 
         #endregion
 
@@ -40,6 +65,7 @@ namespace Scripts.Common
         
         public float GetCurrentSpeed() => currentSpeed;
         public bool IsMoving() => isMoving;
+        public bool IsCapableOfMovement() => canMove;
 
         #endregion
 
@@ -50,6 +76,7 @@ namespace Scripts.Common
         [Header("Status")]
 
         [SerializeField] private bool isMoving = false;
+        [SerializeField] private bool canMove = true;
 
         [Header("Current Variables")]
 
@@ -63,6 +90,14 @@ namespace Scripts.Common
 
         [SerializeField] private float minSpeed = 1f;
         [SerializeField] private float maxSpeed = 10f;
+
+        #endregion
+
+        #region Private Methods
+
+        private bool isMinRangeCorrect(int minValue, int value) => value > minValue;
+
+        private bool isMaxRangeCorrect(int maxValue, int value) => value < maxValue;
 
         #endregion
     }
