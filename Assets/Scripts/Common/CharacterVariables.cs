@@ -35,6 +35,9 @@ namespace Scripts.Common
         #region Get Methods
 
         public int GetCurrentHitpoints() => currentHitpoints;
+        public int GetMaxHitPoints() => maxHitPoints;
+        public int GetMinHitPoints() => minHitPoints;
+        
         public float GetCurrentSpeed() => currentSpeed;
         public bool IsMoving() => isMoving;
 
@@ -50,7 +53,7 @@ namespace Scripts.Common
 
         [Header("Current Variables")]
 
-        [SerializeField] private int currentHitpoints = 1;
+        [SerializeField] private int currentHitpoints = 2;
         [SerializeField] private float currentSpeed = 5f;
 
         [Header("Range of Variables")]
