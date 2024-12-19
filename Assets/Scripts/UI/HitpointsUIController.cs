@@ -11,11 +11,13 @@ public class HitpointsUIController : MonoBehaviour
 
     public void UpdateHealthBar()
     {
+        if (characterVariables.GetCurrentHitpoints() < 0 || characterVariables.GetCurrentHitpoints() > characterVariables.GetMaxHitPoints()) return;
+
         // Get the maximum size of the bar (width of the bar bottom)
-        float maxWidth = healthBar.GetComponent<RectTransform>().sizeDelta.x;
+        float maxWidth = healthBar.sizeDelta.x;
 
         // Calculate the current life ratio and set the width of the fill bar
-        float fillWidth = maxWidth * ((float)characterVariables.GetCurrentHitpoints() / characterVariables.GetMaxHitPoints());
+        float fillWidth = maxWidth * ((float)characterVariables.GetCurrentHitpoints() / (float)characterVariables.GetMaxHitPoints());
 
         // Update the size of the fill bar
         fillBar.sizeDelta = new Vector2(fillWidth, fillBar.sizeDelta.y);
@@ -23,8 +25,8 @@ public class HitpointsUIController : MonoBehaviour
 
     public void EnlargeHealthBar()
     {
-        RectTransform rectTransform = healthBar.GetComponent<RectTransform>();
-        rectTransform.sizeDelta += new Vector2(10f, 0); // Increase width only
+        healthBar.sizeDelta += new Vector2(10f, 0); // Increase width only
+        UpdateHealthBar();
     }
 
     #endregion
@@ -32,8 +34,7 @@ public class HitpointsUIController : MonoBehaviour
 
     #region Private Variables
 
-    [SerializeField] private GameObject healthBar;
-    
+    private RectTransform healthBar;    
     private RectTransform fillBar;
     private CharacterVariables characterVariables;
 
@@ -42,9 +43,14 @@ public class HitpointsUIController : MonoBehaviour
 
     #region Private Methods
 
-    private void Start()
+    private void Awake()
     {
         characterVariables = GameObject.FindWithTag("Player").GetComponent<CharacterVariables>();
+        healthBar = GameObject.FindWithTag("Health Bar").GetComponent<RectTransform>();
+    }
+
+    private void Start()
+    {
         fillBar = healthBar.transform
             .Find("Background").transform
             .Find("Fill")
