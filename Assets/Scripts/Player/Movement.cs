@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    [RequireComponent(typeof(Controller))]
+    [RequireComponent(typeof(CharacterStatus))]
+    [RequireComponent(typeof(CharacterSpeed))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Movement : MonoBehaviour
     {
         #region Private Variables
 
-        [SerializeField] private Controller controller;
+        [SerializeField] private CharacterStatus status;
+        [SerializeField] private CharacterSpeed speed;
         [SerializeField] private Rigidbody2D rb;
 
         private Vector2 movement = Vector2.zero;
@@ -20,27 +23,27 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            controller = GetComponent<Controller>();
+            status = GetComponent<CharacterStatus>();
+            speed = GetComponent<CharacterSpeed>();
             
             rb = GetComponent<Rigidbody2D>();
         }
 
         private void Update()
         {
-            if (controller.GetCanMove())
+            if (status.IsCapableOfMovement())
             {
                 getInputMovement();
 
-                controller.SetMovingStatus(isMoving());
+                status.SetMovingStatus(isMoving());
             }
             else
-                controller.SetMovingStatus(false);
+                status.SetMovingStatus(false);
         }
 
         private void FixedUpdate()
         {
-            if (controller.GetCanMove())
-                move();
+            move();
         }
 
         #endregion
@@ -59,7 +62,7 @@ namespace Scripts.Player
         {
             Vector2 normalizedMovement = movement.normalized;
 
-            rb.linearVelocity = normalizedMovement * controller.GetCurrentSpeed();
+            rb.linearVelocity = normalizedMovement * speed.GetCurrentSpeed();
 
             if (isMoving())
             {
