@@ -12,3 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9305d6f4f75dd46a2b0244bf9ee12e, type: 3}
   m_Name: Player_Stats
   m_EditorClassIdentifier: 
+  currentSpeed: 8
+  minSpeed: 1
+  maxSpeed: 10
+  currentHitPoints: 2
+  minHitPoints: 1
+  maxHitPoints: 2
+  isMoving: 0
+  canMove: 1
