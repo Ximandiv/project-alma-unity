@@ -19,6 +19,15 @@ namespace Scripts.Common
             currentHitpoints = amount;
         }
 
+        // Use this to configure the character's hitpoints on start
+        public void SetMaxHitpoints(int amount)
+        {
+            if (!isMinRangeCorrect(minHitPoints, amount))
+                amount = minHitPoints;
+            
+            maxHitPoints = amount;
+        }
+
         // Use this to increment or decrement current hitpoints
         public void SumCurrentHitpoints(int amount)
         {
@@ -41,6 +50,14 @@ namespace Scripts.Common
             currentSpeed = amount;
         }
 
+        public void SetMaxSpeed(float amount)
+        {
+            if (!isMinRangeCorrect((int)minSpeed, (int)amount))
+                amount = minSpeed;
+
+            maxSpeed = amount;
+        }
+
         // Use this to increment or decrement current speed
         public void SumCurrentSpeed(float amount)
         {
@@ -50,6 +67,18 @@ namespace Scripts.Common
                 currentSpeed = minSpeed;
             else if (!isMaxRangeCorrect((int)maxSpeed, (int)currentSpeed))
                 currentSpeed = maxSpeed;
+        }
+
+        public void ConfigureVariables(float maxSpeed, 
+                                        float currSpeed, 
+                                        int maxHitpoints, 
+                                        int currHitpoints)
+        {
+            SetMaxSpeed(maxSpeed);
+            SetCurrentSpeed(currSpeed);
+
+            SetMaxHitpoints(maxHitpoints);
+            SetCurrentHitpoints(currHitpoints);
         }
 
         public void SetMovingStatus(bool status) => isMoving = status;
