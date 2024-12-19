@@ -403,6 +403,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasNPCMindLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 2541225419899368101, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541225419899368101, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541225419899368101, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4825244836610535781, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -483,9 +495,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6961648390488911171, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961648390488911171, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7287808784580501047, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
       propertyPath: m_TagString
-      value: Health Bar
+      value: HealthBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

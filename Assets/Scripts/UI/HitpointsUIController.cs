@@ -46,7 +46,7 @@ public class HitpointsUIController : MonoBehaviour
     private void Awake()
     {
         characterVariables = GameObject.FindWithTag("Player").GetComponent<CharacterVariables>();
-        healthBar = GameObject.FindWithTag("Health Bar").GetComponent<RectTransform>();
+        healthBar = GameObject.FindWithTag("HealthBar").GetComponent<RectTransform>();
     }
 
     private void Start()
