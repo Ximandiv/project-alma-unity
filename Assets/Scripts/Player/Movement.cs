@@ -3,17 +3,12 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    [RequireComponent(typeof(CharacterVariablesConfig))]
-    [RequireComponent(typeof(CharacterSpeed))]
-    [RequireComponent(typeof(CharacterStatus))]
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Controller))]
     public class Movement : MonoBehaviour
     {
         #region Private Variables
 
-        [SerializeField] private CharacterVariablesConfig characterVariables;
-        [SerializeField] private CharacterSpeed characterSpeed;
-        [SerializeField] private CharacterStatus characterStatus;
+        [SerializeField] private Controller controller;
         [SerializeField] private Rigidbody2D rb;
 
         private Vector2 movement = Vector2.zero;
@@ -25,41 +20,26 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            characterVariables = GetComponent<CharacterVariablesConfig>();
-            characterSpeed = GetComponent<CharacterSpeed>();
-            characterStatus = GetComponent<CharacterStatus>();
+            controller = GetComponent<Controller>();
             
             rb = GetComponent<Rigidbody2D>();
         }
 
-        private void Start()
-        {
-            int maxHitpoints = 10;
-            int currHitPoints = 10;
-            float maxSpeed = 12f;
-            float currSpeed = 8f;
-
-            characterVariables.ConfigureVariables(maxSpeed,
-                                                    currSpeed,
-                                                    maxHitpoints,
-                                                    currHitPoints);
-        }
-
         private void Update()
         {
-            if (characterStatus.IsCapableOfMovement())
+            if (controller.GetCanMove())
             {
                 getInputMovement();
 
-                characterStatus.SetMovingStatus(isMoving());
+                controller.SetMovingStatus(isMoving());
             }
             else
-                characterStatus.SetMovingStatus(false);
+                controller.SetMovingStatus(false);
         }
 
         private void FixedUpdate()
         {
-            if (characterStatus.IsCapableOfMovement())
+            if (controller.GetCanMove())
                 move();
         }
 
@@ -79,7 +59,7 @@ namespace Scripts.Player
         {
             Vector2 normalizedMovement = movement.normalized;
 
-            rb.linearVelocity = normalizedMovement * characterSpeed.GetCurrentSpeed();
+            rb.linearVelocity = normalizedMovement * controller.GetCurrentSpeed();
 
             if (isMoving())
             {

@@ -129,9 +129,13 @@ GameObject:
   m_Component:
   - component: {fileID: 833677349}
   - component: {fileID: 833677348}
-  - component: {fileID: 833677350}
+  - component: {fileID: 833677356}
+  - component: {fileID: 833677355}
+  - component: {fileID: 833677354}
+  - component: {fileID: 833677353}
   - component: {fileID: 833677352}
   - component: {fileID: 833677351}
+  - component: {fileID: 833677350}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -218,16 +222,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 833677347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a517246d2c57b429a2e2c3d7412efb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbca9cc95b73c148aedcc04921dea7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoving: 0
-  currentHitpoints: 1
-  currentSpeed: 8
-  minHitPoints: 1
-  maxHitPoints: 2
-  minSpeed: 1
-  maxSpeed: 10
+  controller: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!114 &833677351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,12 +236,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 833677347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fbca9cc95b73c148aedcc04921dea7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 38a517246d2c57b429a2e2c3d7412efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterVariables: {fileID: 0}
-  rb: {fileID: 0}
---- !u!50 &833677352
+  status: {fileID: 0}
+  hitpoints: {fileID: 0}
+  speed: {fileID: 0}
+--- !u!114 &833677352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833677347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46a5e946e11ff443a2a93643df412fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSpeed: 5
+  minSpeed: 1
+  maxSpeed: 10
+--- !u!114 &833677353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833677347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc39930bd982af7468686ea56d509c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHitpoints: 2
+  minHitPoints: 1
+  maxHitPoints: 2
+--- !u!114 &833677354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833677347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99e93886e14e0f4ab91ccd0feeb9296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMoving: 0
+  canMove: 1
+--- !u!114 &833677355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833677347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224788a62a2a34947a329b6efd101d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 0}
+  speed: {fileID: 0}
+  hitpoints: {fileID: 0}
+  status: {fileID: 0}
+--- !u!50 &833677356
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
