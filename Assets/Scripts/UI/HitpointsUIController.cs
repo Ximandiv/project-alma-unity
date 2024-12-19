@@ -6,7 +6,6 @@ namespace Scripts.UI
 {
     public class HitpointsUIController : MonoBehaviour
     {
-
         #region Public Methods
 
         public void UpdateHealthBar()
@@ -17,7 +16,7 @@ namespace Scripts.UI
             float maxWidth = healthBar.sizeDelta.x;
 
             // Calculate the current life ratio and set the width of the fill bar
-            float fillWidth = maxWidth * ((float)characterVariables.GetCurrentHitpoints() / (float)characterVariables.GetMaxHitPoints());
+            float fillWidth = maxWidth * ((float)characterHitpoints.GetCurrentHitpoints() / (float)characterHitpoints.GetMaxHitPoints());
 
             // Update the size of the fill bar
             fillBar.sizeDelta = new Vector2(fillWidth, fillBar.sizeDelta.y);
@@ -36,7 +35,7 @@ namespace Scripts.UI
 
         private RectTransform healthBar;
         private RectTransform fillBar;
-        private CharacterVariables characterVariables;
+        private CharacterHitpoints characterHitpoints;
 
         #endregion
 
@@ -45,7 +44,7 @@ namespace Scripts.UI
 
         private void Awake()
         {
-            characterVariables = GameObject.FindWithTag("Player").GetComponent<CharacterVariables>();
+            characterHitpoints = GameObject.FindWithTag("Player").GetComponent<CharacterHitpoints>();
             healthBar = GameObject.FindWithTag("HealthBar").GetComponent<RectTransform>();
         }
 
@@ -58,9 +57,9 @@ namespace Scripts.UI
             UpdateHealthBar();
         }
 
-        private Boolean characterVariablesAreIncorrect()
+        private bool characterVariablesAreIncorrect()
         {
-            return (characterVariables.GetCurrentHitpoints() < 0 || characterVariables.GetCurrentHitpoints() > characterVariables.GetMaxHitPoints() || characterVariables.GetCurrentHitpoints() < characterVariables.GetMinHitPoints());
+            return (characterHitpoints.GetCurrentHitpoints() < 0 || characterHitpoints.GetCurrentHitpoints() > characterHitpoints.GetMaxHitPoints() || characterHitpoints.GetCurrentHitpoints() < characterHitpoints.GetMinHitPoints());
         }
 
         #endregion

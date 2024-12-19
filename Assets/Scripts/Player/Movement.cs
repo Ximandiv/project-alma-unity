@@ -3,14 +3,19 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    [RequireComponent(typeof(CharacterVariables))]
+    [RequireComponent(typeof(CharacterVariablesConfig))]
+    [RequireComponent(typeof(CharacterSpeed))]
+    [RequireComponent(typeof(CharacterStatus))]
     [RequireComponent(typeof(Rigidbody2D))]
     public class Movement : MonoBehaviour
     {
         #region Private Variables
 
-        [SerializeField] private CharacterVariables characterVariables;
+        [SerializeField] private CharacterVariablesConfig characterVariables;
+        [SerializeField] private CharacterSpeed characterSpeed;
+        [SerializeField] private CharacterStatus characterStatus;
         [SerializeField] private Rigidbody2D rb;
+
         private Vector2 movement = Vector2.zero;
         private Vector2 lastDirection;
 
@@ -20,7 +25,10 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            characterVariables = GetComponent<CharacterVariables>();
+            characterVariables = GetComponent<CharacterVariablesConfig>();
+            characterSpeed = GetComponent<CharacterSpeed>();
+            characterStatus = GetComponent<CharacterStatus>();
+            
             rb = GetComponent<Rigidbody2D>();
         }
 
@@ -39,19 +47,19 @@ namespace Scripts.Player
 
         private void Update()
         {
-            if (characterVariables.IsCapableOfMovement())
+            if (characterStatus.IsCapableOfMovement())
             {
                 getInputMovement();
 
-                characterVariables.SetMovingStatus(isMoving());
+                characterStatus.SetMovingStatus(isMoving());
             }
             else
-                characterVariables.SetMovingStatus(false);
+                characterStatus.SetMovingStatus(false);
         }
 
         private void FixedUpdate()
         {
-            if (characterVariables.IsCapableOfMovement())
+            if (characterStatus.IsCapableOfMovement())
                 move();
         }
 
@@ -71,7 +79,7 @@ namespace Scripts.Player
         {
             Vector2 normalizedMovement = movement.normalized;
 
-            rb.linearVelocity = normalizedMovement * characterVariables.GetCurrentSpeed();
+            rb.linearVelocity = normalizedMovement * characterSpeed.GetCurrentSpeed();
 
             if (isMoving())
             {
