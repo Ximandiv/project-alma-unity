@@ -36,6 +36,8 @@ namespace Scripts.Common
 
         public int GetCurrentHitpoints() => currentHitpoints;
         public int GetMaxHitPoints() => maxHitPoints;
+        public int GetMinHitPoints() => minHitPoints;
+        
         public float GetCurrentSpeed() => currentSpeed;
         public bool IsMoving() => isMoving;
 

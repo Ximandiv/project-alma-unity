@@ -11,7 +11,7 @@ public class HitpointsUIController : MonoBehaviour
 
     public void UpdateHealthBar()
     {
-        if (characterVariables.GetCurrentHitpoints() < 0 || characterVariables.GetCurrentHitpoints() > characterVariables.GetMaxHitPoints()) return;
+        if (characterVariablesAreIncorrect()) return;
 
         // Get the maximum size of the bar (width of the bar bottom)
         float maxWidth = healthBar.sizeDelta.x;
@@ -56,6 +56,11 @@ public class HitpointsUIController : MonoBehaviour
             .Find("Fill")
             .GetComponent<RectTransform>();
         UpdateHealthBar();
+    }
+
+    private Boolean characterVariablesAreIncorrect()
+    {
+        return (characterVariables.GetCurrentHitpoints() < 0 || characterVariables.GetCurrentHitpoints() > characterVariables.GetMaxHitPoints() || characterVariables.GetCurrentHitpoints() < characterVariables.GetMinHitPoints());
     }
 
     #endregion
