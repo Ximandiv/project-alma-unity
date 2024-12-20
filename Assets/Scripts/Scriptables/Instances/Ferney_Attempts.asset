@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b9305d6f4f75dd46a2b0244bf9ee12e, type: 3}
-  m_Name: Player_Stats
+  m_Script: {fileID: 11500000, guid: f5d87ae01479c7a43816e62758e95d30, type: 3}
+  m_Name: Ferney_Attempts
   m_EditorClassIdentifier: 
-  currentSpeed: 8
-  minSpeed: 1
-  maxSpeed: 10
-  currentHitPoints: 2
-  minHitPoints: 1
-  maxHitPoints: 2
-  isMoving: 0
-  canMove: 1
+  currentAttempts: 3
+  minAttempts: 0
+  maxAttempts: 3
