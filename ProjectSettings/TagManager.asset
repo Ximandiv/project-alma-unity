@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - HealthBar
+  - Attempts
+  - NPC
   - Lantern
   - WeaponLight
   - Enemy
-  - PlayerPos
   layers:
   - Default
   - TransparentFX
