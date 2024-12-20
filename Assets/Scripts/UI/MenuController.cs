@@ -13,7 +13,6 @@ namespace Scripts.UI
         public void QuitApp()
         {
             Application.Quit();
-            Debug.Log("The game was closed.");
         }
     }
 }
