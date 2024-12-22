@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bigger_AutumnTrees_0: 184937298381382029
+      Bigger_AutumnTrees_1: -5544769748466162268
+      Bigger_AutumnTrees_2: -5055136961592936015
+      Bigger_AutumnTrees_3: 7912150949070585227
+      Bigger_AutumnTrees_4: 351445514531102216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

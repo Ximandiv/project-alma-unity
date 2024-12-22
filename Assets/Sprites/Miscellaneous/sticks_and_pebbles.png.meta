@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sticks_and_pebbles_0: -249838220876185989
+      sticks_and_pebbles_1: 7169782466323755721
+      sticks_and_pebbles_2: -173507530939543475
+      sticks_and_pebbles_3: -5122480603611327569
+      sticks_and_pebbles_4: 3660424760424456165
+      sticks_and_pebbles_5: 3919855124960968665
+      sticks_and_pebbles_6: -6154614353779864408
+      sticks_and_pebbles_7: 5313383020452533630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

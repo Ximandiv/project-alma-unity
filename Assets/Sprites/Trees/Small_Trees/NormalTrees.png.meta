@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NormalTrees_0: 2237068918094761724
+      NormalTrees_1: -2447292581563093369
+      NormalTrees_2: -5735979993516289708
+      NormalTrees_3: -4940160452711581120
+      NormalTrees_4: 3713922848574406110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

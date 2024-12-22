@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fallen_leaves_0: -7848133707585238659
+      fallen_leaves_1: 1304055728390619166
+      fallen_leaves_10: -2744715014157970473
+      fallen_leaves_11: -5537913907684290992
+      fallen_leaves_2: -2672122198443265346
+      fallen_leaves_3: 7946586996369682428
+      fallen_leaves_4: -5728032720233031016
+      fallen_leaves_5: 7330225412842380436
+      fallen_leaves_6: -3392615290145354242
+      fallen_leaves_7: 3536319855599994935
+      fallen_leaves_8: -7335828432455194237
+      fallen_leaves_9: -5895614561249371379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

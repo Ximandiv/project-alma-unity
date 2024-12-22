@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      M_Farmer_Idle_0: -5940580315325000074
+      M_Farmer_Idle_1: 5504095802329401870
+      M_Farmer_Idle_2: -67309645864486496
+      M_Farmer_Idle_3: -6732461245585882923
+      M_Farmer_Idle_4: 8018629583088020321
+      M_Farmer_Idle_5: -1954551793439832689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

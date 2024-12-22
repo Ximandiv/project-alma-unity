@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +89,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -131,12 +131,12 @@ TextureImporter:
       name: F_Farmer_Idle_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 33
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 34
+        width: 23
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.035714287}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: F_Farmer_Idle_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 33
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 36
+        y: 34
+        width: 23
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.035714287}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: F_Farmer_Idle_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 33
-        width: 25
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 68
+        y: 34
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.03448276}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: F_Farmer_Idle_3
       rect:
         serializedVersion: 2
-        x: 98
-        y: 33
-        width: 26
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 99
+        y: 34
+        width: 24
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5416667, y: 0.033333335}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: F_Farmer_Idle_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 33
-        width: 23
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 133
+        y: 34
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.52380955, y: 0.035714287}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: F_Farmer_Idle_5
       rect:
         serializedVersion: 2
-        x: 164
-        y: 33
-        width: 24
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 165
+        y: 34
+        width: 22
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.035714287}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3d05c1017b1e96a4eb6418dee87992e8
     internalID: 0
     vertices: []
     indices: 
@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      F_Farmer_Idle_0: 1792022310720702622
+      F_Farmer_Idle_1: 1000699708723217061
+      F_Farmer_Idle_2: -1805136816429186639
+      F_Farmer_Idle_3: -577484053442459556
+      F_Farmer_Idle_4: -2954107955983003054
+      F_Farmer_Idle_5: 3745195750332039625
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

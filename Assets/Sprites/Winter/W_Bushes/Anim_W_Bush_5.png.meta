@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Anim_W_Bush_5_0: 5720195653038822628
+      Anim_W_Bush_5_1: -5694322546643164846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

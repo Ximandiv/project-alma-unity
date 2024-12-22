@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Big_TreeswVines_0: -7483787654352225285
+      Big_TreeswVines_1: 3907321776205447499
+      Big_TreeswVines_2: 5603674107032153673
+      Big_TreeswVines_3: 1721443689814634593
+      Big_TreeswVines_4: 4955320876813688072
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

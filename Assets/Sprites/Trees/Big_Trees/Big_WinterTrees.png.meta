@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Big_WinterTrees_0: 6102062020257925301
+      Big_WinterTrees_1: 5567765265881678508
+      Big_WinterTrees_2: -3041829544667608383
+      Big_WinterTrees_3: 6080511368007020857
+      Big_WinterTrees_4: 7519701822981205549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

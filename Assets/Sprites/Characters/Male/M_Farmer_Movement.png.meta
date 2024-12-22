@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      M_Farmer_Movement_0: -1333269704436069745
+      M_Farmer_Movement_1: 7611348758763722707
+      M_Farmer_Movement_2: 5999363437417691795
+      M_Farmer_Movement_3: 251458341414916467
+      M_Farmer_Movement_4: 7736368245269596595
+      M_Farmer_Movement_5: 2522338400815651879
+      M_Farmer_Movement_6: -3250217700676736576
+      M_Farmer_Movement_7: 7100514083547583865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

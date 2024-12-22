@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ocean_Water_40%_Anim_0: 6755681167704961710
+      Ocean_Water_40%_Anim_1: 2045086365725238371
+      Ocean_Water_40%_Anim_2: -4286359075149213276
+      Ocean_Water_40%_Anim_3: -7486396011144464100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Deep_Water_Winter_Grass_0: -5159319425995117301
+      Deep_Water_Winter_Grass_1: -4749540705647800876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

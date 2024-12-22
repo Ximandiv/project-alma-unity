@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WinterTreeswSnow_0: -5115466753875108129
+      WinterTreeswSnow_1: 6804812979667418152
+      WinterTreeswSnow_2: -2218183172014034072
+      WinterTreeswSnow_3: 6594574360539553953
+      WinterTreeswSnow_4: -4624481863268506866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

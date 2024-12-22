@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dirt_Path_Snow_Grass_0: 8836047773569741680
+      Dirt_Path_Snow_Grass_1: -8951348144709968673
+      Dirt_Path_Snow_Grass_2: 2274588588129487937
+      Dirt_Path_Snow_Grass_3: 67086106169380580
+      Dirt_Path_Snow_Grass_4: -1450521595602570302
+      Dirt_Path_Snow_Grass_5: 6171964357335340507
+      Dirt_Path_Snow_Grass_6: 6112820531739630859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

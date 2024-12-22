@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dirt_Path_Snow_0: -4183951637962350322
+      Dirt_Path_Snow_1: 1353638732475340225
+      Dirt_Path_Snow_2: 2058532090184026687
+      Dirt_Path_Snow_3: -4470804339796245648
+      Dirt_Path_Snow_4: -7637714029109047361
+      Dirt_Path_Snow_5: 3647990296347431930
+      Dirt_Path_Snow_6: -5655129834990603537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
