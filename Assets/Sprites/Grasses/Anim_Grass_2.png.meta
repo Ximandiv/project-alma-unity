@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -80,7 +80,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -122,12 +122,12 @@ TextureImporter:
       name: Anim_Grass_2_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 32
-        width: 24
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 36
+        y: 33
+        width: 22
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12903225}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: Anim_Grass_2_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 32
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 66
+        y: 33
+        width: 23
+        height: 31
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.12903225}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: Anim_Grass_2_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 97
+        y: 33
+        width: 23
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6086957, y: 0.12903225}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2d7fe3b446ebc674ca61d780f911ca72
     internalID: 0
     vertices: []
     indices: 

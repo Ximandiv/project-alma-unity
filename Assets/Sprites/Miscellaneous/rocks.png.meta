@@ -131,12 +131,12 @@ TextureImporter:
       name: rocks_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 39
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 33
+        y: 40
+        width: 9
+        height: 7
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.2857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: rocks_1
       rect:
         serializedVersion: 2
-        x: 44
-        y: 34
-        width: 18
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 45
+        y: 35
+        width: 16
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5833334}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: rocks_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 37
-        width: 29
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 66
+        y: 38
+        width: 27
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4814815, y: 0.2777778}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: rocks_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 38
-        width: 25
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 98
+        y: 39
+        width: 23
+        height: 19
+      alignment: 9
+      pivot: {x: 0.47826087, y: 0.21052632}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: rocks_4
       rect:
         serializedVersion: 2
-        x: 137
-        y: 33
-        width: 47
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 138
+        y: 34
+        width: 45
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4888889, y: 0.2916667}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: rocks_5
       rect:
         serializedVersion: 2
-        x: 200
-        y: 32
-        width: 51
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 201
+        y: 33
+        width: 49
+        height: 57
+      alignment: 9
+      pivot: {x: 0.48979592, y: 0.3508772}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6a8c16f0b2d1d39478d7b1109dfd01b8
     internalID: 0
     vertices: []
     indices: 

@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +95,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -137,10 +137,10 @@ TextureImporter:
       name: sticks_and_pebbles_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 39
-        width: 20
-        height: 14
+        x: 40
+        y: 40
+        width: 18
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: sticks_and_pebbles_1
       rect:
         serializedVersion: 2
-        x: 71
-        y: 40
-        width: 20
-        height: 13
+        x: 72
+        y: 41
+        width: 18
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,32 +181,10 @@ TextureImporter:
       name: sticks_and_pebbles_2
       rect:
         serializedVersion: 2
-        x: 99
-        y: 37
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d405e74e1d3979df0800000000000000
-      internalID: -173507530939543475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sticks_and_pebbles_3
-      rect:
-        serializedVersion: 2
-        x: 103
+        x: 100
         y: 38
-        width: 21
-        height: 15
+        width: 23
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,13 +200,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sticks_and_pebbles_4
+      name: sticks_and_pebbles_3
       rect:
         serializedVersion: 2
-        x: 135
-        y: 40
-        width: 26
-        height: 16
+        x: 136
+        y: 34
+        width: 24
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,13 +222,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sticks_and_pebbles_5
+      name: sticks_and_pebbles_4
       rect:
         serializedVersion: 2
-        x: 144
-        y: 33
-        width: 10
-        height: 8
+        x: 166
+        y: 38
+        width: 19
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,13 +244,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sticks_and_pebbles_6
+      name: sticks_and_pebbles_5
       rect:
         serializedVersion: 2
-        x: 165
-        y: 37
-        width: 21
-        height: 13
+        x: 198
+        y: 34
+        width: 19
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,33 +265,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: sticks_and_pebbles_7
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 33
-        width: 21
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e755aa1a4bdecb940800000000000000
-      internalID: 5313383020452533630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 16ae6f6566cead4468d1ea4e57dd0bfa
     internalID: 0
     vertices: []
     indices: 
@@ -325,11 +281,10 @@ TextureImporter:
     nameFileIdTable:
       sticks_and_pebbles_0: -249838220876185989
       sticks_and_pebbles_1: 7169782466323755721
-      sticks_and_pebbles_2: -173507530939543475
-      sticks_and_pebbles_3: -5122480603611327569
-      sticks_and_pebbles_4: 3660424760424456165
-      sticks_and_pebbles_5: 3919855124960968665
-      sticks_and_pebbles_6: -6154614353779864408
+      sticks_and_pebbles_2: -5122480603611327569
+      sticks_and_pebbles_3: 3660424760424456165
+      sticks_and_pebbles_4: 3919855124960968665
+      sticks_and_pebbles_5: -6154614353779864408
       sticks_and_pebbles_7: 5313383020452533630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
