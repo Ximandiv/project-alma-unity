@@ -18,6 +18,7 @@ namespace Scripts.Player
 
         private Vector2 movement = Vector2.zero;
         private Vector2 lastDirection;
+        private float minMovementValue = 0.01f;
 
         #endregion
 
@@ -33,26 +34,23 @@ namespace Scripts.Player
 
         private void Update()
         {
-            if (status.IsCapableOfMovement() && !gameStatus.IsPaused)
-            {
+            if ( canMove() )
                 getInputMovement();
 
-                status.SetMovingStatus(isMoving());
-            }
-            else
-                status.SetMovingStatus(false);
+            status.SetMovingStatus( isMoving() );
         }
 
         private void FixedUpdate()
         {
-            move();
+            if ( canMove() )
+                move();
+            else
+                rb.linearVelocity = Vector2.zero;
         }
 
         #endregion
 
         #region Private Methods
-
-        private bool isMoving() => (movement.normalized).sqrMagnitude > 0.01f;
 
         private void getInputMovement()
         {
@@ -66,7 +64,7 @@ namespace Scripts.Player
 
             rb.linearVelocity = normalizedMovement * speed.GetCurrentSpeed();
 
-            if (isMoving())
+            if ( isMoving() )
             {
                 lastDirection = normalizedMovement;
                 rotate();
@@ -79,6 +77,10 @@ namespace Scripts.Player
 
             rb.rotation = angle;
         }
+
+        private bool isMoving() => (movement.normalized).sqrMagnitude > minMovementValue;
+
+        private bool canMove() => status.IsCapableOfMovement() || !gameStatus.IsPaused;
 
         #endregion
     }

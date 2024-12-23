@@ -1,3 +1,4 @@
+using Scripts.Scriptables;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,6 +7,8 @@ namespace Scripts.Player
     public class Weapon : MonoBehaviour
     {
         #region Private Variables
+
+        [SerializeField] private GameStatus gameStatus;
 
         [Header("Layer Masks")]
 
@@ -60,11 +63,14 @@ namespace Scripts.Player
 
         private void Update()
         {
-            moveAroundPlayerByMousePos(out Vector3 direction);
-            rotateToMouseDirection(direction);
+            if ( !gameStatus.IsPaused )
+            {
+                moveAroundPlayerByMousePos(out Vector3 direction);
+                rotateToMouseDirection(direction);
 
-            lightDownwardDir = - light.up;
-            detectEnemiesOnLight();
+                lightDownwardDir = -light.up;
+                detectEnemiesOnLight();
+            }
         }
 
         private void OnDrawGizmosSelected()
