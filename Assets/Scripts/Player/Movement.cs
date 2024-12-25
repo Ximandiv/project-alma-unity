@@ -80,7 +80,7 @@ namespace Scripts.Player
 
         private bool isMoving() => (movement.normalized).sqrMagnitude > minMovementValue;
 
-        private bool canMove() => status.IsCapableOfMovement() || !gameStatus.IsPaused;
+        private bool canMove() => status.IsCapableOfMovement() && !gameStatus.IsPaused;
 
         #endregion
     }

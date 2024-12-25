@@ -63,14 +63,13 @@ namespace Scripts.Player
 
         private void Update()
         {
-            if ( !gameStatus.IsPaused )
-            {
-                moveAroundPlayerByMousePos(out Vector3 direction);
-                rotateToMouseDirection(direction);
+            if (gameStatus.IsPaused) return;
 
-                lightDownwardDir = -light.up;
-                detectEnemiesOnLight();
-            }
+            moveAroundPlayerByMousePos(out Vector3 direction);
+            rotateToMouseDirection(direction);
+
+            lightDownwardDir = -light.up;
+            detectEnemiesOnLight();
         }
 
         private void OnDrawGizmosSelected()
@@ -111,6 +110,8 @@ namespace Scripts.Player
 
         private void detectEnemiesOnLight()
         {
+            if(gameStatus.IsPaused) return;
+
             Collider2D[] colliders = getEnemiesWithinRange();
 
             if(areThereEnemiesInRange(colliders))
