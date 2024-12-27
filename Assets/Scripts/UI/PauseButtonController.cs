@@ -20,7 +20,7 @@ namespace Scripts.UI
         {
             if (Input.GetKeyDown(keyToMenu))
             {
-                ActivateButton();
+                activateButton();
             }
         }
 
@@ -28,7 +28,7 @@ namespace Scripts.UI
 
         #region Private Methods
 
-        private void ActivateButton()
+        private void activateButton()
         {  
             gameStatus.Pause();
             menuPanel.SetActive(!menuPanel.activeSelf);
