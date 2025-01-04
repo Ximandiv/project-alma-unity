@@ -32,8 +32,11 @@ namespace Scripts.UI
 
         #region Private Variables
 
+        [SerializeField] private GameObject visualCue;
+        [SerializeField] private KeyCode keyToTalk = KeyCode.E;
         [SerializeField] private StoryStatus storyStatus;
         [SerializeField] private DialogueMapping[] dialogueMappings;
+        private bool playerInRange;
         private Dictionary<StoryStatus.StoryStage, Dialogue> dialogues;
         private Dialogue currentDialogue;
 
@@ -43,12 +46,47 @@ namespace Scripts.UI
 
         private void Awake()
         {
+            playerInRange = false;
+            visualCue.SetActive(false);
+            
             dialogues = new Dictionary<StoryStatus.StoryStage, Dialogue>();
             
             //Uses mapping created in the editor to fill the dictionary.
             foreach (var mapping in dialogueMappings)
             {
                 dialogues[mapping.storyStage] = mapping.dialogue;
+            }
+        }
+
+        private void Update()
+        {
+            if (playerInRange)
+            {
+                visualCue.SetActive(true);
+                if (Input.GetKeyDown(keyToTalk))
+                {
+                    StartDialogue();
+                }
+            }
+            else
+            {
+                visualCue.SetActive(false);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                playerInRange = true;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                playerInRange = false;
             }
         }
 

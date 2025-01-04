@@ -17,7 +17,7 @@ namespace Scripts.UI
 
             gameStatus.Pause();
             isActive = true;
-            dialoguePanel.SetActive(!dialoguePanel.activeSelf);
+            dialoguePanel.SetActive(true);
 
             displayMessage();
         }
@@ -31,7 +31,7 @@ namespace Scripts.UI
             } else {
                 gameStatus.Pause();
                 isActive = false;
-                dialoguePanel.SetActive(!dialoguePanel.activeSelf);
+                dialoguePanel.SetActive(false);
             }
         }
 
@@ -48,13 +48,18 @@ namespace Scripts.UI
         
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
-        private int activeMessage = 0;
-        private static bool isActive = false;
+        private int activeMessage;
+        private static bool isActive;
 
         #endregion
 
         #region Unity API Methods
-
+        private void Awake()
+        {
+            isActive = false;
+            dialoguePanel.SetActive(false);
+        }
+        
         private void Update()
         {
             if (Input.GetKeyDown(keyToNext) && isActive == true)
