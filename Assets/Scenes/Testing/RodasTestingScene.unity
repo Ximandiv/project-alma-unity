@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Dialogo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -700,7 +700,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d10723f2f60fe94d8bb246bc30818b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
+  storyStatus: {fileID: 11400000, guid: a000dd7a67a48384b9a19d583445c1a9, type: 2}
+  dialogueMappings:
+  - storyStage: 0
+    dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
+  - storyStage: 1
+    dialogue: {fileID: 11400000, guid: 8d7c07f62db53034f816382a076a51a1, type: 2}
 --- !u!114 &1993815266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,7 +831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d10723f2f60fe94d8bb246bc30818b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
+  storyStatus: {fileID: 0}
+  dialogueMappings: []
 --- !u!61 &2067567902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1030,6 +1036,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4582701435191962251, guid: 7fc6cdefcb6772649913a48d1dfb426b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7376177113926991647, guid: 7fc6cdefcb6772649913a48d1dfb426b, type: 3}
       propertyPath: m_Pivot.x
       value: 0

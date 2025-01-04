@@ -5,7 +5,7 @@ using Scripts.Scriptables;
 
 namespace Scripts.UI
 {
-    public class DialogueManager : MonoBehaviour
+    public class DialogueController : MonoBehaviour
     {
         #region Public Methods
         
@@ -19,7 +19,6 @@ namespace Scripts.UI
             isActive = true;
             dialoguePanel.SetActive(!dialoguePanel.activeSelf);
 
-            Debug.Log("OpenDialogue, messages: "+ currentMessages.Length);
             displayMessage();
         }
 
@@ -33,7 +32,6 @@ namespace Scripts.UI
                 gameStatus.Pause();
                 isActive = false;
                 dialoguePanel.SetActive(!dialoguePanel.activeSelf);
-                Debug.Log("Conversation Ended");
             }
         }
 

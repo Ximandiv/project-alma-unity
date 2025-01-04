@@ -201,8 +201,7 @@ MonoBehaviour:
   m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque
     varius tortor ut ullamcorper. Curabitur convallis feugiat felis, non ultrices
     leo ultrices quis. Nullam vel felis vehicula, pretium purus in, tristique eros.
-    Nulla lorem massa, imperdiet a cursus nec, molestie ut eros. In ac augue quis
-    dui molestie commodo.
+    Nulla lorem massa, imperdiet a cursus nec, molestie ut eros.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -440,8 +439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 100, y: -200}
-  m_SizeDelta: {x: 300, y: 500}
+  m_AnchoredPosition: {x: -100, y: 25}
+  m_SizeDelta: {x: 330, y: 550}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &7049141772078954195
 CanvasRenderer:
@@ -602,8 +601,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3090642107978789781}
-        m_TargetAssemblyTypeName: Scripts.UI.DialogueManager, Assembly-CSharp
+      - m_Target: {fileID: 8800611582722384541}
+        m_TargetAssemblyTypeName: Scripts.UI.DialogueController, Assembly-CSharp
         m_MethodName: NextMessage
         m_Mode: 1
         m_Arguments:
@@ -901,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7375006192433354789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -918,10 +917,10 @@ RectTransform:
   - {fileID: 8189197209281883219}
   m_Father: {fileID: 7376177113926991647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 790, y: -270}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5358705289957529325
 GameObject:
@@ -1098,8 +1097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -790, y: -220}
-  m_SizeDelta: {x: 1820, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 180}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5747290802305922367
 CanvasRenderer:
@@ -1151,7 +1150,7 @@ GameObject:
   - component: {fileID: 8105432034820440134}
   - component: {fileID: 5749952599410664077}
   - component: {fileID: 2441263507269804339}
-  - component: {fileID: 3090642107978789781}
+  - component: {fileID: 8800611582722384541}
   m_Layer: 5
   m_Name: CanvasDialogueSystem
   m_TagString: Untagged
@@ -1242,7 +1241,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3090642107978789781
+--- !u!114 &8800611582722384541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

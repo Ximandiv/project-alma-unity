@@ -1,0 +1,57 @@
+using UnityEngine;
+using Scripts.Scriptables;
+using System.Collections.Generic;
+
+namespace Scripts.UI
+{
+    public class NPCDialogueTrigger : MonoBehaviour
+    {     
+        #region Public Methods
+
+        public void StartDialogue()
+        {
+            //Checks if a dialogue exist for current story stage.
+            if (dialogues.TryGetValue(storyStatus.CurrentStage, out currentDialogue))
+            {
+                if (currentDialogue == null)
+                {
+                    Debug.LogWarning("Missing dialogue reference for current story stage.");
+                }
+                else
+                {
+                    FindFirstObjectByType<DialogueController>().OpenDialogue(currentDialogue);
+                } 
+            }
+            else
+            {
+                Debug.LogWarning("No dialogue found for current story stage.");
+            }
+        }
+
+        #endregion
+
+        #region Private Variables
+
+        [SerializeField] private StoryStatus storyStatus;
+        [SerializeField] private DialogueMapping[] dialogueMappings;
+        private Dictionary<StoryStatus.StoryStage, Dialogue> dialogues;
+        private Dialogue currentDialogue;
+
+        #endregion
+
+        #region Unity API Methods
+
+        private void Awake()
+        {
+            dialogues = new Dictionary<StoryStatus.StoryStage, Dialogue>();
+            
+            //Uses mapping created in the editor to fill the dictionary.
+            foreach (var mapping in dialogueMappings)
+            {
+                dialogues[mapping.storyStage] = mapping.dialogue;
+            }
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fcda7f648394c44a706eb47ce1918f, type: 3}
+  m_Name: Emilio_Dialogue1
+  m_EditorClassIdentifier: 
+  Messages:
+  - actorId: 0
+    messageText: "\xA1Alma! Mi psic\xF3loga favorita, qu\xE9 alegr\xEDa verte de
+      nuevo por ac\xE1. \xBFDe vuelta para quedarte?"
+  - actorId: 1
+    messageText: "S\xED, Emilio. He decidido que ya era hora de regresar. Quiero
+      ayudar a la comunidad con algo muy importante."
+  - actorId: 0
+    messageText: "Eso est\xE1 muy bien. Aunque mira, all\xE1 est\xE1 Ferney. Ese
+      muchacho ha estado raro \xFAltimamente. Trabaja poco, parece distra\xEDdo.
+      Le he dicho que no se preocupe tanto, que esas cosas no son penas de verdad,
+      pero nada que mejora."
+  - actorId: 1
+    messageText: "Gracias por contarme, Emilio. Tal vez pueda hablar con \xE9l. Nos
+      vemos m\xE1s tarde."
+  - actorId: 0
+    messageText: "Claro, mija. Siempre es bueno tenerte por aqu\xED."
+  Actors:
+  - actorName: Emilio
+    actorSprite: {fileID: 21300000, guid: 702972766c83965478f9a7d526c0dba4, type: 3}
+  - actorName: Alma
+    actorSprite: {fileID: 21300000, guid: a47f5969dc4d02740bc689e6bb626cc5, type: 3}
