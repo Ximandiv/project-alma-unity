@@ -2,15 +2,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Scripts.Scriptables;
+using System;
 
 namespace Scripts.UI
 {
     public class DialogueController : MonoBehaviour
     {
+        #region Public Variables
+
+        public event Action<Dialogue> OnDialogueEnded;
+
+        #endregion
+        
         #region Public Methods
         
         public void OpenDialogue(Dialogue dialogue)
         {
+            currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
             activeMessage = 0;
@@ -32,6 +40,8 @@ namespace Scripts.UI
                 gameStatus.Pause();
                 isActive = false;
                 dialoguePanel.SetActive(false);
+
+                OnDialogueEnded?.Invoke(currentDialogue);
             }
         }
 
@@ -46,6 +56,7 @@ namespace Scripts.UI
         [SerializeField] private GameObject dialoguePanel;
         [SerializeField] private KeyCode keyToNext = KeyCode.Space;
         
+        private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
         private int activeMessage;

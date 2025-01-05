@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 447264311570105081}
   m_Layer: 0
   m_Name: Ferney
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,9 +318,9 @@ MonoBehaviour:
   storyStatus: {fileID: 11400000, guid: a000dd7a67a48384b9a19d583445c1a9, type: 2}
   dialogueMappings:
   - storyStage: 0
-    dialogue: {fileID: 11400000, guid: 3fa9cb47372b6ab48872bc636f804eb4, type: 2}
+    dialogue: {fileID: 11400000, guid: 2879c17cf9bb3bf4493eda631df684a9, type: 2}
   - storyStage: 1
-    dialogue: {fileID: 11400000, guid: 3fa9cb47372b6ab48872bc636f804eb4, type: 2}
+    dialogue: {fileID: 11400000, guid: 2879c17cf9bb3bf4493eda631df684a9, type: 2}
   - storyStage: 2
     dialogue: {fileID: 11400000, guid: 3fa9cb47372b6ab48872bc636f804eb4, type: 2}
   - storyStage: 3

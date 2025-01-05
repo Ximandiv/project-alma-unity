@@ -14,18 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Messages:
   - actorId: 0
-    messageText: "Ya me imagino por qu\xE9 viniste. Pero de verdad, no hay nada de
-      qu\xE9 preocuparse."
-  - actorId: 1
-    messageText: "Emilio y tu familia est\xE1n preocupados por ti. No es malo sentirnos
-      abrumados a veces, pero hablar puede ayudar."
-  - actorId: 0
-    messageText: "Supongo que hablar no har\xE1 da\xF1o. Pero no s\xE9 si me va a
-      servir de algo."
-  - actorId: 1
-    messageText: "Podemos empezar con eso. T\xF3mate tu tiempo."
+    messageText: "\xA1Se\xF1orita Alma! Ahora mismo no puedo hablar. Salude a los
+      dem\xE1s y en un rato la atiendo."
   Actors:
   - actorName: Ferney
     actorSprite: {fileID: 21300000, guid: c00c2931916962944969533097c0b0ba, type: 3}
-  - actorName: Alma
-    actorSprite: {fileID: 21300000, guid: a47f5969dc4d02740bc689e6bb626cc5, type: 3}
