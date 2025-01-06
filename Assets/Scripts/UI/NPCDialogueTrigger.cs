@@ -33,9 +33,10 @@ namespace Scripts.UI
 
         #region Private Variables
 
+        [SerializeField] private GameStatus gameStatus;
+        [SerializeField] private StoryStatus storyStatus;
         [SerializeField] private GameObject visualCue;
         [SerializeField] private KeyCode keyToTalk = KeyCode.E;
-        [SerializeField] private StoryStatus storyStatus;
         [SerializeField] private DialogueMapping[] dialogueMappings;
         private DialogueController dialogueController;
         private bool playerInRange;
@@ -66,7 +67,7 @@ namespace Scripts.UI
             if (playerInRange)
             {
                 visualCue.SetActive(true);
-                if (Input.GetKeyDown(keyToTalk))
+                if (Input.GetKeyDown(keyToTalk) && !gameStatus.IsPaused)
                 {
                     StartDialogue();
                 }

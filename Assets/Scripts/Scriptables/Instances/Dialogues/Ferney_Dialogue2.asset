@@ -29,3 +29,4 @@ MonoBehaviour:
     actorSprite: {fileID: 21300000, guid: c00c2931916962944969533097c0b0ba, type: 3}
   - actorName: Alma
     actorSprite: {fileID: 21300000, guid: a47f5969dc4d02740bc689e6bb626cc5, type: 3}
+  IsLevelStarter: 1

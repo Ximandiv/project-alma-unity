@@ -5,8 +5,15 @@ namespace Scripts.Scriptables
     [CreateAssetMenu(fileName = "Dialogue", menuName = "Scriptables/Dialogue")]
     public class Dialogue : ScriptableObject
     {
+        #region Public Variables
+
         public Message[] Messages;
         public Actor[] Actors;
+        public bool IsLevelStarter = false;
+
+        #endregion
+
+        #region Public Classes
 
         [System.Serializable]
         public class Message
@@ -27,5 +34,7 @@ namespace Scripts.Scriptables
             public string ActorName => actorName;
             public Sprite ActorSprite => actorSprite;
         }
+
+        #endregion
     }
 }

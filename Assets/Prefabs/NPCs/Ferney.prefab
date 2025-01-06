@@ -313,9 +313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d10723f2f60fe94d8bb246bc30818b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
+  storyStatus: {fileID: 11400000, guid: a000dd7a67a48384b9a19d583445c1a9, type: 2}
   visualCue: {fileID: 1973494366246479789}
   keyToTalk: 101
-  storyStatus: {fileID: 11400000, guid: a000dd7a67a48384b9a19d583445c1a9, type: 2}
   dialogueMappings:
   - storyStage: 0
     dialogue: {fileID: 11400000, guid: 2879c17cf9bb3bf4493eda631df684a9, type: 2}

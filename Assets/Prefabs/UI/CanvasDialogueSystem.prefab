@@ -393,10 +393,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8800611582722384541}
+        m_TargetAssemblyTypeName: Scripts.UI.DialogueController, Assembly-CSharp
+        m_MethodName: CloseChoices
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1258,7 +1258,11 @@ MonoBehaviour:
   displayedSprite: {fileID: 7034758710692100715}
   displayedText: {fileID: 147363202194184073}
   dialoguePanel: {fileID: 4582701435191962251}
+  continueButton: {fileID: 3523584734724897064}
+  helpButton: {fileID: 4765524548104371823}
+  afterButton: {fileID: 4872064312106748113}
   keyToNext: 32
+  choicesDialogue: {fileID: 11400000, guid: 87120e8ec36e5824ca1ab0f295100c90, type: 2}
 --- !u!1 &8397361458905623490
 GameObject:
   m_ObjectHideFlags: 0
