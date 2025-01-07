@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fcda7f648394c44a706eb47ce1918f, type: 3}
+  m_Name: Mom_Dialogue2
+  m_EditorClassIdentifier: 
+  Messages:
+  - actorId: 0
+    messageText: "\xA1Alma, hija! \xA1Por fin llegaste! Te hemos estado esperando."
+  - actorId: 1
+    messageText: "\xBFC\xF3mo ves la vereda? Nos dijeron que andabas por el huerto,
+      \xBFes verdad?"
+  - actorId: 2
+    messageText: "S\xED, ayud\xE9 a Ferney. Creo que lo est\xE1 afectando el insomnio\u2026
+      necesita descansar."
+  - actorId: 0
+    messageText: "No es solo Ferney, Alma. Hemos visto a otros vecinos igual\u2026
+      deca\xEDdos, apagados. Nadie dice nada, pero es como si todos cargaran con
+      un peso que no quieren mostrar."
+  - actorId: 1
+    messageText: "Do\xF1a Rosa lleva d\xEDas sin salir de su casa, y Emilio ya no
+      conversa como antes. Algo est\xE1 pasando, y t\xFA eres la \xFAnica que puede
+      ayudarlos."
+  - actorId: 2
+    messageText: "Si la vereda necesita ayuda, entonces hablar\xE9 con cada uno de
+      ellos. No puedo quedarme de brazos cruzados."
+  - actorId: 0
+    messageText: "\xA1Sabemos que puedes hacerlo, Alma!"
+  - actorId: 1
+    messageText: "\xA1La vereda tiene suerte de tenerte aqu\xED!"
+  Actors:
+  - actorName: Madre
+    actorSprite: {fileID: 21300000, guid: 4854b5e7c90ca4846b7e9f4b4d9296b6, type: 3}
+  - actorName: Padre
+    actorSprite: {fileID: 21300000, guid: f9c402bfef252714496f613a75dbf18c, type: 3}
+  - actorName: Alma
+    actorSprite: {fileID: 21300000, guid: a47f5969dc4d02740bc689e6bb626cc5, type: 3}
+  IsLevelStarter: 0

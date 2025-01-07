@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentStage: 0
   leadingDialoguesMappings:
-  - storyStage: 2
+  - storyStage: 1
     dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
+  - storyStage: 2
+    dialogue: {fileID: 11400000, guid: 4096337d004bf3a4e8fed05c368ac3c6, type: 2}
   - storyStage: 3
     dialogue: {fileID: 11400000, guid: 3fa9cb47372b6ab48872bc636f804eb4, type: 2}

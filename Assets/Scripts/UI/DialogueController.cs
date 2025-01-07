@@ -98,7 +98,12 @@ namespace Scripts.UI
         private void Awake()
         {
             isActive = false;
+            
+            continueButton.gameObject.SetActive(true);
+            helpButton.gameObject.SetActive(false);
+            afterButton.gameObject.SetActive(false);
             dialoguePanel.SetActive(false);
+
             menuController = FindFirstObjectByType<MenuController>();
         }
         
