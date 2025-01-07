@@ -5,8 +5,37 @@ namespace Scripts.Scriptables
     [CreateAssetMenu(fileName = "Game Status", menuName = "Scriptables/GameStatus")]
     public class GameStatus : ScriptableObject
     {
-        public void Pause() => IsPaused = !IsPaused;
+        public bool IsPaused
+        {
+            get { return isPaused; }
+        }
+        
+        public void Pause()
+        {
+            pauseCount++;
+            if (pauseCount == 1)
+            {
+                isPaused = true;
+            }
+        }
 
-        public bool IsPaused = false;
+        public void Unpause()
+        {
+            pauseCount--;
+            if (pauseCount == 0)
+            {
+                isPaused = false;
+            }
+        }
+
+        private bool isPaused = false;
+        private int pauseCount = 0;
+
+        private void OnEnable()
+        {
+            isPaused = false;
+            pauseCount = 0;
+        }
+
     }
 }

@@ -26,6 +26,8 @@ namespace Scripts.UI
             gameStatus.Pause();
             isActive = true;
             dialoguePanel.SetActive(true);
+            menuController.OnMenuOpen += handleMenuOpen;
+            menuController.OnMenuClosed += handleMenuClosed;
 
             displayMessage();
         }
@@ -46,9 +48,7 @@ namespace Scripts.UI
                 }
                 else if(currentDialogue != choicesDialogue)
                 {
-                    gameStatus.Pause();
-                    isActive = false;
-                    dialoguePanel.SetActive(false);
+                    closeDialogue();
                 }
             }
         }
@@ -59,9 +59,7 @@ namespace Scripts.UI
             helpButton.gameObject.SetActive(false);
             afterButton.gameObject.SetActive(false);
 
-            gameStatus.Pause();
-            isActive = false;
-            dialoguePanel.SetActive(false);
+            closeDialogue();
         }
 
         #endregion
@@ -86,6 +84,7 @@ namespace Scripts.UI
         [Header("Choices Dialogue")]
         [SerializeField] private Dialogue choicesDialogue;
         
+        private MenuController menuController;
         private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
@@ -95,17 +94,19 @@ namespace Scripts.UI
         #endregion
 
         #region Unity API Methods
+
         private void Awake()
         {
             isActive = false;
             dialoguePanel.SetActive(false);
+            menuController = FindFirstObjectByType<MenuController>();
         }
         
         private void Update()
         {
-            if (Input.GetKeyDown(keyToNext) && isActive == true)
+            if (Input.GetKeyDown(keyToNext) &&  isActive == true && continueButton.interactable)
             {
-                NextMessage();
+                continueButton.onClick.Invoke();
             }
         }
 
@@ -135,6 +136,29 @@ namespace Scripts.UI
             afterButton.gameObject.SetActive(true);
 
             displayMessage();
+        }
+
+        private void closeDialogue()
+        {
+            gameStatus.Unpause();
+            isActive = false;
+            dialoguePanel.SetActive(false);
+            menuController.OnMenuOpen -= handleMenuOpen;
+            menuController.OnMenuClosed -= handleMenuClosed;
+        }
+
+        private void handleMenuOpen()
+        {
+            continueButton.interactable = false;
+            helpButton.interactable = false;
+            afterButton.interactable = false;
+        }
+
+        private void handleMenuClosed()
+        {
+            continueButton.interactable = true;
+            helpButton.interactable = true;
+            afterButton.interactable = true;
         }
 
         #endregion

@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 410779557384979924}
   - component: {fileID: 8952057392137033536}
   - component: {fileID: 4440477980816789360}
-  - component: {fileID: 1851494867752091215}
-  - component: {fileID: 6333701191102533586}
   m_Layer: 5
   m_Name: CanvasInGameMenu
   m_TagString: Untagged
@@ -33,6 +31,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7759645937206015946}
   - {fileID: 1674947349530842644}
   - {fileID: 6617950592697901811}
   m_Father: {fileID: 0}
@@ -105,34 +104,71 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1851494867752091215
+--- !u!1 &234940130277299591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7759645937206015946}
+  - component: {fileID: 271717350289243439}
+  - component: {fileID: 1878028690025198667}
+  m_Layer: 5
+  m_Name: Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7759645937206015946
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234940130277299591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4868444342578577180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &271717350289243439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120624942862934054}
+  m_GameObject: {fileID: 234940130277299591}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97372618d927cfd46878a25806db76af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6333701191102533586
+  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
+  menuPanel: {fileID: 3917025477314672560}
+  keyToMenu: 27
+--- !u!114 &1878028690025198667
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120624942862934054}
+  m_GameObject: {fileID: 234940130277299591}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bae7dd5ea0f4c94686d5c87e662d67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
   pausePanel: {fileID: 9217936709011808938}
-  menuPanel: {fileID: 3917025477314672560}
-  keyToMenu: 27
 --- !u!1 &518435447994546184
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1851494867752091215}
+      - m_Target: {fileID: 271717350289243439}
         m_TargetAssemblyTypeName: Scripts.UI.MenuController, Assembly-CSharp
         m_MethodName: QuitApp
         m_Mode: 1
@@ -885,33 +921,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3917025477314672560}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 9217936709011808938}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
-        m_TargetAssemblyTypeName: Scripts.Scriptables.GameStatus, Assembly-CSharp
-        m_MethodName: Pause
+      - m_Target: {fileID: 271717350289243439}
+        m_TargetAssemblyTypeName: Scripts.UI.MenuController, Assembly-CSharp
+        m_MethodName: OpenMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1619,33 +1631,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9217936709011808938}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3917025477314672560}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
-        m_TargetAssemblyTypeName: Scripts.Scriptables.GameStatus, Assembly-CSharp
-        m_MethodName: Pause
+      - m_Target: {fileID: 271717350289243439}
+        m_TargetAssemblyTypeName: Scripts.UI.MenuController, Assembly-CSharp
+        m_MethodName: CloseMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
