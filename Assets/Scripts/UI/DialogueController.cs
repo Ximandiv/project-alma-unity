@@ -21,7 +21,7 @@ namespace Scripts.UI
             currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
-            activeMessage = 0;
+            activeMessageID = 0;
 
             gameStatus.Pause();
             isActive = true;
@@ -34,8 +34,8 @@ namespace Scripts.UI
 
         public void NextMessage()
         {
-            activeMessage++;
-            if (activeMessage < currentMessages.Length) 
+            activeMessageID++;
+            if (activeMessageID < currentMessages.Length) 
             {
                 displayMessage();
             } else
@@ -88,7 +88,7 @@ namespace Scripts.UI
         private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
-        private int activeMessage;
+        private int activeMessageID;
         private static bool isActive;
 
         #endregion
@@ -98,7 +98,7 @@ namespace Scripts.UI
         private void Awake()
         {
             isActive = false;
-            
+
             continueButton.gameObject.SetActive(true);
             helpButton.gameObject.SetActive(false);
             afterButton.gameObject.SetActive(false);
@@ -121,12 +121,17 @@ namespace Scripts.UI
 
         private void displayMessage()
         {
-            Dialogue.Message messageToDisplay = currentMessages[activeMessage];
-            displayedText.text = messageToDisplay.MessageText;
+            Dialogue.Message activeMessage = currentMessages[activeMessageID];
 
-            Dialogue.Actor actorToDisplay = currentActors[messageToDisplay.ActorId];
-            displayedName.text = actorToDisplay.ActorName;
-            displayedSprite.sprite = actorToDisplay.ActorSprite;
+            //Uses the TMP's Typewriter to type the text from active message
+            Typewriter typewriter = displayedText.GetComponent<Typewriter>();
+            typewriter.SetText(activeMessage.MessageText);
+
+            Dialogue.Actor activeActor = currentActors[activeMessage.ActorId];
+
+            //Sets the values ​​of the active actor to be displayed
+            displayedName.text = activeActor.ActorName;
+            displayedSprite.sprite = activeActor.ActorSprite;
         }
 
         private void openChoices(Dialogue dialogue)
@@ -134,7 +139,7 @@ namespace Scripts.UI
             currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
-            activeMessage = 0;
+            activeMessageID = 0;
 
             continueButton.gameObject.SetActive(false);
             helpButton.gameObject.SetActive(true);

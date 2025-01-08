@@ -17,6 +17,6 @@ MonoBehaviour:
     messageText: "Hija, me agarras desprevenida, apenas estoy prendiendo el fog\xF3n
       \xBFPor qu\xE9 no das una vuelta primero?"
   Actors:
-  - actorName: Madre
+  - actorName: "Mam\xE1"
     actorSprite: {fileID: 21300000, guid: 4854b5e7c90ca4846b7e9f4b4d9296b6, type: 3}
   IsLevelStarter: 0
