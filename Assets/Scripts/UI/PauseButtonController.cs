@@ -5,37 +5,36 @@ namespace Scripts.UI
 {
     public class PauseButtonController : MonoBehaviour
     {
-        #region Private Variables
-
-        [SerializeField] private GameStatus gameStatus;
         [SerializeField] private GameObject pausePanel;
-        [SerializeField] private GameObject menuPanel;
-        [SerializeField] private KeyCode keyToMenu = KeyCode.Escape;
+        private MenuController menuController;
 
-        #endregion
-        
-        #region Unity API Methods
-
-        private void Update()
+        private void Awake()
         {
-            if (Input.GetKeyDown(keyToMenu))
-            {
-                ActivateButton();
-            }
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private void ActivateButton()
-        {  
-            gameStatus.Pause();
-            menuPanel.SetActive(!menuPanel.activeSelf);
-            pausePanel.SetActive(!pausePanel.activeSelf);
+            menuController = FindFirstObjectByType<MenuController>();
         }
         
-        #endregion
+        private void OnEnable()
+        {
+            menuController.OnMenuOpen += handleMenuOpen;
+            menuController.OnMenuClosed += handleMenuClosed;
+        }
+
+        private void OnDisable()
+        {
+            menuController.OnMenuOpen -= handleMenuOpen;
+            menuController.OnMenuClosed -= handleMenuClosed;
+        }
+
+        private void handleMenuOpen()
+        {
+            pausePanel.SetActive(false);
+        }
+
+        private void handleMenuClosed()
+        {
+            pausePanel.SetActive(true);
+        }
+
     }
 }
 

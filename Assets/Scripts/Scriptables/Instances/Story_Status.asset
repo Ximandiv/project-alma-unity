@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4b0f4c530b99540b9e1e23f6e635c3, type: 3}
+  m_Name: Story_Status
+  m_EditorClassIdentifier: 
+  CurrentStage: 0
+  leadingDialoguesMappings:
+  - storyStage: 1
+    dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
+  - storyStage: 2
+    dialogue: {fileID: 11400000, guid: 4096337d004bf3a4e8fed05c368ac3c6, type: 2}
+  - storyStage: 3
+    dialogue: {fileID: 11400000, guid: 3fa9cb47372b6ab48872bc636f804eb4, type: 2}
