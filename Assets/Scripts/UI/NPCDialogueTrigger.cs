@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Scripts.UI
 {
+    [RequireComponent(typeof(Collider2D))]
     public class NPCDialogueTrigger : MonoBehaviour
     {     
         #region Public Methods
