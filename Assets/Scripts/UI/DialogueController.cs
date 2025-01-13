@@ -21,7 +21,7 @@ namespace Scripts.UI
             currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
-            activeMessageID = 0;
+            activeMessageIndex = 0;
 
             gameStatus.Pause();
             isActive = true;
@@ -34,8 +34,8 @@ namespace Scripts.UI
 
         public void NextMessage()
         {
-            activeMessageID++;
-            if (activeMessageID < currentMessages.Length) 
+            activeMessageIndex++;
+            if (activeMessageIndex < currentMessages.Length) 
             {
                 displayMessage();
             } else
@@ -88,7 +88,7 @@ namespace Scripts.UI
         private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
-        private int activeMessageID;
+        private int activeMessageIndex;
         private static bool isActive;
 
         #endregion
@@ -121,7 +121,7 @@ namespace Scripts.UI
 
         private void displayMessage()
         {
-            Dialogue.Message activeMessage = currentMessages[activeMessageID];
+            Dialogue.Message activeMessage = currentMessages[activeMessageIndex];
 
             //Uses the TMP's Typewriter to type the text from active message
             Typewriter typewriter = displayedText.GetComponent<Typewriter>();
@@ -139,7 +139,7 @@ namespace Scripts.UI
             currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
-            activeMessageID = 0;
+            activeMessageIndex = 0;
 
             continueButton.gameObject.SetActive(false);
             helpButton.gameObject.SetActive(true);

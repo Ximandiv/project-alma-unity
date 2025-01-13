@@ -5,12 +5,13 @@ namespace Scripts.UI
 {
     public class PauseButtonController : MonoBehaviour
     {
-        [SerializeField] private GameObject pausePanel;
+        [SerializeField] private GameObject pauseButtonPanel;
         private MenuController menuController;
 
         private void Awake()
         {
             menuController = FindFirstObjectByType<MenuController>();
+            pauseButtonPanel.SetActive(true);
         }
         
         private void OnEnable()
@@ -27,12 +28,12 @@ namespace Scripts.UI
 
         private void handleMenuOpen()
         {
-            pausePanel.SetActive(false);
+            pauseButtonPanel.SetActive(false);
         }
 
         private void handleMenuClosed()
         {
-            pausePanel.SetActive(true);
+            pauseButtonPanel.SetActive(true);
         }
 
     }
