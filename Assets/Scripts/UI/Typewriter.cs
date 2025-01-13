@@ -7,9 +7,10 @@ namespace Scripts.UI
     [RequireComponent(typeof(TMP_Text))]
     public class Typewriter : MonoBehaviour
     {
+        [SerializeField] private float textDelay = 0.02f;
         private TMP_Text textBox;
 
-        private int currentCharacterID;
+        private int currentCharacterIndex;
 
         private void Awake()
         {
@@ -20,7 +21,7 @@ namespace Scripts.UI
         {
             textBox.text = text;
             textBox.maxVisibleCharacters = 0;
-            currentCharacterID = 0;
+            currentCharacterIndex = 0;
 
             StartCoroutine(TypeText());
         }
@@ -31,12 +32,11 @@ namespace Scripts.UI
 
             TMP_TextInfo textInfo = textBox.textInfo;
 
-            while (currentCharacterID < textInfo.characterCount)
+            while (currentCharacterIndex < textInfo.characterCount)
             {
-                char character = textInfo.characterInfo[currentCharacterID].character;
                 textBox.maxVisibleCharacters++;
-                yield return new WaitForSeconds(0.02f);
-                currentCharacterID++;
+                yield return new WaitForSeconds(textDelay);
+                currentCharacterIndex++;
             }
         }
     }

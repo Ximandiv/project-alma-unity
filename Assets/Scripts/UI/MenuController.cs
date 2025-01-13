@@ -24,14 +24,14 @@ namespace Scripts.UI
         {  
             OnMenuOpen?.Invoke();
             gameStatus.Pause();
-            menuPanel.SetActive(true);
+            pausedPanel.SetActive(true);
         }
 
         public void CloseMenu()
         {  
             OnMenuClosed?.Invoke();
             gameStatus.Unpause();
-            menuPanel.SetActive(false);
+            pausedPanel.SetActive(false);
         }
 
         #endregion
@@ -39,18 +39,23 @@ namespace Scripts.UI
         #region Private Variables
 
         [SerializeField] private GameStatus gameStatus;
-        [SerializeField] private GameObject menuPanel;
+        [SerializeField] private GameObject pausedPanel;
         [SerializeField] private KeyCode keyToMenu = KeyCode.Escape;
 
         #endregion
 
         #region Unity API Methods
 
+        private void Awake()
+        {
+            pausedPanel.SetActive(false);
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(keyToMenu))
             {
-                if (!menuPanel.activeSelf) OpenMenu();
+                if (!pausedPanel.activeSelf) OpenMenu();
                 else CloseMenu();
             }
 
