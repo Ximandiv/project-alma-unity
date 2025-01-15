@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 7049141772078954195}
   - component: {fileID: 7034758710692100715}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: AvatarSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 4069889388730843934}
   - component: {fileID: 8265294859941561088}
   m_Layer: 5
-  m_Name: Controller
+  m_Name: DialogueController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 6684584327128038612}
   - component: {fileID: 7744596898058438058}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LaterButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 2155638278301238493}
   - component: {fileID: 5890227114627847780}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ContinueButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 2489490520918438872}
   - component: {fileID: 551046437540028399}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ContinueButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

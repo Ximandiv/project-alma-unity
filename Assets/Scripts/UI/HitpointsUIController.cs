@@ -45,15 +45,12 @@ namespace Scripts.UI
         private void Awake()
         {
             characterHitpoints = GameObject.FindWithTag("Player").GetComponent<CharacterHitpoints>();
-            healthBar = GameObject.FindWithTag("HealthBar").GetComponent<RectTransform>();
+            healthBar = gameObject.transform.Find("HealthBar").GetComponent<RectTransform>();
+            fillBar = gameObject.transform.Find("HealthBar/Fill").GetComponent<RectTransform>();
         }
 
         private void Start()
         {
-            fillBar = healthBar.transform
-                .Find("Background").transform
-                .Find("Fill")
-                .GetComponent<RectTransform>();
             UpdateHealthBar();
         }
 

@@ -114,9 +114,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7759645937206015946}
   - component: {fileID: 271717350289243439}
-  - component: {fileID: 1878028690025198667}
   m_Layer: 5
-  m_Name: Controller
+  m_Name: MenuController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +138,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271717350289243439
 MonoBehaviour:
@@ -156,19 +155,6 @@ MonoBehaviour:
   gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
   pausedPanel: {fileID: 8886532349979741219}
   keyToMenu: 27
---- !u!114 &1878028690025198667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234940130277299591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bae7dd5ea0f4c94686d5c87e662d67f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseButtonPanel: {fileID: 9217936709011808938}
 --- !u!1 &518435447994546184
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +288,7 @@ GameObject:
   - component: {fileID: 4247664384146489430}
   - component: {fileID: 4350355658259338415}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HelpButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,7 +529,7 @@ GameObject:
   - component: {fileID: 3493219851312429677}
   - component: {fileID: 7542033176914889386}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PauseButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,7 +1160,7 @@ GameObject:
   - component: {fileID: 194337597452826370}
   - component: {fileID: 4615854980349982706}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ContinueButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1385,7 +1371,7 @@ GameObject:
   - component: {fileID: 3776979124746491241}
   - component: {fileID: 744001693378349262}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: QuitButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1730,7 +1716,7 @@ GameObject:
   - component: {fileID: 1030800331021458891}
   - component: {fileID: 1992044867848373592}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HeaderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1943,7 +1929,7 @@ GameObject:
   - component: {fileID: 2619775388058390664}
   - component: {fileID: 2488857884593284151}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: EscKeyFillText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
