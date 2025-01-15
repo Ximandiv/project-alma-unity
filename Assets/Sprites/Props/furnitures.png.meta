@@ -318,7 +318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_7
+      name: vtore_fallen_leaves
       rect:
         serializedVersion: 2
         x: 274
@@ -586,9 +586,9 @@ TextureImporter:
       Props_4: -1870876656750283219
       Props_5: -4004860913340282569
       Props_6: -6362549862341014049
-      Props_7: -9085773957535209297
       Props_8: 4556875247267356194
       Props_9: 5595747086137543514
+      vtore_fallen_leaves: -9085773957535209297
       vtore_left_arrow: 6502129103713456404
       vtore_right_arrow: 4730907938173302739
   mipmapLimitGroupName: 
