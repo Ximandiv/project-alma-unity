@@ -156,7 +156,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -76.5, y: -22}
+        - {x: -8.720322, y: -21.99997}
+        - {x: -8.5, y: -55}
+        - {x: 76.5, y: -55}
+        - {x: 76.5, y: 40}
+        - {x: -76.5, y: 40}
       tessellationDetail: 0
       bones: []
       spriteID: 109417ee11954934eac7e78e4bf1017c
