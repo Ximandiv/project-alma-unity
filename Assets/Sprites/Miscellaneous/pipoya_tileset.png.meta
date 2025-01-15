@@ -4622,7 +4622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_176
+      name: pip_fence_0
       rect:
         serializedVersion: 2
         x: 0
@@ -4634,7 +4634,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -16}
+        - {x: 4, y: -16}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: c8456bd32ad407210800000000000000
@@ -4644,7 +4648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_177
+      name: pip_fence_1
       rect:
         serializedVersion: 2
         x: 32
@@ -4656,7 +4660,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 6}
+        - {x: -4, y: 6}
+        - {x: -4, y: -16}
+        - {x: 4, y: -16}
       tessellationDetail: 0
       bones: []
       spriteID: 03ff5eb6774753740800000000000000
@@ -4666,7 +4674,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_178
+      name: pip_fence_2
       rect:
         serializedVersion: 2
         x: 64
@@ -4699,7 +4707,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_179
+      name: pip_fence_3
       rect:
         serializedVersion: 2
         x: 96
@@ -4711,7 +4719,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: -4, y: -8}
+        - {x: -4, y: -16}
+        - {x: 4, y: -16}
+        - {x: 4, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: c2b3fae18366ae570800000000000000
@@ -4721,7 +4735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_180
+      name: pip_fence_4
       rect:
         serializedVersion: 2
         x: 128
@@ -4733,7 +4747,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: 4, y: -8}
+        - {x: 4, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: 72cae70787a647fb0800000000000000
@@ -4743,7 +4761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_181
+      name: pip_fence_5
       rect:
         serializedVersion: 2
         x: 160
@@ -4755,7 +4773,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: 4.030243, y: 6}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
+        - {x: -4, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: e1b6a5671eb8666f0800000000000000
@@ -4765,7 +4791,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_182
+      name: pip_fence_6
       rect:
         serializedVersion: 2
         x: 192
@@ -4777,7 +4803,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: -4, y: -8}
+        - {x: -4, y: -16}
+        - {x: 4, y: -16}
+        - {x: 4, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: 1a0987d455f9e7500800000000000000
@@ -4787,7 +4821,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_183
+      name: pip_fence_7
       rect:
         serializedVersion: 2
         x: 224
@@ -4799,7 +4833,19 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: -4, y: -8}
+        - {x: -4, y: -16}
+        - {x: 4, y: -16}
+        - {x: 4, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
+        - {x: -4, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: d3144ecea52fe25d0800000000000000
@@ -4809,7 +4855,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_184
+      name: pip_fence_8
       rect:
         serializedVersion: 2
         x: 0
@@ -4822,10 +4868,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: -7}
-        - {x: 16, y: 5}
-        - {x: -16, y: 5}
-        - {x: -16, y: -7}
+      - - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: -16, y: 6}
+        - {x: -16, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: b3592a8539391b050800000000000000
@@ -4835,7 +4881,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_185
+      name: pip_fence_9
       rect:
         serializedVersion: 2
         x: 32
@@ -4847,7 +4893,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -8}
+        - {x: 4, y: -8}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 3d01a11db2cd5b660800000000000000
@@ -4857,7 +4907,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_186
+      name: pip_fence_10
       rect:
         serializedVersion: 2
         x: 64
@@ -4869,7 +4919,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: 4, y: 6.1499023}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 1100ed87dcb5cdcc0800000000000000
@@ -4879,7 +4935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_187
+      name: pip_fence_11
       rect:
         serializedVersion: 2
         x: 96
@@ -4891,7 +4947,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: 4, y: -8}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
+        - {x: -4, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: 8cb099c7e17339740800000000000000
@@ -4901,7 +4963,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_188
+      name: pip_fence_12
       rect:
         serializedVersion: 2
         x: 128
@@ -4913,7 +4975,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: -4, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: 12215ff86648c8050800000000000000
@@ -4923,7 +4989,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_189
+      name: pip_fence_13
       rect:
         serializedVersion: 2
         x: 160
@@ -4935,7 +5001,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -16}
+        - {x: 4, y: -16}
+        - {x: 4, y: -8}
+        - {x: 16, y: -8}
+        - {x: 16, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: c2ac14bb7db689e50800000000000000
@@ -4945,7 +5019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_190
+      name: pip_fence_14
       rect:
         serializedVersion: 2
         x: 192
@@ -4957,7 +5031,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -8}
+        - {x: -4, y: -8}
+        - {x: -4, y: -16}
+        - {x: 4, y: -16}
+        - {x: 4, y: 16}
+        - {x: -4, y: 16}
+        - {x: -4, y: 6}
+        - {x: -16, y: 6}
       tessellationDetail: 0
       bones: []
       spriteID: 5788c2904537ef8e0800000000000000
@@ -4967,7 +5049,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_191
+      name: pip_fence_15
       rect:
         serializedVersion: 2
         x: 224
@@ -4979,7 +5061,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -8}
+        - {x: 4, y: -8}
+        - {x: 4, y: -1}
+        - {x: -4, y: -1}
       tessellationDetail: 0
       bones: []
       spriteID: 44bb9a32ad2e90fe0800000000000000
@@ -23446,6 +23532,22 @@ TextureImporter:
       pip_farmland_7: 2221047678157050706
       pip_farmland_8: -7306364379403559492
       pip_farmland_9: 7079482714679965557
+      pip_fence_0: 1328647249289696396
+      pip_fence_1: 5131135406718713648
+      pip_fence_10: -3684969457041670127
+      pip_fence_11: 5157526602348301256
+      pip_fence_12: 5804159595810460193
+      pip_fence_13: 6816316610329037356
+      pip_fence_14: -1657760808057403275
+      pip_fence_15: -1222196397325305020
+      pip_fence_2: -7415127898359242968
+      pip_fence_3: 8496716038206864172
+      pip_fence_4: -4650975449650910169
+      pip_fence_5: -691711692285252834
+      pip_fence_6: 395929005975965857
+      pip_fence_7: -3085262222366850755
+      pip_fence_8: 5814590854968546619
+      pip_fence_9: 7401063643403129043
       pip_flowers_0: 6444053016369086767
       pip_flowers_1: -8971533625387506020
       pip_flowers_2: -3983654418145499070
@@ -23609,24 +23711,8 @@ TextureImporter:
       pipoya_tileset_163: 2336352739340132737
       pipoya_tileset_17: 5377662058618166515
       pipoya_tileset_173: -1393018602290956736
-      pipoya_tileset_176: 1328647249289696396
-      pipoya_tileset_177: 5131135406718713648
-      pipoya_tileset_178: -7415127898359242968
-      pipoya_tileset_179: 8496716038206864172
       pipoya_tileset_18: 8603877895483817634
-      pipoya_tileset_180: -4650975449650910169
-      pipoya_tileset_181: -691711692285252834
-      pipoya_tileset_182: 395929005975965857
-      pipoya_tileset_183: -3085262222366850755
-      pipoya_tileset_184: 5814590854968546619
-      pipoya_tileset_185: 7401063643403129043
-      pipoya_tileset_186: -3684969457041670127
-      pipoya_tileset_187: 5157526602348301256
-      pipoya_tileset_188: 5804159595810460193
-      pipoya_tileset_189: 6816316610329037356
       pipoya_tileset_19: -4815077411181461554
-      pipoya_tileset_190: -1657760808057403275
-      pipoya_tileset_191: -1222196397325305020
       pipoya_tileset_192: -7017668141611745654
       pipoya_tileset_193: -366298302207397571
       pipoya_tileset_194: -2185911195802701988
