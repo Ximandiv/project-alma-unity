@@ -5825,15 +5825,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_228
+      name: pip_inbox
       rect:
         serializedVersion: 2
         x: 128
         y: 3328
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5842,28 +5842,6 @@ TextureImporter:
       bones: []
       spriteID: 01cf8eca080b8c84fb0ca126f936b089
       internalID: -372740868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pipoya_tileset_229
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 3328
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd4a3125e2489cf4ca97a8566db2c101
-      internalID: -1233133336
       vertices: []
       indices: 
       edges: []
@@ -5935,15 +5913,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_234
+      name: pip_small_sign
       rect:
         serializedVersion: 2
         x: 64
         y: 3296
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1875}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5957,15 +5935,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_235
+      name: pip_sign
       rect:
         serializedVersion: 2
         x: 96
         y: 3296
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -5979,15 +5957,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_236
+      name: pip_wide_sign
       rect:
         serializedVersion: 2
         x: 128
         y: 3296
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -6001,15 +5979,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_237
+      name: pip_directional_sign
       rect:
         serializedVersion: 2
         x: 160
         y: 3296
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0625}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -24165,6 +24143,11 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       kioso: -1401087422
+      pip_directional_sign: -1782484102
+      pip_inbox: -372740868
+      pip_sign: -1096358434
+      pip_small_sign: 467168769
+      pip_wide_sign: -885060820
       pipoya_tileset_0: -5255510228046030789
       pipoya_tileset_1: -6214943281287129530
       pipoya_tileset_10: 2197467330336778225
@@ -24373,16 +24356,11 @@ TextureImporter:
       pipoya_tileset_225: 396211022764286500
       pipoya_tileset_226: -1339116232696671848
       pipoya_tileset_227: 7594980649417006959
-      pipoya_tileset_228: -372740868
       pipoya_tileset_229: -1233133336
       pipoya_tileset_23: 6130782824755097107
       pipoya_tileset_231: 2019097317
       pipoya_tileset_232: 1956672808
       pipoya_tileset_233: 2070387109
-      pipoya_tileset_234: 467168769
-      pipoya_tileset_235: -1096358434
-      pipoya_tileset_236: -885060820
-      pipoya_tileset_237: -1782484102
       pipoya_tileset_238: -351970415
       pipoya_tileset_239: -1238475356
       pipoya_tileset_24: -3720507143237594
