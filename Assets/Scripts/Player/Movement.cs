@@ -19,7 +19,7 @@ namespace Scripts.Player
         [SerializeField] private CharacterStatus status;
         [SerializeField] private CharacterSpeed speed;
         [SerializeField] private GameStatus gameStatus;
-        [SerializeField] private Rigidbody2D rb;
+        [SerializeField] private Rigidbody2D rbCollider;
 
         private Vector2 movement = Vector2.zero;
         private float minMovementValue = 0.01f;
@@ -35,7 +35,7 @@ namespace Scripts.Player
             status = newStatus;
             speed = newSpeed;
             gameStatus = newGameStatus;
-            rb = newRb;
+            rbCollider = newRb;
         }
 
         #region Unity API Methods
@@ -53,7 +53,7 @@ namespace Scripts.Player
             if ( canMove() )
                 move();
             else
-                rb.linearVelocity = Vector2.zero;
+                rbCollider.linearVelocity = Vector2.zero;
 
             if(isMoving())
                 onMoving?.Invoke(true);
@@ -75,7 +75,7 @@ namespace Scripts.Player
         {
             Vector2 normalizedMovement = movement.normalized;
 
-            rb.linearVelocity = normalizedMovement * speed.GetCurrentSpeed();
+            rbCollider.linearVelocity = normalizedMovement * speed.GetCurrentSpeed();
 
             if (normalizedMovement.x < 0)
                 onFlip?.Invoke(true);

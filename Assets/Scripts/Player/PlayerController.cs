@@ -15,7 +15,8 @@ namespace Scripts.Player
         private Transform flashlight;
         private AnimationController animController;
         private Movement movement;
-        private Rigidbody2D rb;
+        private Rigidbody2D rbCollider;
+        private Rigidbody2D rbHitbox;
         private CharacterStatus status;
         private CharacterSpeed speed;
 
@@ -29,7 +30,8 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
+            rbCollider = GetComponent<Rigidbody2D>();
+            rbHitbox = transform.GetChild(1).GetComponent<Rigidbody2D>();
             status = GetComponent<CharacterStatus>();
             speed = GetComponent<CharacterSpeed>();
 
@@ -45,7 +47,7 @@ namespace Scripts.Player
         {
             movement = GetComponent<Movement>();
             if (movement is not null)
-                movement.Initialize(status, speed, gameStatus, rb);
+                movement.Initialize(status, speed, gameStatus, rbCollider);
 
             if (animController is not null && movement is not null)
             {
