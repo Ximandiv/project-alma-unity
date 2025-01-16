@@ -1,25 +1,28 @@
 using Scripts.Scriptables;
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+namespace Scripts.Player
 {
-    private SpriteRenderer sprite;
-    private Animator animator;
-
-    public void SetMovement(bool isMoving)
+    public class AnimationController : MonoBehaviour
     {
-        if(isMoving)
-            animator.SetBool("isMoving", true);
-        else
-            animator.SetBool("isMoving", false);
-    }
+        private SpriteRenderer sprite;
+        private Animator animator;
 
-    public void Flip(bool isRotating)
-        => sprite.flipX = isRotating;
+        public void SetMovement(bool isMoving)
+        {
+            if (isMoving)
+                animator.SetBool("isMoving", true);
+            else
+                animator.SetBool("isMoving", false);
+        }
 
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
+        public void Flip(bool isRotating)
+            => sprite.flipX = isRotating;
+
+        private void Awake()
+        {
+            animator = GetComponent<Animator>();
+            sprite = GetComponent<SpriteRenderer>();
+        }
     }
 }
