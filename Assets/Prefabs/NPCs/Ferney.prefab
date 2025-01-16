@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 447264311570105081}
   m_Layer: 0
   m_Name: Ferney
-  m_TagString: NPC
+  m_TagString: TroubledNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 6995832745907559466}
   m_Layer: 0
   m_Name: Scripts
-  m_TagString: NPC
+  m_TagString: TroubledNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

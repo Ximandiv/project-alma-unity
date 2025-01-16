@@ -13,7 +13,7 @@ namespace Scripts.UI
         {
             if (NPCVariablesAreIncorrect()) return;
 
-            attemptsText.text = $"{NPCAttempts.GetCurrentAttempts()} / {NPCAttempts.GetMaxAttempts()}";
+            attemptsText.text = $"Intento: {NPCAttempts.GetCurrentAttempts()} / {NPCAttempts.GetMaxAttempts()}";
         }
 
         #endregion
@@ -31,10 +31,8 @@ namespace Scripts.UI
 
         private void Awake()
         {
-            NPCAttempts = GameObject.FindWithTag("NPC").GetComponent<NPCAttemptsController>();
-            attemptsText = GameObject.FindWithTag("Attempts").transform
-                .Find("AttemptsText")
-                .GetComponent<TextMeshProUGUI>();
+            NPCAttempts = GameObject.FindWithTag("TroubledNPC").GetComponent<NPCAttemptsController>();
+            attemptsText = gameObject.transform.Find("AttemptsText").GetComponent<TextMeshProUGUI>();
         }
 
         private void Start()
