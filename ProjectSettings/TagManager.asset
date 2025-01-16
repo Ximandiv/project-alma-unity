@@ -10,6 +10,7 @@ TagManager:
   - Lantern
   - WeaponLight
   - Enemy
+  - Flashlight
   layers:
   - Default
   - TransparentFX
