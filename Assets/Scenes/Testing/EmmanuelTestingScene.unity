@@ -913,6 +913,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WeaponLight
       objectReference: {fileID: 0}
+    - target: {fileID: 1869540166588663707, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869540166588663707, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869540166588663707, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1792022310720702622, guid: 0121b52a55490fc46920aa33a6daf933, type: 3}
     - target: {fileID: 2082384582989012206, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -952,6 +964,18 @@ PrefabInstance:
     - target: {fileID: 2082384582989012206, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335556439786274853, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
+      propertyPath: m_Name
+      value: Logic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476133554577208570, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476133554577208570, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
+      propertyPath: m_TagString
+      value: Flashlight
       objectReference: {fileID: 0}
     - target: {fileID: 5207358657028293116, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
       propertyPath: m_Name
