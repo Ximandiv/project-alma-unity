@@ -11,26 +11,34 @@ namespace Scripts.Player
     {
         #region Private Variables
 
+        public delegate void OnMovement(bool isMoving);
+        public event OnMovement onMoving;
+        public delegate void OnFlip(bool isRotating);
+        public event OnFlip onFlip;
+
         [SerializeField] private CharacterStatus status;
-        [SerializeField] private GameStatus gameStatus;
         [SerializeField] private CharacterSpeed speed;
+        [SerializeField] private GameStatus gameStatus;
         [SerializeField] private Rigidbody2D rb;
 
         private Vector2 movement = Vector2.zero;
-        private Vector2 lastDirection;
         private float minMovementValue = 0.01f;
 
         #endregion
 
-        #region Unity API Methods
-
-        private void Awake()
+        public void Initialize(
+            CharacterStatus newStatus,
+            CharacterSpeed newSpeed,
+            GameStatus newGameStatus,
+            Rigidbody2D newRb)
         {
-            status = GetComponent<CharacterStatus>();
-            speed = GetComponent<CharacterSpeed>();
-            
-            rb = GetComponent<Rigidbody2D>();
+            status = newStatus;
+            speed = newSpeed;
+            gameStatus = newGameStatus;
+            rb = newRb;
         }
+
+        #region Unity API Methods
 
         private void Update()
         {
@@ -46,6 +54,11 @@ namespace Scripts.Player
                 move();
             else
                 rb.linearVelocity = Vector2.zero;
+
+            if(isMoving())
+                onMoving?.Invoke(true);
+            else
+                onMoving?.Invoke(false);
         }
 
         #endregion
@@ -64,18 +77,10 @@ namespace Scripts.Player
 
             rb.linearVelocity = normalizedMovement * speed.GetCurrentSpeed();
 
-            if ( isMoving() )
-            {
-                lastDirection = normalizedMovement;
-                rotate();
-            }
-        }
-
-        private void rotate()
-        {
-            float angle = Mathf.Atan2(lastDirection.y, lastDirection.x) * Mathf.Rad2Deg;
-
-            rb.rotation = angle;
+            if (normalizedMovement.x < 0)
+                onFlip?.Invoke(true);
+            else if(normalizedMovement.x > 0)
+                onFlip?.Invoke(false);
         }
 
         private bool isMoving() => (movement.normalized).sqrMagnitude > minMovementValue;
