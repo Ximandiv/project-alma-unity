@@ -9,7 +9,10 @@ rural que busca desmitificar la salud mental en un pueblo.
 - Cualquier IDE (Visual Studio 2022, Visual Studio Code, Rider, ...)
 
 ## Assets de Terceros
-
+- Stardew Farm Game Assets | Top-Down Pixel Art - nogardev https://nogardev.itch.io/stardew-farm-pixel-art-top-down-assets
+- The fantasy tileset - Ventiratore https://ventilatore.itch.io/the-fantasy-tileset
+- Pipoya Free RPG Tileset 32x32 Pixel - Pipoya https://pipoya.itch.io/pipoya-rpg-tileset-32x32
+- Harmonious Seasons - Foxtale Studios https://foxtalestudios.itch.io/harmonious-seasons
 
 ## Integrantes
 - Emmanuel Vanegas Carmona (ximandiv@gmail.com)
