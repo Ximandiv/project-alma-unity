@@ -1,5 +1,4 @@
 using UnityEngine;
-using Scripts.Scriptables;
 using TMPro;
 
 namespace Scripts.UI
@@ -10,7 +9,7 @@ namespace Scripts.UI
 
         public void OpenPowerupPopup(string powerupName, string powerupDescription)
         {
-            gameStatus.Pause();
+            GameEvents.Instance.Pause();
             powerupPopup.SetActive(true);
             displayedName.text = powerupName;
             displayedDescription.text = powerupDescription;
@@ -19,7 +18,7 @@ namespace Scripts.UI
 
         public void ClosePowerupPopup()
         {
-            gameStatus.Unpause();
+            GameEvents.Instance.Unpause();
             powerupPopup.SetActive(false);
         }
 
@@ -27,7 +26,6 @@ namespace Scripts.UI
 
         #region Private Variables
 
-        [SerializeField] private GameStatus gameStatus;
         [SerializeField] private GameObject powerupPopup;
         [SerializeField] private TextMeshProUGUI displayedName;
         [SerializeField] private TextMeshProUGUI displayedDescription;

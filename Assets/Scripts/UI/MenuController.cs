@@ -1,5 +1,4 @@
 using UnityEngine;
-using Scripts.Scriptables;
 using System;
 
 namespace Scripts.UI
@@ -23,14 +22,14 @@ namespace Scripts.UI
         public void OpenMenu()
         {  
             OnMenuOpen?.Invoke();
-            gameStatus.Pause();
+            GameEvents.Instance.Pause();
             pausedPanel.SetActive(true);
         }
 
         public void CloseMenu()
         {  
             OnMenuClosed?.Invoke();
-            gameStatus.Unpause();
+            GameEvents.Instance.Unpause();
             pausedPanel.SetActive(false);
         }
 
@@ -38,7 +37,6 @@ namespace Scripts.UI
         
         #region Private Variables
 
-        [SerializeField] private GameStatus gameStatus;
         [SerializeField] private GameObject pausedPanel;
         [SerializeField] private KeyCode keyToMenu = KeyCode.Escape;
 

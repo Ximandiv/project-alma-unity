@@ -23,7 +23,7 @@ namespace Scripts.UI
             currentActors = dialogue.Actors;
             activeMessageIndex = 0;
 
-            gameStatus.Pause();
+            GameEvents.Instance.Pause();
             isActive = true;
             dialoguePanel.SetActive(true);
             menuController.OnMenuOpen += handleMenuOpen;
@@ -65,9 +65,6 @@ namespace Scripts.UI
         #endregion
 
         #region Private Variables
-
-        [Header("GameStatus")]
-        [SerializeField] private GameStatus gameStatus;
 
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI displayedName;
@@ -150,7 +147,7 @@ namespace Scripts.UI
 
         private void closeDialogue()
         {
-            gameStatus.Unpause();
+            GameEvents.Instance.Unpause();
             isActive = false;
             dialoguePanel.SetActive(false);
             menuController.OnMenuOpen -= handleMenuOpen;
