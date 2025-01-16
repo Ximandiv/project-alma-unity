@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
+  storyStatus: {fileID: 11400000, guid: a000dd7a67a48384b9a19d583445c1a9, type: 2}
   visualCue: {fileID: 4910591338747204797}
   keyToTalk: 101
-  storyStatus: {fileID: 11400000, guid: a000dd7a67a48384b9a19d583445c1a9, type: 2}
   dialogueMappings:
   - storyStage: 0
     dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
