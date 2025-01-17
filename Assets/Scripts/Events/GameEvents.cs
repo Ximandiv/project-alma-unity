@@ -9,39 +9,45 @@ namespace Scripts.Events
         #region Public Variables
 
         public static GameEvents Instance;
-        public event Action OnPause;
-        public event Action OnUnpause;
-        public event Action OnMenuToggle;
-        public event Action<Dialogue> OnDialogueStart;
+        public event Action OnPaused;
+        public event Action OnUnpaused;
+        public event Action OnMenuToggled;
+        public event Action<Dialogue> OnDialogueStarted;
         public event Action<Dialogue> OnDialogueEnded;
+        public event Action<String, String> OnPowerupObtained;
 
         #endregion
 
         #region Public Methods
         
-        public void Pause()
+        public void Paused()
         {
-            OnPause?.Invoke();
+            OnPaused?.Invoke();
         }
 
-        public void Unpause()
+        public void Unpaused()
         {
-            OnUnpause?.Invoke();
+            OnUnpaused?.Invoke();
         }
 
-        public void MenuToggle()
+        public void MenuToggled()
         {
-            OnMenuToggle?.Invoke();
+            OnMenuToggled?.Invoke();
         }
 
-        public void DialogueStart(Dialogue dialogue)
+        public void DialogueStarted(Dialogue dialogue)
         {
-            OnDialogueStart?.Invoke(dialogue);
+            OnDialogueStarted?.Invoke(dialogue);
         }
 
         public void DialogueEnded(Dialogue dialogue)
         {
             OnDialogueEnded?.Invoke(dialogue);
+        }
+
+        public void PowerupObtained(string powerupName, string powerupDescription)
+        {
+            OnPowerupObtained?.Invoke(powerupName, powerupDescription);
         }
         
         #endregion

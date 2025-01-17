@@ -911,7 +911,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 638987615}
         m_TargetAssemblyTypeName: Scripts.UI.PowerupPopupController, Assembly-CSharp
-        m_MethodName: TestButton
+        m_MethodName: CollectPowerup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

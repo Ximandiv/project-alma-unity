@@ -15,26 +15,26 @@ namespace Scripts.Events
 
         private void Start()
         {
-            GameEvents.Instance.OnPause += handlePause;
-            GameEvents.Instance.OnUnpause += handleUnpause;
+            GameEvents.Instance.OnPaused += handlePaused;
+            GameEvents.Instance.OnUnpaused += handleUnpaused;
         }
 
         private void OnDestroy()
         {
-            GameEvents.Instance.OnPause -= handlePause;
-            GameEvents.Instance.OnUnpause -= handleUnpause;
+            GameEvents.Instance.OnPaused -= handlePaused;
+            GameEvents.Instance.OnUnpaused -= handleUnpaused;
         }
 
         #endregion
 
         #region Private Methods
 
-        private void handlePause()
+        private void handlePaused()
         {
             gameStatus.Pause();
         }
 
-        private void handleUnpause()
+        private void handleUnpaused()
         {
             gameStatus.Unpause();
         }

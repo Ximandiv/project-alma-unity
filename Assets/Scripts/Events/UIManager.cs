@@ -10,6 +10,7 @@ namespace Scripts.Events
 
         private MenuController menuController;
         private DialogueController dialogueController;
+        private PowerupPopupController powerupPopupController;
 
         #endregion
 
@@ -19,25 +20,28 @@ namespace Scripts.Events
         {
             menuController = FindFirstObjectByType<MenuController>();
             dialogueController = FindFirstObjectByType<DialogueController>();
+            powerupPopupController = FindFirstObjectByType<PowerupPopupController>();
         }
 
         private void Start()
         {
-            GameEvents.Instance.OnMenuToggle += handleMenuToggle;
-            GameEvents.Instance.OnDialogueStart += handleDialogueStart;
+            GameEvents.Instance.OnMenuToggled += handleMenuToggled;
+            GameEvents.Instance.OnDialogueStarted += handleDialogueStarted;
+            GameEvents.Instance.OnPowerupObtained += handlePowerupObtained;
         }
 
         private void OnDestroy()
         {
-            GameEvents.Instance.OnMenuToggle -= handleMenuToggle;
-            GameEvents.Instance.OnDialogueStart -= handleDialogueStart;
+            GameEvents.Instance.OnMenuToggled -= handleMenuToggled;
+            GameEvents.Instance.OnDialogueStarted -= handleDialogueStarted;
+            GameEvents.Instance.OnPowerupObtained -= handlePowerupObtained;
         }
 
         #endregion
 
         #region Private Methods
 
-        private void handleMenuToggle()
+        private void handleMenuToggled()
         {
             if(!menuController.IsOpen)
             {
@@ -51,9 +55,14 @@ namespace Scripts.Events
             }
         }
 
-        private void handleDialogueStart(Dialogue dialogue)
+        private void handleDialogueStarted(Dialogue dialogue)
         {
             dialogueController.OpenDialogue(dialogue);
+        }
+
+        private void handlePowerupObtained(string powerupName, string powerupDescription)
+        {
+            powerupPopupController.OpenPowerupPopup(powerupName, powerupDescription);
         }
 
         #endregion

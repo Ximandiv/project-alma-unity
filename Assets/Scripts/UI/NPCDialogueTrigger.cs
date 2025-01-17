@@ -21,7 +21,7 @@ namespace Scripts.UI
                 }
                 else
                 {
-                    GameEvents.Instance.DialogueStart(currentDialogue);
+                    GameEvents.Instance.DialogueStarted(currentDialogue);
                 } 
             }
             else

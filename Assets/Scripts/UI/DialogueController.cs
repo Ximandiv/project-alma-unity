@@ -23,7 +23,7 @@ namespace Scripts.UI
             currentActors = dialogue.Actors;
             activeMessageIndex = 0;
 
-            GameEvents.Instance.Pause();
+            GameEvents.Instance.Paused();
             IsOpen = true;
             dialoguePanel.SetActive(true);
 
@@ -155,7 +155,7 @@ namespace Scripts.UI
 
         private void closeDialogue()
         {
-            GameEvents.Instance.Unpause();
+            GameEvents.Instance.Unpaused();
             IsOpen = false;
             dialoguePanel.SetActive(false);
         }

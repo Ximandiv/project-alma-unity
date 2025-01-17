@@ -12,7 +12,7 @@ namespace Scripts.UI
             {
                 currentDialogue = dialogues[dialogueCount]; //Selects the appropriate dialogue
 
-                GameEvents.Instance.DialogueStart(currentDialogue);
+                GameEvents.Instance.DialogueStarted(currentDialogue);
 
                 dialogueCount++;
             }

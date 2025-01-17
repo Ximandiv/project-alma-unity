@@ -14,21 +14,21 @@ namespace Scripts.UI
 
         public void OpenMenu()
         {  
-            GameEvents.Instance.Pause();
+            GameEvents.Instance.Paused();
             pausedPanel.SetActive(true);
             IsOpen = true;
         }
 
         public void CloseMenu()
         {  
-            GameEvents.Instance.Unpause();
+            GameEvents.Instance.Unpaused();
             pausedPanel.SetActive(false);
             IsOpen = false;
         }
 
         public void ToggleMenu()
         {
-            GameEvents.Instance.MenuToggle();
+            GameEvents.Instance.MenuToggled();
         }
 
         public void QuitApp()
@@ -57,7 +57,7 @@ namespace Scripts.UI
         {
             if (Input.GetKeyDown(keyToMenu))
             {
-                GameEvents.Instance.MenuToggle();
+                GameEvents.Instance.MenuToggled();
             }
 
         }
