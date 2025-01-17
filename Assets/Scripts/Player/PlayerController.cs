@@ -4,21 +4,34 @@ using UnityEngine;
 
 namespace Scripts.Player
 {
-    [RequireComponent(typeof(AnimationController))]
     [RequireComponent(typeof(Movement))]
+    [RequireComponent(typeof(Health))]
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(CharacterHitpoints))]
     [RequireComponent(typeof(CharacterStatus))]
     [RequireComponent(typeof(CharacterSpeed))]
     public class PlayerController : MonoBehaviour
     {
+        #region Private Variables
+
         [SerializeField] private GameStatus gameStatus;
+
         private Transform flashlight;
+
         private AnimationController animController;
+        private Health health;
         private Movement movement;
-        private Rigidbody2D rbCollider;
-        private Rigidbody2D rbHitbox;
+
+        private CharacterHitpoints hitpoints;
         private CharacterStatus status;
         private CharacterSpeed speed;
+
+        private Rigidbody2D rbCollider;
+        private Rigidbody2D rbHitbox;
+
+        #endregion
+
+        #region Public Variables
 
         [ContextMenu("Enter Combat")]
         public void EnterCombat()
@@ -28,22 +41,36 @@ namespace Scripts.Player
         public void ExitCombat()
             => flashlight.gameObject.SetActive(false);
 
+        #endregion
+
+        #region Unity API Methods
+
         private void Awake()
         {
             rbCollider = GetComponent<Rigidbody2D>();
             rbHitbox = transform.GetChild(1).GetComponent<Rigidbody2D>();
             status = GetComponent<CharacterStatus>();
             speed = GetComponent<CharacterSpeed>();
-
+            hitpoints = GetComponent<CharacterHitpoints>();
+            health = GetComponent<Health>();
             animController = transform.GetChild(0).GetComponent<AnimationController>();
 
-            InitializeMovement();
+            health.Initialize(this, hitpoints, status);
+
+            initializeMovement();
+
+            status.SetIsDead(false);
+            status.SetCanMoveStatus(true);
 
             flashlight = GameObject.FindWithTag("Flashlight").transform;
             flashlight.gameObject.SetActive(false);
         }
 
-        private void InitializeMovement()
+        #endregion
+
+        #region Private Methods
+
+        private void initializeMovement()
         {
             movement = GetComponent<Movement>();
             if (movement is not null)
@@ -55,5 +82,7 @@ namespace Scripts.Player
                 movement.onFlip += animController.Flip;
             }
         }
+
+        #endregion
     }
 }
