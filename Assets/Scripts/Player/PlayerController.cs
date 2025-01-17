@@ -1,6 +1,5 @@
 using Scripts.Common;
 using Scripts.Scriptables;
-using Scripts.UI;
 using UnityEngine;
 
 namespace Scripts.Player
