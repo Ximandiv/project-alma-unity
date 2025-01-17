@@ -1,14 +1,11 @@
 using UnityEngine;
-using System;
 
 namespace Scripts.UI
 {
     public class MenuController : MonoBehaviour
     {
         #region Public Variables
-
-        public event Action OnMenuOpen;
-        public event Action OnMenuClosed;
+        public bool IsOpen;
 
         #endregion
         
@@ -21,16 +18,16 @@ namespace Scripts.UI
 
         public void OpenMenu()
         {  
-            OnMenuOpen?.Invoke();
             GameEvents.Instance.Pause();
             pausedPanel.SetActive(true);
+            IsOpen = true;
         }
 
         public void CloseMenu()
         {  
-            OnMenuClosed?.Invoke();
             GameEvents.Instance.Unpause();
             pausedPanel.SetActive(false);
+            IsOpen = false;
         }
 
         #endregion
@@ -47,14 +44,14 @@ namespace Scripts.UI
         private void Awake()
         {
             pausedPanel.SetActive(false);
+            IsOpen = false;
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(keyToMenu))
             {
-                if (!pausedPanel.activeSelf) OpenMenu();
-                else CloseMenu();
+                GameEvents.Instance.MenuToggle();
             }
 
         }

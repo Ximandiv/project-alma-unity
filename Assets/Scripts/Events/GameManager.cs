@@ -1,6 +1,5 @@
 using UnityEngine;
 using Scripts.Scriptables;
-using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,24 +16,14 @@ public class GameManager : MonoBehaviour
         GameEvents.Instance.OnPause -= handlePause;
         GameEvents.Instance.OnUnpause -= handleUnpause;
     }
-    
-        private void handlePause()
+
+    private void handlePause()
     {
-        gameStatus.PauseCount++;
-            if (gameStatus.PauseCount == 1)
-            {
-                gameStatus.IsPaused = true;
-                Time.timeScale = 0f;
-            }
+        gameStatus.Pause();
     }
 
     private void handleUnpause()
     {
-        gameStatus.PauseCount--;
-            if (gameStatus.PauseCount == 0)
-            {
-                gameStatus.IsPaused = false;
-                Time.timeScale = 1f;
-            }
+        gameStatus.Unpause();
     }
 }

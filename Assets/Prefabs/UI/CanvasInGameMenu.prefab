@@ -56,8 +56,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 2
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97372618d927cfd46878a25806db76af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
+  IsOpen: 0
   pausedPanel: {fileID: 8886532349979741219}
   keyToMenu: 27
 --- !u!1 &518435447994546184
@@ -907,9 +907,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 271717350289243439}
-        m_TargetAssemblyTypeName: Scripts.UI.MenuController, Assembly-CSharp
-        m_MethodName: OpenMenu
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
+        m_MethodName: MenuToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1692,9 +1692,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 271717350289243439}
-        m_TargetAssemblyTypeName: Scripts.UI.MenuController, Assembly-CSharp
-        m_MethodName: CloseMenu
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameEvents, Assembly-CSharp
+        m_MethodName: MenuToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -6,6 +6,7 @@ public class GameEvents : MonoBehaviour
     public static GameEvents Instance;
     public event Action OnPause;
     public event Action OnUnpause;
+    public event Action OnMenuToggle;
 
      private void Awake()
     {
@@ -27,5 +28,10 @@ public class GameEvents : MonoBehaviour
     public void Unpause()
     {
         OnUnpause?.Invoke();
+    }
+
+    public void MenuToggle()
+    {
+        OnMenuToggle?.Invoke();
     }
 }
