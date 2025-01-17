@@ -1,37 +1,65 @@
 using UnityEngine;
 using System;
+using Scripts.Scriptables;
 
-public class GameEvents : MonoBehaviour
+namespace Scripts.Events
 {
-    public static GameEvents Instance;
-    public event Action OnPause;
-    public event Action OnUnpause;
-    public event Action OnMenuToggle;
-
-     private void Awake()
+    public class GameEvents : MonoBehaviour
     {
-        if (Instance != null && Instance != this)
+        #region Public Variables
+
+        public static GameEvents Instance;
+        public event Action OnPause;
+        public event Action OnUnpause;
+        public event Action OnMenuToggle;
+        public event Action<Dialogue> OnDialogueStart;
+        public event Action<Dialogue> OnDialogueEnded;
+
+        #endregion
+
+        #region Public Methods
+        
+        public void Pause()
         {
-            Destroy(gameObject);
+            OnPause?.Invoke();
         }
-        else
+
+        public void Unpause()
         {
-            Instance = this;
+            OnUnpause?.Invoke();
         }
-    }
-    
-    public void Pause()
-    {
-        OnPause?.Invoke();
-    }
 
-    public void Unpause()
-    {
-        OnUnpause?.Invoke();
-    }
+        public void MenuToggle()
+        {
+            OnMenuToggle?.Invoke();
+        }
 
-    public void MenuToggle()
-    {
-        OnMenuToggle?.Invoke();
+        public void DialogueStart(Dialogue dialogue)
+        {
+            OnDialogueStart?.Invoke(dialogue);
+        }
+
+        public void DialogueEnded(Dialogue dialogue)
+        {
+            OnDialogueEnded?.Invoke(dialogue);
+        }
+        
+        #endregion
+
+        #region Unity API Methods
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+        }
+
+        #endregion
     }
 }

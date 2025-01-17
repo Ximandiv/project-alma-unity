@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Scripts.Scriptables;
-using System;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
@@ -10,8 +10,7 @@ namespace Scripts.UI
     {
         #region Public Variables
 
-        public event Action<Dialogue> OnDialogueEnded;
-        public bool IsOpen;
+        [HideInInspector] public bool IsOpen;
 
         #endregion
         
@@ -39,7 +38,7 @@ namespace Scripts.UI
                 displayMessage();
             } else
             {
-                OnDialogueEnded?.Invoke(currentDialogue);
+                GameEvents.Instance.DialogueEnded(currentDialogue);
 
                 if (currentDialogue.IsLevelStarter)
                 {

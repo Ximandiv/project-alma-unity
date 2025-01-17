@@ -1,29 +1,44 @@
 using UnityEngine;
 using Scripts.Scriptables;
 
-public class GameManager : MonoBehaviour
+namespace Scripts.Events
 {
-    [SerializeField] private GameStatus gameStatus;
-
-    private void Start()
+    public class GameManager : MonoBehaviour
     {
-        GameEvents.Instance.OnPause += handlePause;
-        GameEvents.Instance.OnUnpause += handleUnpause;
-    }
+        #region Private Variables
+        
+        [SerializeField] private GameStatus gameStatus;
 
-    private void OnDestroy()
-    {
-        GameEvents.Instance.OnPause -= handlePause;
-        GameEvents.Instance.OnUnpause -= handleUnpause;
-    }
+        #endregion
 
-    private void handlePause()
-    {
-        gameStatus.Pause();
-    }
+        #region Unity API Methods
 
-    private void handleUnpause()
-    {
-        gameStatus.Unpause();
+        private void Start()
+        {
+            GameEvents.Instance.OnPause += handlePause;
+            GameEvents.Instance.OnUnpause += handleUnpause;
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.Instance.OnPause -= handlePause;
+            GameEvents.Instance.OnUnpause -= handleUnpause;
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void handlePause()
+        {
+            gameStatus.Pause();
+        }
+
+        private void handleUnpause()
+        {
+            gameStatus.Unpause();
+        }
+
+        #endregion
     }
 }

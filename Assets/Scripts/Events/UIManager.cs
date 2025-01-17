@@ -1,39 +1,61 @@
+using Scripts.Scriptables;
 using Scripts.UI;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+namespace Scripts.Events
 {
-    private MenuController menuController;
-    private DialogueController dialogueController;
-
-    private void Awake()
+    public class UIManager : MonoBehaviour
     {
-        menuController = FindFirstObjectByType<MenuController>();
-        dialogueController = FindFirstObjectByType<DialogueController>();
-    }
+        #region Private Variables
 
-    private void Start()
-    {
-        GameEvents.Instance.OnMenuToggle += handleMenuToggle;
-    }
+        private MenuController menuController;
+        private DialogueController dialogueController;
 
-    private void OnDisable()
-    {
-        GameEvents.Instance.OnMenuToggle -= handleMenuToggle;
-    }
+        #endregion
 
-    private void handleMenuToggle()
-    {
-        if(!menuController.IsOpen)
+        #region Unity API Methods
+
+        private void Awake()
         {
-            menuController.OpenMenu();
-            if (dialogueController.IsOpen) dialogueController.DisableDialogue();
+            menuController = FindFirstObjectByType<MenuController>();
+            dialogueController = FindFirstObjectByType<DialogueController>();
         }
-        else 
-        {
-            menuController.CloseMenu();
-            if (dialogueController.IsOpen) dialogueController.EnableDialogue();
-        }
-    }
 
+        private void Start()
+        {
+            GameEvents.Instance.OnMenuToggle += handleMenuToggle;
+            GameEvents.Instance.OnDialogueStart += handleDialogueStart;
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.Instance.OnMenuToggle -= handleMenuToggle;
+            GameEvents.Instance.OnDialogueStart -= handleDialogueStart;
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void handleMenuToggle()
+        {
+            if(!menuController.IsOpen)
+            {
+                menuController.OpenMenu();
+                if (dialogueController.IsOpen) dialogueController.DisableDialogue();
+            }
+            else 
+            {
+                menuController.CloseMenu();
+                if (dialogueController.IsOpen) dialogueController.EnableDialogue();
+            }
+        }
+
+        private void handleDialogueStart(Dialogue dialogue)
+        {
+            dialogueController.OpenDialogue(dialogue);
+        }
+
+        #endregion
+    }
 }

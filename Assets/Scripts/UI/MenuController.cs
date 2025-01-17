@@ -1,20 +1,16 @@
 using UnityEngine;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
     public class MenuController : MonoBehaviour
     {
         #region Public Variables
-        public bool IsOpen;
+        [HideInInspector] public bool IsOpen;
 
         #endregion
         
         #region Public Methods
-
-        public void QuitApp()
-        {
-            Application.Quit();
-        }
 
         public void OpenMenu()
         {  
@@ -28,6 +24,16 @@ namespace Scripts.UI
             GameEvents.Instance.Unpause();
             pausedPanel.SetActive(false);
             IsOpen = false;
+        }
+
+        public void ToggleMenu()
+        {
+            GameEvents.Instance.MenuToggle();
+        }
+
+        public void QuitApp()
+        {
+            Application.Quit();
         }
 
         #endregion

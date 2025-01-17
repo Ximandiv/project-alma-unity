@@ -1,4 +1,5 @@
 using UnityEngine;
+using Scripts.Events;
 using TMPro;
 
 namespace Scripts.UI
