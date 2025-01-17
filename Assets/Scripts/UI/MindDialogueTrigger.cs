@@ -1,5 +1,6 @@
 using UnityEngine;
 using Scripts.Scriptables;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
@@ -11,7 +12,7 @@ namespace Scripts.UI
             {
                 currentDialogue = dialogues[dialogueCount]; //Selects the appropriate dialogue
 
-                dialogueController.OpenDialogue(currentDialogue);
+                GameEvents.Instance.DialogueStarted(currentDialogue);
 
                 dialogueCount++;
             }
@@ -24,11 +25,5 @@ namespace Scripts.UI
         [SerializeField] private Dialogue[] dialogues;
         private Dialogue currentDialogue;
         private int dialogueCount = 0;
-        private DialogueController dialogueController;
-
-        private void Awake()
-        {
-            dialogueController = FindFirstObjectByType<DialogueController>();
-        }
     }
 }
