@@ -10,6 +10,7 @@ TagManager:
   - WeaponLight
   - Enemy
   - Flashlight
+  - HitpointsUi
   layers:
   - Default
   - TransparentFX

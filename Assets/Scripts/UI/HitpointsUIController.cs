@@ -1,4 +1,5 @@
 using Scripts.Common;
+using Scripts.Player;
 using System;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ namespace Scripts.UI
             float maxWidth = healthBar.sizeDelta.x;
 
             // Calculate the current life ratio and set the width of the fill bar
-            float fillWidth = maxWidth * ((float)characterHitpoints.GetCurrentHitpoints() / (float)characterHitpoints.GetMaxHitPoints());
+            float fillWidth = maxWidth * ((float)characterHitpoints.GetCurrentHitPoints() / (float)characterHitpoints.GetMaxHitPoints());
 
             // Update the size of the fill bar
             fillBar.sizeDelta = new Vector2(fillWidth, fillBar.sizeDelta.y);
@@ -44,9 +45,13 @@ namespace Scripts.UI
 
         private void Awake()
         {
-            characterHitpoints = GameObject.FindWithTag("Player").GetComponent<CharacterHitpoints>();
+            var player = GameObject.FindWithTag("Player").transform;
+
+            characterHitpoints = player.gameObject.GetComponent<CharacterHitpoints>();
             healthBar = gameObject.transform.Find("HealthBar").GetComponent<RectTransform>();
             fillBar = gameObject.transform.Find("HealthBar/Fill").GetComponent<RectTransform>();
+
+            player.gameObject.GetComponent<Health>().OnPlayerDamaged += UpdateHealthBar;
         }
 
         private void Start()
@@ -56,7 +61,7 @@ namespace Scripts.UI
 
         private bool characterVariablesAreIncorrect()
         {
-            return (characterHitpoints.GetCurrentHitpoints() < 0 || characterHitpoints.GetCurrentHitpoints() > characterHitpoints.GetMaxHitPoints() || characterHitpoints.GetCurrentHitpoints() < characterHitpoints.GetMinHitPoints());
+            return (characterHitpoints.GetCurrentHitPoints() < 0 || characterHitpoints.GetCurrentHitPoints() > characterHitpoints.GetMaxHitPoints() || characterHitpoints.GetCurrentHitPoints() < characterHitpoints.GetMinHitPoints());
         }
 
         #endregion

@@ -44,7 +44,7 @@ namespace Scripts.Common
 
         #region Get Methods
 
-        public int GetCurrentHitpoints() => characterStats.CurrentHitPoints;
+        public int GetCurrentHitPoints() => characterStats.CurrentHitPoints;
         public int GetMaxHitPoints() => characterStats.MaxHitPoints;
         public int GetMinHitPoints() => characterStats.MinHitPoints;
 

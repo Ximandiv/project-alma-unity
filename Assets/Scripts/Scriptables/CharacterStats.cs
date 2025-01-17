@@ -66,5 +66,12 @@ namespace Scripts.Scriptables
             get { return canMove; }
             set { canMove = value; }
         }
+
+        [SerializeField] private bool isDead = false;
+        public bool IsDead
+        {
+            get { return isDead; }
+            set { isDead = value; }
+        }
     }
 }
