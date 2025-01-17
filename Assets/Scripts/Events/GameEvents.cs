@@ -11,6 +11,9 @@ namespace Scripts.Events
         public static GameEvents Instance;
         public event Action OnPaused;
         public event Action OnUnpaused;
+        public event Action OnTimerEnded;
+        public event Action OnLevelStarted;
+        public event Action OnLevelBeaten;
         public event Action OnMenuToggled;
         public event Action<Dialogue> OnDialogueStarted;
         public event Action<Dialogue> OnDialogueEnded;
@@ -28,6 +31,21 @@ namespace Scripts.Events
         public void Unpaused()
         {
             OnUnpaused?.Invoke();
+        }
+
+        public void TimerEnded()
+        {
+            OnTimerEnded?.Invoke();
+        }
+
+        public void LevelStarted()
+        {
+            OnLevelStarted?.Invoke();
+        }
+
+        public void LevelBeaten()
+        {
+            OnLevelBeaten?.Invoke();
         }
 
         public void MenuToggled()

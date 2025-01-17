@@ -16,11 +16,13 @@ namespace Scripts.Events
         private void Start()
         {
             GameEvents.Instance.OnDialogueEnded += handleDialogueEnded;
+            GameEvents.Instance.OnLevelBeaten += handleLevelBeaten;
         }
 
         private void OnDestroy()
         {
             GameEvents.Instance.OnDialogueEnded -= handleDialogueEnded;
+            GameEvents.Instance.OnLevelBeaten += handleLevelBeaten;
         }
 
         #endregion
@@ -35,6 +37,11 @@ namespace Scripts.Events
                 storyStatus.ChangeStage(newStage);
             }
         
+        }
+
+        private void handleLevelBeaten()
+        {
+            storyStatus.ChangeStage(StoryStatus.StoryStage.Conclusion);
         }
 
         #endregion

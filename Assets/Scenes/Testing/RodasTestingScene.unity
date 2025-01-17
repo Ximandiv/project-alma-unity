@@ -176,17 +176,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a9d0eefe85a8f546af4cd3fe632dc22, type: 3}
---- !u!114 &103352724 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6995832745907559466, guid: 6a9d0eefe85a8f546af4cd3fe632dc22, type: 3}
-  m_PrefabInstance: {fileID: 103352722}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5dbc7b75a171964989e8304d0578c87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &233951167
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Power-up
+  m_text: Test
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -563,17 +552,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &638987615 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4100788755891323331, guid: 5c2f1e6d31aa98645b54e3653823bc68, type: 3}
-  m_PrefabInstance: {fileID: 1969283106}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed0f9ae482aae0408b636e7a472b424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &755530877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -693,6 +671,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006465247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6891496289619069282, guid: 497296d7fcf2c1b438b553c2170c81fe, type: 3}
+  m_PrefabInstance: {fileID: 9146335639524905229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a3f5286b564c24a9f6ac3a35816604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1726142712
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,9 +765,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103352724}
-        m_TargetAssemblyTypeName: Scripts.UI.MindDialogueTrigger, Assembly-CSharp
-        m_MethodName: StartDialogue
+      - m_Target: {fileID: 1006465247}
+        m_TargetAssemblyTypeName: Scripts.Events.GameEvents, Assembly-CSharp
+        m_MethodName: TimerEnded
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -909,9 +898,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 638987615}
-        m_TargetAssemblyTypeName: Scripts.UI.PowerupPopupController, Assembly-CSharp
-        m_MethodName: CollectPowerup
+      - m_Target: {fileID: 1006465247}
+        m_TargetAssemblyTypeName: Scripts.Events.GameEvents, Assembly-CSharp
+        m_MethodName: LevelBeaten
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

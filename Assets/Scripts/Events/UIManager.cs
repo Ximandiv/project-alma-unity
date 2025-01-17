@@ -10,6 +10,7 @@ namespace Scripts.Events
 
         private MenuController menuController;
         private DialogueController dialogueController;
+        private MindDialogueTrigger mindDialogueTrigger;
         private PowerupPopupController powerupPopupController;
 
         #endregion
@@ -21,6 +22,7 @@ namespace Scripts.Events
             menuController = FindFirstObjectByType<MenuController>();
             dialogueController = FindFirstObjectByType<DialogueController>();
             powerupPopupController = FindFirstObjectByType<PowerupPopupController>();
+            mindDialogueTrigger = FindFirstObjectByType<MindDialogueTrigger>();
         }
 
         private void Start()
@@ -28,6 +30,8 @@ namespace Scripts.Events
             GameEvents.Instance.OnMenuToggled += handleMenuToggled;
             GameEvents.Instance.OnDialogueStarted += handleDialogueStarted;
             GameEvents.Instance.OnPowerupObtained += handlePowerupObtained;
+            GameEvents.Instance.OnLevelStarted += handleLevelStarted;
+            GameEvents.Instance.OnTimerEnded += handleTimerEnded;
         }
 
         private void OnDestroy()
@@ -35,6 +39,8 @@ namespace Scripts.Events
             GameEvents.Instance.OnMenuToggled -= handleMenuToggled;
             GameEvents.Instance.OnDialogueStarted -= handleDialogueStarted;
             GameEvents.Instance.OnPowerupObtained -= handlePowerupObtained;
+            GameEvents.Instance.OnLevelStarted -= handleLevelStarted;
+            GameEvents.Instance.OnTimerEnded -= handleTimerEnded;
         }
 
         #endregion
@@ -63,6 +69,16 @@ namespace Scripts.Events
         private void handlePowerupObtained(string powerupName, string powerupDescription)
         {
             powerupPopupController.OpenPowerupPopup(powerupName, powerupDescription);
+        }
+
+        private void handleLevelStarted()
+        {
+            mindDialogueTrigger.StartDialogue();
+        }
+
+        private void handleTimerEnded()
+        {
+            mindDialogueTrigger.StartDialogue();
         }
 
         #endregion
