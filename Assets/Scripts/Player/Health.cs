@@ -33,7 +33,7 @@ namespace Scripts.Player
 
         public void Damage(int dmgAmount = -1)
         {
-            if (dmgAmount > 0)
+            if (dmgAmount >= 0)
                 return;
 
             hitpoints.SumCurrentHitpoints(dmgAmount);
@@ -45,7 +45,7 @@ namespace Scripts.Player
 
         public void Regenerate(int healAmount = 1)
         {
-            if (healAmount < 0)
+            if (healAmount <= 0)
                 return;
 
             hitpoints.SumCurrentHitpoints(healAmount);
