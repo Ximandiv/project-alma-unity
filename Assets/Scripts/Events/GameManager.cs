@@ -1,5 +1,6 @@
 using UnityEngine;
 using Scripts.Scriptables;
+using UnityEngine.SceneManagement;
 
 namespace Scripts.Events
 {
@@ -17,12 +18,14 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
+            GameEvents.Instance.OnGameOver += handleGameOver;
         }
 
         private void OnDestroy()
         {
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
+            GameEvents.Instance.OnGameOver -= handleGameOver;
         }
 
         #endregion
@@ -37,6 +40,11 @@ namespace Scripts.Events
         private void handleUnpaused()
         {
             gameStatus.Unpause();
+        }
+
+        private void handleGameOver()
+        {
+            SceneManager.LoadScene("Credits");
         }
 
         #endregion
