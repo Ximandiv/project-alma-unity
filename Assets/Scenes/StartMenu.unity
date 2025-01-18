@@ -382,54 +382,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasStartMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 1980790525460033747, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980790525460033747, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980790525460033747, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980790525460033747, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2051498080120429049, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2051498080120429049, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2051498080120429049, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2051498080120429049, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3832495397732624306, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3832495397732624306, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3832495397732624306, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3832495397732624306, guid: 5646cafe043436c448f97290f60ebc27, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
