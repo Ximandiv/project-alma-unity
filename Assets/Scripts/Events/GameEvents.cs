@@ -18,6 +18,7 @@ namespace Scripts.Events
         public event Action<Dialogue> OnDialogueStarted;
         public event Action<Dialogue> OnDialogueEnded;
         public event Action<String, String> OnPowerupObtained;
+        public event Action OnGameOver;
 
         #endregion
 
@@ -66,6 +67,11 @@ namespace Scripts.Events
         public void PowerupObtained(string powerupName, string powerupDescription)
         {
             OnPowerupObtained?.Invoke(powerupName, powerupDescription);
+        }
+
+        public void GameOver()
+        {
+            OnGameOver?.Invoke();
         }
         
         #endregion
