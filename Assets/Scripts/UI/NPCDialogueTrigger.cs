@@ -1,6 +1,7 @@
 using UnityEngine;
 using Scripts.Scriptables;
 using System.Collections.Generic;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
@@ -20,8 +21,7 @@ namespace Scripts.UI
                 }
                 else
                 {
-                    dialogueController.OnDialogueEnded += handleDialogueEnded;
-                    dialogueController.OpenDialogue(currentDialogue);
+                    GameEvents.Instance.DialogueStarted(currentDialogue);
                 } 
             }
             else
@@ -39,7 +39,6 @@ namespace Scripts.UI
         [SerializeField] private GameObject visualCue;
         [SerializeField] private KeyCode keyToTalk = KeyCode.E;
         [SerializeField] private DialogueMapping[] dialogueMappings;
-        private DialogueController dialogueController;
         private bool playerInRange;
         private Dictionary<StoryStatus.StoryStage, Dialogue> dialogues;
         private Dialogue currentDialogue;
@@ -52,7 +51,6 @@ namespace Scripts.UI
         {
             playerInRange = false;
             visualCue.SetActive(false);
-            dialogueController = FindFirstObjectByType<DialogueController>();
             
             dialogues = new Dictionary<StoryStatus.StoryStage, Dialogue>();
             
@@ -97,20 +95,5 @@ namespace Scripts.UI
 
         #endregion
 
-        #region Private Methods
-
-        private void handleDialogueEnded(Dialogue endedDialogue)
-        {
-            dialogueController.OnDialogueEnded -= handleDialogueEnded;
-
-            //If the dialogue is a leading dialogue, changes the stage to the appropriate one.
-            if (storyStatus.LeadingDialogues.TryGetValue(endedDialogue, out StoryStatus.StoryStage newStage))
-            {
-                storyStatus.ChangeStage(newStage);
-            }
-        
-        }
-
-        #endregion
     }
 }

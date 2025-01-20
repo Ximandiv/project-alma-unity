@@ -41,6 +41,8 @@ namespace Scripts.Scriptables
         
         private void OnEnable()
         {
+            CurrentStage = StoryStage.Start;
+            
             LeadingDialogues = new Dictionary<Dialogue, StoryStatus.StoryStage>();
 
             //Uses mapping created in the editor to fill the dictionary.

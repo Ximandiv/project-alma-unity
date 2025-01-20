@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Scripts.Scriptables;
-using System;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
@@ -10,7 +10,7 @@ namespace Scripts.UI
     {
         #region Public Variables
 
-        public event Action<Dialogue> OnDialogueEnded;
+        [HideInInspector] public bool IsOpen;
 
         #endregion
         
@@ -21,26 +21,24 @@ namespace Scripts.UI
             currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
-            activeMessageID = 0;
+            activeMessageIndex = 0;
 
-            gameStatus.Pause();
-            isActive = true;
+            GameEvents.Instance.Paused();
+            IsOpen = true;
             dialoguePanel.SetActive(true);
-            menuController.OnMenuOpen += handleMenuOpen;
-            menuController.OnMenuClosed += handleMenuClosed;
 
             displayMessage();
         }
 
         public void NextMessage()
         {
-            activeMessageID++;
-            if (activeMessageID < currentMessages.Length) 
+            activeMessageIndex++;
+            if (activeMessageIndex < currentMessages.Length) 
             {
                 displayMessage();
             } else
             {
-                OnDialogueEnded?.Invoke(currentDialogue);
+                GameEvents.Instance.DialogueEnded(currentDialogue);
 
                 if (currentDialogue.IsLevelStarter)
                 {
@@ -62,12 +60,23 @@ namespace Scripts.UI
             closeDialogue();
         }
 
+        public void DisableDialogue()
+        {
+            continueButton.interactable = false;
+            helpButton.interactable = false;
+            afterButton.interactable = false;
+        }
+
+        public void EnableDialogue()
+        {
+            continueButton.interactable = true;
+            helpButton.interactable = true;
+            afterButton.interactable = true;
+        }
+
         #endregion
 
         #region Private Variables
-
-        [Header("GameStatus")]
-        [SerializeField] private GameStatus gameStatus;
 
         [Header("UI Elements")]
         [SerializeField] private TextMeshProUGUI displayedName;
@@ -84,12 +93,10 @@ namespace Scripts.UI
         [Header("Choices Dialogue")]
         [SerializeField] private Dialogue choicesDialogue;
         
-        private MenuController menuController;
         private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
-        private int activeMessageID;
-        private static bool isActive;
+        private int activeMessageIndex;
 
         #endregion
 
@@ -97,19 +104,17 @@ namespace Scripts.UI
 
         private void Awake()
         {
-            isActive = false;
+            IsOpen = false;
 
             continueButton.gameObject.SetActive(true);
             helpButton.gameObject.SetActive(false);
             afterButton.gameObject.SetActive(false);
             dialoguePanel.SetActive(false);
-
-            menuController = FindFirstObjectByType<MenuController>();
         }
         
         private void Update()
         {
-            if (Input.GetKeyDown(keyToNext) &&  isActive == true && continueButton.interactable)
+            if (Input.GetKeyDown(keyToNext) &&  IsOpen == true && continueButton.interactable)
             {
                 continueButton.onClick.Invoke();
             }
@@ -121,7 +126,7 @@ namespace Scripts.UI
 
         private void displayMessage()
         {
-            Dialogue.Message activeMessage = currentMessages[activeMessageID];
+            Dialogue.Message activeMessage = currentMessages[activeMessageIndex];
 
             //Uses the TMP's Typewriter to type the text from active message
             Typewriter typewriter = displayedText.GetComponent<Typewriter>();
@@ -139,7 +144,7 @@ namespace Scripts.UI
             currentDialogue = dialogue;
             currentMessages = dialogue.Messages;
             currentActors = dialogue.Actors;
-            activeMessageID = 0;
+            activeMessageIndex = 0;
 
             continueButton.gameObject.SetActive(false);
             helpButton.gameObject.SetActive(true);
@@ -150,25 +155,9 @@ namespace Scripts.UI
 
         private void closeDialogue()
         {
-            gameStatus.Unpause();
-            isActive = false;
+            GameEvents.Instance.Unpaused();
+            IsOpen = false;
             dialoguePanel.SetActive(false);
-            menuController.OnMenuOpen -= handleMenuOpen;
-            menuController.OnMenuClosed -= handleMenuClosed;
-        }
-
-        private void handleMenuOpen()
-        {
-            continueButton.interactable = false;
-            helpButton.interactable = false;
-            afterButton.interactable = false;
-        }
-
-        private void handleMenuClosed()
-        {
-            continueButton.interactable = true;
-            helpButton.interactable = true;
-            afterButton.interactable = true;
         }
 
         #endregion

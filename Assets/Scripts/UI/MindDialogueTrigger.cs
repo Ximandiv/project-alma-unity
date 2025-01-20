@@ -1,5 +1,6 @@
 using UnityEngine;
 using Scripts.Scriptables;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
@@ -11,14 +12,13 @@ namespace Scripts.UI
             {
                 currentDialogue = dialogues[dialogueCount]; //Selects the appropriate dialogue
 
-                FindFirstObjectByType<DialogueController>().OpenDialogue(currentDialogue);
+                GameEvents.Instance.DialogueStarted(currentDialogue);
 
                 dialogueCount++;
             }
             else
             {
                 Debug.LogWarning("There is no more dialogue.");
-
             }
         }
 

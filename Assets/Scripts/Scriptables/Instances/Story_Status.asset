@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4b0f4c530b99540b9e1e23f6e635c3, type: 3}
   m_Name: Story_Status
   m_EditorClassIdentifier: 
-  CurrentStage: 0
+  CurrentStage: 4
   leadingDialoguesMappings:
   - storyStage: 1
     dialogue: {fileID: 11400000, guid: 5856bc17d19ca154a9a8079a9f578caf, type: 2}
