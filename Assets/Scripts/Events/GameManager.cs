@@ -18,7 +18,6 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
-            GameEvents.Instance.OnGameOver += handleGameOver;
             GameEvents.Instance.OnGameWon += handleGameWon;
         }
 
@@ -26,7 +25,6 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
-            GameEvents.Instance.OnGameOver -= handleGameOver;
             GameEvents.Instance.OnGameWon -= handleGameWon;
         }
 
@@ -42,11 +40,6 @@ namespace Scripts.Events
         private void handleUnpaused()
         {
             gameStatus.Unpause();
-        }
-
-        private void handleGameOver()
-        {
-            //Show game over screen.
         }
 
         private void handleGameWon()

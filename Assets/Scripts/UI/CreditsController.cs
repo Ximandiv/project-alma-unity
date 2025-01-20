@@ -21,7 +21,7 @@ namespace Scripts.UI
 
         #region Unity API Methods
 
-        private void Start()
+        private void Awake()
         {
             creditsPanel = gameObject.transform.Find("CreditsPanel").gameObject;
             panelRectTransform = creditsPanel.GetComponent<RectTransform>();
