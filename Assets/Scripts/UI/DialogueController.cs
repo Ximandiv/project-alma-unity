@@ -32,10 +32,17 @@ namespace Scripts.UI
 
         public void NextMessage()
         {
+            if (typeWriter.IsTyping)
+            {
+                typeWriter.CompleteType();
+                return;
+            }
+
             activeMessageIndex++;
             if (activeMessageIndex < currentMessages.Length) 
             {
                 displayMessage();
+                GameEvents.Instance.DialogueAdvance(currentDialogue,activeMessageIndex);
             } else
             {
                 GameEvents.Instance.DialogueEnded(currentDialogue);
@@ -93,6 +100,8 @@ namespace Scripts.UI
         [Header("Choices Dialogue")]
         [SerializeField] private Dialogue choicesDialogue;
         
+
+        private Typewriter typeWriter;
         private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
@@ -104,6 +113,7 @@ namespace Scripts.UI
 
         private void Awake()
         {
+            typeWriter = displayedText.GetComponent<Typewriter>();
             IsOpen = false;
 
             continueButton.gameObject.SetActive(true);
@@ -129,8 +139,7 @@ namespace Scripts.UI
             Dialogue.Message activeMessage = currentMessages[activeMessageIndex];
 
             //Uses the TMP's Typewriter to type the text from active message
-            Typewriter typewriter = displayedText.GetComponent<Typewriter>();
-            typewriter.SetText(activeMessage.MessageText);
+            typeWriter.SetText(activeMessage.MessageText);
 
             Dialogue.Actor activeActor = currentActors[activeMessage.ActorId];
 

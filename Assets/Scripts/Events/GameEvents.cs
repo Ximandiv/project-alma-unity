@@ -16,6 +16,7 @@ namespace Scripts.Events
         public event Action OnLevelBeaten;
         public event Action OnMenuToggled;
         public event Action<Dialogue> OnDialogueStarted;
+        public event Action<Dialogue, int> OnDialogueAdvance;
         public event Action<Dialogue> OnDialogueEnded;
         public event Action<String, String> OnPowerupObtained;
         public event Action OnGameOver;
@@ -57,6 +58,10 @@ namespace Scripts.Events
         public void DialogueStarted(Dialogue dialogue)
         {
             OnDialogueStarted?.Invoke(dialogue);
+        }
+        public void DialogueAdvance(Dialogue dialogue, int index)
+        {
+            OnDialogueAdvance?.Invoke(dialogue,index);
         }
 
         public void DialogueEnded(Dialogue dialogue)

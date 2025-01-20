@@ -12,6 +12,10 @@ namespace Scripts.UI
 
         private int currentCharacterIndex;
 
+        private bool isTyping = false;
+        public bool IsTyping {
+            get { return isTyping; }
+        }
         private void Awake()
         {
             textBox = GetComponent<TMP_Text>();
@@ -26,18 +30,27 @@ namespace Scripts.UI
             StartCoroutine(TypeText());
         }
 
+        public void CompleteType()
+        {
+            isTyping = false;
+            textBox.maxVisibleCharacters = textBox.textInfo.characterCount;
+        }
+
         private IEnumerator TypeText()
         {
+            isTyping = true;
             yield return null; //Wait for a frame for the text to be processed by TMP_Text
 
             TMP_TextInfo textInfo = textBox.textInfo;
 
-            while (currentCharacterIndex < textInfo.characterCount)
+            while (currentCharacterIndex < textInfo.characterCount && IsTyping)
             {
                 textBox.maxVisibleCharacters++;
                 yield return new WaitForSeconds(textDelay);
                 currentCharacterIndex++;
             }
+
+            isTyping = false;
         }
     }
 }
