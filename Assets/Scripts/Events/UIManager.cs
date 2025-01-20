@@ -12,6 +12,7 @@ namespace Scripts.Events
         private DialogueController dialogueController;
         private MindDialogueTrigger mindDialogueTrigger;
         private PowerupPopupController powerupPopupController;
+        private GameOverUIController gameOverUIController;
 
         #endregion
 
@@ -23,6 +24,7 @@ namespace Scripts.Events
             dialogueController = FindFirstObjectByType<DialogueController>();
             powerupPopupController = FindFirstObjectByType<PowerupPopupController>();
             mindDialogueTrigger = FindFirstObjectByType<MindDialogueTrigger>();
+            gameOverUIController = FindFirstObjectByType<GameOverUIController>();
         }
 
         private void Start()
@@ -32,6 +34,7 @@ namespace Scripts.Events
             GameEvents.Instance.OnPowerupObtained += handlePowerupObtained;
             GameEvents.Instance.OnLevelStarted += handleLevelStarted;
             GameEvents.Instance.OnTimerEnded += handleTimerEnded;
+            GameEvents.Instance.OnGameOver += handleGameOver;
         }
 
         private void OnDestroy()
@@ -41,6 +44,7 @@ namespace Scripts.Events
             GameEvents.Instance.OnPowerupObtained -= handlePowerupObtained;
             GameEvents.Instance.OnLevelStarted -= handleLevelStarted;
             GameEvents.Instance.OnTimerEnded -= handleTimerEnded;
+            GameEvents.Instance.OnGameOver -= handleGameOver;
         }
 
         #endregion
@@ -79,6 +83,11 @@ namespace Scripts.Events
         private void handleTimerEnded()
         {
             mindDialogueTrigger.StartDialogue();
+        }
+
+        private void handleGameOver()
+        {
+            gameOverUIController.OpenGameOverScreen();
         }
 
         #endregion
