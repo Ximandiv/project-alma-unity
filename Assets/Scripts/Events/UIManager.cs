@@ -13,6 +13,7 @@ namespace Scripts.Events
         private MindDialogueTrigger mindDialogueTrigger;
         private PowerupPopupController powerupPopupController;
         private GameOverUIController gameOverUIController;
+        private InGameHelpController inGameHelpController;
 
         #endregion
 
@@ -25,10 +26,12 @@ namespace Scripts.Events
             powerupPopupController = FindFirstObjectByType<PowerupPopupController>();
             mindDialogueTrigger = FindFirstObjectByType<MindDialogueTrigger>();
             gameOverUIController = FindFirstObjectByType<GameOverUIController>();
+            inGameHelpController = FindFirstObjectByType<InGameHelpController>();
         }
 
         private void Start()
         {
+            GameEvents.Instance.OnGameStarted += handleGameStarted;
             GameEvents.Instance.OnMenuToggled += handleMenuToggled;
             GameEvents.Instance.OnDialogueStarted += handleDialogueStarted;
             GameEvents.Instance.OnPowerupObtained += handlePowerupObtained;
@@ -39,6 +42,7 @@ namespace Scripts.Events
 
         private void OnDestroy()
         {
+            GameEvents.Instance.OnGameStarted -= handleGameStarted;
             GameEvents.Instance.OnMenuToggled -= handleMenuToggled;
             GameEvents.Instance.OnDialogueStarted -= handleDialogueStarted;
             GameEvents.Instance.OnPowerupObtained -= handlePowerupObtained;
@@ -51,6 +55,11 @@ namespace Scripts.Events
 
         #region Private Methods
 
+        private void handleGameStarted()
+        {
+            inGameHelpController.OpenVillageHelp();
+        }
+        
         private void handleMenuToggled()
         {
             if(!menuController.IsOpen)
@@ -78,6 +87,7 @@ namespace Scripts.Events
         private void handleLevelStarted()
         {
             mindDialogueTrigger.StartDialogue();
+            inGameHelpController.OpenMindHelp();
         }
 
         private void handleTimerEnded()

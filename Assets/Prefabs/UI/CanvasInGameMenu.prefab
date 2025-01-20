@@ -1073,7 +1073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2848690399526089146}
   m_Layer: 5
-  m_Name: InGameHelp
+  m_Name: Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a39dc62a950d143b1fdd307aa6eb0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitingTime: 3
+  gameOverScreenTime: 3
 --- !u!1 &3241272076138213436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,7 +2497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 0}
+  m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4239073510528565447
@@ -3236,6 +3236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8511014873809867063}
+  - component: {fileID: 4756832322168674275}
   m_Layer: 5
   m_Name: InGameHelpController
   m_TagString: Untagged
@@ -3264,6 +3265,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4756832322168674275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5887042156791595674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f08e6fa529197c346aa2ab1e331933e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  helpTime: 6
 --- !u!1 &6233142975026756948
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,7 +4060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 0}
+  m_AnchoredPosition: {x: 300, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8102597623931888878

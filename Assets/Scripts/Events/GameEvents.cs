@@ -9,6 +9,7 @@ namespace Scripts.Events
         #region Public Variables
 
         public static GameEvents Instance;
+        public event Action OnGameStarted;
         public event Action OnPaused;
         public event Action OnUnpaused;
         public event Action OnTimerEnded;
@@ -25,6 +26,10 @@ namespace Scripts.Events
 
         #region Public Methods
         
+        public void GameStarted()
+        {
+            OnGameStarted?.Invoke();
+        }
         public void Paused()
         {
             OnPaused?.Invoke();
