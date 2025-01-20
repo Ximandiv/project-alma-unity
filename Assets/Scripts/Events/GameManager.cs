@@ -19,6 +19,7 @@ namespace Scripts.Events
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
             GameEvents.Instance.OnGameOver += handleGameOver;
+            GameEvents.Instance.OnGameWon += handleGameWon;
         }
 
         private void OnDestroy()
@@ -26,6 +27,7 @@ namespace Scripts.Events
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
             GameEvents.Instance.OnGameOver -= handleGameOver;
+            GameEvents.Instance.OnGameWon -= handleGameWon;
         }
 
         #endregion
@@ -43,6 +45,11 @@ namespace Scripts.Events
         }
 
         private void handleGameOver()
+        {
+            //Show game over screen.
+        }
+
+        private void handleGameWon()
         {
             SceneManager.LoadScene("Credits");
         }
