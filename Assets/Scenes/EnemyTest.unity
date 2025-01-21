@@ -717,14 +717,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 267331776}
     - target: {fileID: 2982597905421310577, guid: 71ea7174f1d8aad49944ff9eda55787c, type: 3}
-      propertyPath: sfxVolumen
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982597905421310577, guid: 71ea7174f1d8aad49944ff9eda55787c, type: 3}
-      propertyPath: enemySpawners.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982597905421310577, guid: 71ea7174f1d8aad49944ff9eda55787c, type: 3}
       propertyPath: 'enemySpawners.Array.data[0]'
       value: 
       objectReference: {fileID: 1925584845}
@@ -801,14 +793,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
-    - target: {fileID: 4226134388594807683, guid: 7d1eaeff74490ee4792fc1ce3ec1b64c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226134388594807683, guid: 7d1eaeff74490ee4792fc1ce3ec1b64c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4526931373037690714, guid: 7d1eaeff74490ee4792fc1ce3ec1b64c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -853,18 +837,6 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 1493522776}
-    - target: {fileID: 7749464405133915061, guid: 7d1eaeff74490ee4792fc1ce3ec1b64c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7749464405133915061, guid: 7d1eaeff74490ee4792fc1ce3ec1b64c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8549487044134429592, guid: 7d1eaeff74490ee4792fc1ce3ec1b64c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -878,14 +850,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 356444346437036453, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 356444346437036453, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2082384582989012206, guid: 8586a14caeea28f469cb2f682b8c1d7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1005,10 +969,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 505007976224369615, guid: eed717e119303d347957dfa5a2853c6f, type: 3}
-      propertyPath: backgroundMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 654137a1cf37bae4d8e32e014e321c4f, type: 3}
     - target: {fileID: 1946706095279229843, guid: eed717e119303d347957dfa5a2853c6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
