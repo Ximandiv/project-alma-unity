@@ -1,3 +1,4 @@
+using Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace Scripts.Enemy
         [Header("Configuration")]
         public float moveSpeed = 3f;
         public int maxHealth = 10;
-        public int damageToPlayer = 1;
+        public int damageToPlayer = -1;
         public float attackRange = 10f;
         public string color;
         public float distanceToApproach = 5f;
@@ -100,12 +101,11 @@ namespace Scripts.Enemy
 
             animator.SetTrigger("attack");
 
-            // Aquí asume que el jugador tiene un script llamado "PlayerHealth"
-            //PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            //if (playerHealth != null)
-            //{
-            //    playerHealth.TakeDamage(damageToPlayer);
-            //}
+            Health playerHealth = player.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.Damage(damageToPlayer);
+            }
 
             yield return new WaitForSeconds(1f);
 

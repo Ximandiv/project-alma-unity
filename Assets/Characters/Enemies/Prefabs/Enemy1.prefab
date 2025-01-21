@@ -223,9 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   maxHealth: 10
-  damageToPlayer: 1
+  damageToPlayer: -1
   attackRange: 2
-  color: Azul
+  color: blue
   distanceToApproach: 5
   circleDuration: 5
   circleRadius: 2

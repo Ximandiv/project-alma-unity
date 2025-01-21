@@ -798,8 +798,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Alma Project G3
-  metroPackageVersion: 
+  metroPackageName: AlmaProjectG3
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -807,7 +807,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Alma Project G3
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Alma Project G3
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

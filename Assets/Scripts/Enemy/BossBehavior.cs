@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Scripts.Player;
 
 public class BossBehavior : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class BossBehavior : MonoBehaviour
     [Header("Attack damage variables")]
     public LayerMask playerLayer;      
     public float attackRange = 1.5f;  
-    public int CloseAttackDamage = 2;  
+    public int CloseAttackDamage = -2;  
 
     [Header("Audio Clips")]
     public AudioClip deadClip;
@@ -125,11 +126,11 @@ public class BossBehavior : MonoBehaviour
 
         foreach (Collider2D player in hitPlayer)
         {
-            //PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            //if (playerHealth != null)
-            //{
-            //    playerHealth.TakeDamage(CloseAttackDamage);
-            //}
+            Health playerHealth = player.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.Damage(CloseAttackDamage);
+            }
         }
 
         nextCloseAttackTime = Time.time + closeAttackCooldown;
