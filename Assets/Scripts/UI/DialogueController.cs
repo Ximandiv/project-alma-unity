@@ -32,6 +32,7 @@ namespace Scripts.UI
 
         public void NextMessage()
         {
+            AudioManager.Instance.PlaySFX(clickClip, clickSFXVolumen);
             activeMessageIndex++;
             if (activeMessageIndex < currentMessages.Length) 
             {
@@ -53,6 +54,7 @@ namespace Scripts.UI
 
         public void CloseChoices()
         {
+            AudioManager.Instance.PlaySFX(clickClip, clickSFXVolumen);
             continueButton.gameObject.SetActive(true);
             helpButton.gameObject.SetActive(false);
             afterButton.gameObject.SetActive(false);
@@ -97,6 +99,10 @@ namespace Scripts.UI
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
         private int activeMessageIndex;
+
+        [Header("SFX")]
+        [SerializeField] private AudioClip clickClip;
+        [SerializeField] private float clickSFXVolumen = 1f;
 
         #endregion
 
