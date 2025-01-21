@@ -48,7 +48,11 @@ MonoBehaviour:
   spawnTimer: 10
   spawnDistance: 5
   player: {fileID: 0}
-  enemySpawners: []
+  enemySpawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bossClip: {fileID: 8300000, guid: e6eaf149f82d4514cab0666fd7cb662e, type: 3}
-  sfxVolumen: 0
+  sfxVolumen: 0.4
   timerText: {fileID: 0}
