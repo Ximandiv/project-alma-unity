@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Flashlight
   - HitpointsUi
+  - Boss
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -32,8 +34,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player
+  - Props
   - 
   - 
   - 
