@@ -1,13 +1,13 @@
+using Scripts.Events;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Scripts.UI
 {
     public class StartMenuController : MonoBehaviour
     {
-        public void ChangeScene(string sceneName)
+        public void ChoosePlay()
         {
-            SceneManager.LoadScene(sceneName);
+            GameEvents.Instance.SceneChanged("Village"); //Poner el nombre que va a tener la escena de la vereda
         }
 
         public void QuitApp()

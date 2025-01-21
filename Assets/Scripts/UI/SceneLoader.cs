@@ -6,7 +6,6 @@ public class SceneLoader : MonoBehaviour
 {
     public void changeScene(string sceneName)
     {
-        gameObject.SetActive(true);
         StartCoroutine(sceneTransition(sceneName));
     }
 
@@ -15,7 +14,7 @@ public class SceneLoader : MonoBehaviour
 
     private void Awake()
     {
-        //gameObject.SetActive(false);
+        transition.gameObject.SetActive(true);
     }
 
     private IEnumerator sceneTransition(string sceneName)

@@ -9,15 +9,22 @@ namespace Scripts.Events
         #region Private Variables
         
         [SerializeField] private GameStatus gameStatus;
+        private SceneLoader sceneLoader;
 
         #endregion
 
         #region Unity API Methods
 
+        private void Awake()
+        {
+            sceneLoader = FindFirstObjectByType<SceneLoader>();
+        }
+
         private void Start()
         {
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
+            GameEvents.Instance.OnSceneChanged += handleSceneChanged;
             GameEvents.Instance.OnGameWon += handleGameWon;
         }
 
@@ -25,6 +32,7 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
+            GameEvents.Instance.OnSceneChanged -= handleSceneChanged;
             GameEvents.Instance.OnGameWon -= handleGameWon;
         }
 
@@ -42,9 +50,14 @@ namespace Scripts.Events
             gameStatus.Unpause();
         }
 
+        private void handleSceneChanged(string sceneName)
+        {
+            sceneLoader.changeScene(sceneName);
+        }
+
         private void handleGameWon()
         {
-            SceneManager.LoadScene("Credits");
+            GameEvents.Instance.SceneChanged("Credits");
         }
 
         #endregion

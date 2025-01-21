@@ -60,6 +60,12 @@ namespace Scripts.UI
             closeDialogue();
         }
 
+        public void ChooseHelp()
+        {
+            CloseChoices();
+            GameEvents.Instance.SceneChanged("NPCMindLevel"); //Poner el nombre que va a tener la escena de la mente.
+        }
+
         public void DisableDialogue()
         {
             continueButton.interactable = false;

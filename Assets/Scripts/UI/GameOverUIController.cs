@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using Scripts.Events;
 
 namespace Scripts.UI
@@ -27,7 +26,7 @@ namespace Scripts.UI
     {
         yield return new WaitForSeconds(gameOverScreenTime);
         GameEvents.Instance.Unpaused();
-        SceneManager.LoadScene("StartMenu");
+        GameEvents.Instance.SceneChanged("StartMenu");
     }
 
 }

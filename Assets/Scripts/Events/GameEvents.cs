@@ -12,6 +12,7 @@ namespace Scripts.Events
         public event Action OnGameStarted;
         public event Action OnPaused;
         public event Action OnUnpaused;
+        public event Action<string> OnSceneChanged;
         public event Action OnTimerEnded;
         public event Action OnLevelStarted;
         public event Action OnLevelBeaten;
@@ -38,6 +39,11 @@ namespace Scripts.Events
         public void Unpaused()
         {
             OnUnpaused?.Invoke();
+        }
+
+        public void SceneChanged(string sceneName)
+        {
+            OnSceneChanged?.Invoke(sceneName);
         }
 
         public void TimerEnded()
