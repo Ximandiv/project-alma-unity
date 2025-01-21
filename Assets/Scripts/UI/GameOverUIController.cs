@@ -3,28 +3,32 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using Scripts.Events;
 
-public class GameOverUIController : MonoBehaviour
+namespace Scripts.UI
+{
+    public class GameOverUIController : MonoBehaviour
 {
     public void OpenGameOverScreen()
     {
         GameEvents.Instance.Paused();
-        GameOverPanel.SetActive(true);
+        gameOverPanel.SetActive(true);
         StartCoroutine(returnToMenu());
     }
     
-    [SerializeField] private float waitingTime = 3f;
-    private GameObject GameOverPanel;
+    [SerializeField] private float gameOverScreenTime = 3f;
+    private GameObject gameOverPanel;
 
     private void Awake()
     {
-        GameOverPanel = gameObject.transform.Find("GameOverPanel").gameObject;
+        gameOverPanel = gameObject.transform.Find("GameOverPanel").gameObject;
+        gameOverPanel.SetActive(false);
     }
 
     private IEnumerator returnToMenu()
     {
-        yield return new WaitForSeconds(waitingTime);
+        yield return new WaitForSeconds(gameOverScreenTime);
         GameEvents.Instance.Unpaused();
         SceneManager.LoadScene("StartMenu");
     }
 
+}
 }
