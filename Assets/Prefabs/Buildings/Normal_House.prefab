@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a7a02a9bcfcf8409542931a6f32755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
   onInteractionPerformed:
     m_PersistentCalls:
       m_Calls: []

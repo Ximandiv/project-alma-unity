@@ -1,3 +1,4 @@
+using Scripts.Scriptables;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,6 +8,7 @@ namespace Scripts.Listener
     public class InteractionTrigger : MonoBehaviour 
     {
         #region Private Variables
+            [SerializeField] private GameStatus gameStatus;
             [SerializeField] private UnityEvent onInteractionPerformed = new UnityEvent();
             [SerializeField] private UnityEvent onPlayerEntered = new UnityEvent();
             [SerializeField] private UnityEvent onPlayerExited = new UnityEvent();
@@ -20,7 +22,7 @@ namespace Scripts.Listener
          {
              if (playerInRange)
              {
-                 if (Input.GetKeyDown(keyToInteract))
+                 if (Input.GetKeyDown(keyToInteract) && !gameStatus.IsPaused)
                      onInteractionPerformed.Invoke();
              }
          

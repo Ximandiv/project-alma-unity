@@ -16,7 +16,7 @@ namespace Scripts.Listener
             private Dictionary<string, MessageFilter> activeMessageFilters; 
     
         #endregion
-        #region Monobehaviour implementation
+        #region Unity API Implementation
          private void Start()
          {
              if (filters.Count == 0)
@@ -48,7 +48,7 @@ namespace Scripts.Listener
                      //Don't add message filters that points an out-of-range index.
                      if (messageIndex <= 0 || messageIndex >= filter.KeyDialogue.Messages.Length)
                      {
-                         Debug.LogWarning("A Message filter has a index that is out-of-range.");
+                         Debug.LogWarning("A Message filter has an index that is out-of-range.");
                          continue;
                      }
  
