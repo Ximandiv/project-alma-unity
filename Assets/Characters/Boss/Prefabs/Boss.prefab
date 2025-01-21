@@ -163,7 +163,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1048576
   attackRange: 1.5
-  CloseAttackDamage: 2
+  CloseAttackDamage: -2
   deadClip: {fileID: 8300000, guid: 39d048fe5ac0fe24489d885125296aa0, type: 3}
   attack1Clip: {fileID: 8300000, guid: d1f8d4165dfa79a4fa92289d2d83d58f, type: 3}
   attack2Clip: {fileID: 8300000, guid: 1eb7cbaf61d23a64bbd36c0a38b5cb0c, type: 3}
@@ -5351,7 +5351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5949bbde25b53ff4b92e85b56fbb791a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: Rojo
+  color: red
 --- !u!1 &1082294217210150604
 GameObject:
   m_ObjectHideFlags: 0
@@ -10666,7 +10666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5949bbde25b53ff4b92e85b56fbb791a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: Azul
+  color: blue
 --- !u!1 &2633127534630061903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11119,7 +11119,7 @@ GameObject:
   - component: {fileID: 3762798613559426688}
   - component: {fileID: 6630580176631896816}
   m_Layer: 6
-  m_Name: WeakPointYellow
+  m_Name: WeakPointPurple
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11185,7 +11185,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.9339623, g: 0.7448561, b: 0.022027409, a: 1}
+  m_Color: {r: 0.69126886, g: 0.02352941, b: 0.93333334, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11271,7 +11271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5949bbde25b53ff4b92e85b56fbb791a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: Amarillo
+  color: purple
 --- !u!1 &6448035599265793802
 GameObject:
   m_ObjectHideFlags: 0

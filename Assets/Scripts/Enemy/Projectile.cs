@@ -1,3 +1,4 @@
+using Scripts.Player;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -9,13 +10,12 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Intentar obtener el componente del jugador que tiene el método TakeDamage
-            //PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
-            //if (playerHealth != null)
-            //{
-            //    // Llamar al método TakeDamage y pasar el daño configurado
-            //    playerHealth.TakeDamage(damage);
-            //}
+            Health playerHealth = collision.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                // Llamar al método TakeDamage y pasar el daño configurado
+                playerHealth.Damage(damage);
+            }
 
             Destroy(gameObject);
         }
