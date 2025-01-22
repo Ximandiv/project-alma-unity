@@ -99,9 +99,9 @@ namespace Scripts.UI
 
         private void OnDestroy()
         {
-            GameEvents.Instance.OnDialogueStarted += openDialogue;
+            GameEvents.Instance.OnDialogueStarted -= openDialogue;
             GameEvents.Instance.OnMenuOpen -= disableDialogue;
-            GameEvents.Instance.OnMenuClosed += enableDialogue;
+            GameEvents.Instance.OnMenuClosed -= enableDialogue;
         }
         
         private void Update()
