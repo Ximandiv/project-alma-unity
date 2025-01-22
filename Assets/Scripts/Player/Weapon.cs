@@ -1,6 +1,7 @@
 using Scripts.Scriptables;
 using UnityEngine;
-using UnityEngine.UIElements;
+using Scripts.Enemy;
+using UnityEngine.Rendering.Universal;
 
 namespace Scripts.Player
 {
@@ -48,6 +49,9 @@ namespace Scripts.Player
         [SerializeField] private float coneAngle = 45f;
         [SerializeField] private float rotationAngle;
 
+        [SerializeField] private string currentColor = "red";
+        [SerializeField] private int attackDamage = 2;
+
         private int coneAngleOffset = 2;
         private int rotationAngleOffset = 90;
 
@@ -59,11 +63,33 @@ namespace Scripts.Player
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
             light = GameObject.FindGameObjectWithTag("WeaponLight").transform;
+            light.GetComponent<Light2D>().color = Color.red;
         }
 
         private void Update()
         {
             if (gameStatus.IsPaused) return;
+
+            if(Input.GetMouseButtonDown(0))
+            {
+                var lightComponent = light.GetComponent<Light2D>();
+                switch (currentColor)
+                {
+                    case "red":
+                        currentColor = "blue";
+                        lightComponent.color = Color.blue;
+                        break;
+                    case "blue":
+                        currentColor = "purple";
+                        lightComponent.color = new Color(0.5f, 0f, 0.5f);
+                        break;
+                    case "purple":
+                    default:
+                        currentColor = "red";
+                        lightComponent.color = Color.red;
+                        break;
+                }
+            }
 
             moveAroundPlayerByMousePos(out Vector3 direction);
             rotateToMouseDirection(direction);
@@ -118,15 +144,27 @@ namespace Scripts.Player
                 damageEnemies(colliders);
         }
 
-        private void damageEnemies(Collider2D[] colliders)
+        private void damageEnemies(Collider2D[] enemyColliderList)
         {
-            foreach (Collider2D collider in colliders)
+            foreach (Collider2D enemyCollider in enemyColliderList)
             {
-                Vector3 directionToEnemy = (collider.transform.position - light.position).normalized;
+                Vector3 directionToEnemy = (enemyCollider.transform.position - light.position).normalized;
                 float angleToEnemy = Vector3.Angle(lightDownwardDir, directionToEnemy);
 
                 if (isEnemyWithinRange(angleToEnemy))
-                    Destroy(collider.gameObject);
+                {
+                    EnemyBehavior enemyBehavior = enemyCollider.GetComponent<EnemyBehavior>();
+                    if (enemyBehavior is not null)
+                        enemyBehavior.TakeDamage(attackDamage, currentColor);
+
+                    BossBehavior bossBehavior = enemyCollider.GetComponent<BossBehavior>();
+                    if (bossBehavior is not null)
+                        bossBehavior.TakeDamage(attackDamage);
+
+                    WeakPoint weakPoint = enemyCollider.GetComponent<WeakPoint>();
+                    if (weakPoint is not null)
+                        weakPoint.TakeDamage(currentColor);
+                }
             }
         }
 

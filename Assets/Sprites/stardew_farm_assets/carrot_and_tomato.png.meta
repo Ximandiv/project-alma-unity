@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      carrot_and_tomato_0: 5675432201458002837
+      carrot_and_tomato_1: 6548178753565887026
+      carrot_and_tomato_2: -2770274591563081690
+      carrot_and_tomato_3: 1187629577345191796
+      carrot_and_tomato_4: -7895995673223392823
+      carrot_and_tomato_5: -359731391069402477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

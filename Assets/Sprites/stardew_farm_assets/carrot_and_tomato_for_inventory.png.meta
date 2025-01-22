@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      carrot_and_tomato_for_inventory_0: -7395487136416943868
+      carrot_and_tomato_for_inventory_1: -3172627622966670707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
