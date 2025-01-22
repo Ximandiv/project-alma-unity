@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using TMPro;
+using Scripts.Events;
 using UnityEngine;
 
 public class BossManager : MonoBehaviour
@@ -17,9 +17,6 @@ public class BossManager : MonoBehaviour
     [Header("SFX")]
     public AudioClip bossClip;
     public float sfxVolumen;
-
-    [Header("Timer")]
-    public TMP_Text timerText;
 
     private float timer;  
     private bool bossIsActive = false;
@@ -46,7 +43,6 @@ public class BossManager : MonoBehaviour
             if (timer <= 0f)
             {
                 bossIsActive = true;
-                timerText.gameObject.SetActive(false);
 
                 SpawnBoss();
                 DestroyObjects();
@@ -80,7 +76,7 @@ public class BossManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("BossPrefab o Player no está configurado en el BossManager.");
+            Debug.LogWarning("BossPrefab o Player no estï¿½ configurado en el BossManager.");
         }
     }
 
@@ -114,7 +110,7 @@ public class BossManager : MonoBehaviour
                 remainingTime = 0;
             }
 
-            UpdateTimerText();
+            GameEvents.Instance.TimerUpdated(remainingTime);
         }
         else
         {
@@ -122,16 +118,6 @@ public class BossManager : MonoBehaviour
             {
                 isRunning = false;
             }
-        }
-    }
-
-    private void UpdateTimerText()
-    {
-        if (timerText != null)
-        {
-            int minutes = Mathf.FloorToInt(remainingTime / 60f);
-            int seconds = Mathf.FloorToInt(remainingTime % 60f);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
 }
