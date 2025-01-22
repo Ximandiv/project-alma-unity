@@ -15,9 +15,9 @@ MonoBehaviour:
   currentSpeed: 6
   minSpeed: 1
   maxSpeed: 10
-  currentHitPoints: 0
+  currentHitPoints: 3
   minHitPoints: 0
-  maxHitPoints: 2
-  isMoving: 1
-  canMove: 0
-  isDead: 1
+  maxHitPoints: 6
+  isMoving: 0
+  canMove: 1
+  isDead: 0

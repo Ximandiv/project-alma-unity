@@ -18,14 +18,16 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
-            GameEvents.Instance.OnGameOver += handleGameOver;
+            SceneManager.sceneLoaded += handleSceneLoaded;
+            GameEvents.Instance.OnGameWon += handleGameWon;
         }
 
         private void OnDestroy()
         {
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
-            GameEvents.Instance.OnGameOver -= handleGameOver;
+            SceneManager.sceneLoaded -= handleSceneLoaded;
+            GameEvents.Instance.OnGameWon -= handleGameWon;
         }
 
         #endregion
@@ -42,9 +44,22 @@ namespace Scripts.Events
             gameStatus.Unpause();
         }
 
-        private void handleGameOver()
+        private void handleSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            SceneManager.LoadScene("Credits");
+            if (scene.name == "Village" && !gameStatus.HasStarted)
+            {
+                GameEvents.Instance.GameStarted();
+                gameStatus.HasStarted = true;
+            }
+            else if (scene.name == "MindLevel")
+            {
+                GameEvents.Instance.LevelStarted();
+            }
+        }
+
+        private void handleGameWon()
+        {
+            GameEvents.Instance.SceneChanged("Credits");
         }
 
         #endregion

@@ -37,6 +37,7 @@ namespace Scripts.UI
         private RectTransform healthBar;
         private RectTransform fillBar;
         private CharacterHitpoints characterHitpoints;
+        private GameObject player;
 
         #endregion
 
@@ -45,18 +46,25 @@ namespace Scripts.UI
 
         private void Awake()
         {
-            var player = GameObject.FindWithTag("Player").transform;
-
-            characterHitpoints = player.gameObject.GetComponent<CharacterHitpoints>();
+            player = GameObject.FindWithTag("Player");
+            characterHitpoints = player.GetComponent<CharacterHitpoints>();
             healthBar = gameObject.transform.Find("HealthBar").GetComponent<RectTransform>();
             fillBar = gameObject.transform.Find("HealthBar/Fill").GetComponent<RectTransform>();
+        }
 
-            player.gameObject.GetComponent<Health>().OnPlayerDamaged += UpdateHealthBar;
+        private void OnEnable()
+        {
+            player.GetComponent<Health>().OnPlayerDamaged += UpdateHealthBar;
         }
 
         private void Start()
         {
             UpdateHealthBar();
+        }
+
+        private void OnDestroy()
+        {
+            player.GetComponent<Health>().OnPlayerDamaged -= UpdateHealthBar;
         }
 
         private bool characterVariablesAreIncorrect()

@@ -1,23 +1,17 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Scripts.Events;
+using System.Collections;
 
 namespace Scripts.UI
 {
     public class CreditsController : MonoBehaviour
     {
-        #region Public Methods
-
-        public void ReturnToMenu()
-        {
-            SceneManager.LoadScene("StartMenu");
-        }
-
-        #endregion
-
         #region Private Variables
 
         [SerializeField] private KeyCode keyToSkip = KeyCode.Escape;
-        private float scrollSpeed = 0.6f;
+        [SerializeField] private float scrollSpeed = 1f;
+        [SerializeField] private float skipSpeed = 8f;
+        [SerializeField] private float waitingTime = 1f;
         private bool isScrolling = true;
         private GameObject creditsPanel;
         private RectTransform panelRectTransform;
@@ -28,7 +22,7 @@ namespace Scripts.UI
 
         #region Unity API Methods
 
-        private void Start()
+        private void Awake()
         {
             creditsPanel = gameObject.transform.Find("CreditsPanel").gameObject;
             panelRectTransform = creditsPanel.GetComponent<RectTransform>();
@@ -43,7 +37,7 @@ namespace Scripts.UI
 
             if (Input.GetKeyDown(keyToSkip))
             {
-                scrollSpeed = 4f;
+                scrollSpeed = skipSpeed;
             }
         }
 
@@ -61,15 +55,22 @@ namespace Scripts.UI
                 //Stops scrolling if the credits panel has moved off the screen.
                 if (panelRectTransform.anchoredPosition.y > panelHeight)
                 {
-                    stopScrolling();
+                    StartCoroutine(stopScrolling());
                 }
             }
         }
 
-        private void stopScrolling()
+        private IEnumerator stopScrolling()
         {
             isScrolling = false;
             returnPanel.SetActive(true);
+            yield return new WaitForSeconds(waitingTime);
+            returnToMenu();
+        }
+
+        private void returnToMenu()
+        {
+            GameEvents.Instance.SceneChanged("StartMenu");
         }
 
         #endregion

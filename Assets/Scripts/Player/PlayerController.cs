@@ -63,7 +63,6 @@ namespace Scripts.Player
             status.SetCanMoveStatus(true);
 
             flashlight = GameObject.FindWithTag("Flashlight").transform;
-            flashlight.gameObject.SetActive(false);
         }
 
         #endregion

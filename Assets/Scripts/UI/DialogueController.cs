@@ -15,20 +15,6 @@ namespace Scripts.UI
         #endregion
         
         #region Public Methods
-        
-        public void OpenDialogue(Dialogue dialogue)
-        {
-            currentDialogue = dialogue;
-            currentMessages = dialogue.Messages;
-            currentActors = dialogue.Actors;
-            activeMessageIndex = 0;
-
-            GameEvents.Instance.Paused();
-            IsOpen = true;
-            dialoguePanel.SetActive(true);
-
-            displayMessage();
-        }
 
         public void NextMessage()
         {
@@ -58,6 +44,12 @@ namespace Scripts.UI
             }
         }
 
+        public void ChooseHelp()
+        {
+            CloseChoices();
+            GameEvents.Instance.SceneChanged("MindLevel");
+        }
+        
         public void CloseChoices()
         {
             continueButton.gameObject.SetActive(true);
@@ -65,20 +57,6 @@ namespace Scripts.UI
             afterButton.gameObject.SetActive(false);
 
             closeDialogue();
-        }
-
-        public void DisableDialogue()
-        {
-            continueButton.interactable = false;
-            helpButton.interactable = false;
-            afterButton.interactable = false;
-        }
-
-        public void EnableDialogue()
-        {
-            continueButton.interactable = true;
-            helpButton.interactable = true;
-            afterButton.interactable = true;
         }
 
         #endregion
@@ -121,6 +99,20 @@ namespace Scripts.UI
             afterButton.gameObject.SetActive(false);
             dialoguePanel.SetActive(false);
         }
+
+        private void OnEnable()
+        {
+            GameEvents.Instance.OnDialogueStarted += openDialogue;
+            GameEvents.Instance.OnMenuOpen += disableDialogue;
+            GameEvents.Instance.OnMenuClosed += enableDialogue;
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.Instance.OnDialogueStarted -= openDialogue;
+            GameEvents.Instance.OnMenuOpen -= disableDialogue;
+            GameEvents.Instance.OnMenuClosed -= enableDialogue;
+        }
         
         private void Update()
         {
@@ -133,6 +125,20 @@ namespace Scripts.UI
         #endregion
 
         #region Private Methods
+
+        private void openDialogue(Dialogue dialogue)
+        {
+            currentDialogue = dialogue;
+            currentMessages = dialogue.Messages;
+            currentActors = dialogue.Actors;
+            activeMessageIndex = 0;
+
+            GameEvents.Instance.Paused();
+            IsOpen = true;
+            dialoguePanel.SetActive(true);
+
+            displayMessage();
+        }
 
         private void displayMessage()
         {
@@ -167,6 +173,20 @@ namespace Scripts.UI
             GameEvents.Instance.Unpaused();
             IsOpen = false;
             dialoguePanel.SetActive(false);
+        }
+
+        private void disableDialogue()
+        {
+            continueButton.interactable = false;
+            helpButton.interactable = false;
+            afterButton.interactable = false;
+        }
+
+        private void enableDialogue()
+        {
+            continueButton.interactable = true;
+            helpButton.interactable = true;
+            afterButton.interactable = true;
         }
 
         #endregion

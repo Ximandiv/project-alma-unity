@@ -9,22 +9,30 @@ namespace Scripts.Events
         #region Public Variables
 
         public static GameEvents Instance;
+        public event Action OnGameStarted;
         public event Action OnPaused;
         public event Action OnUnpaused;
+        public event Action<string> OnSceneChanged;
         public event Action OnTimerEnded;
         public event Action OnLevelStarted;
         public event Action OnLevelBeaten;
-        public event Action OnMenuToggled;
+        public event Action OnMenuOpen;
+        public event Action OnMenuClosed;
         public event Action<Dialogue> OnDialogueStarted;
         public event Action<Dialogue, int> OnDialogueAdvance;
         public event Action<Dialogue> OnDialogueEnded;
         public event Action<String, String> OnPowerupObtained;
         public event Action OnGameOver;
+        public event Action OnGameWon;
 
         #endregion
 
         #region Public Methods
         
+        public void GameStarted()
+        {
+            OnGameStarted?.Invoke();
+        }
         public void Paused()
         {
             OnPaused?.Invoke();
@@ -33,6 +41,11 @@ namespace Scripts.Events
         public void Unpaused()
         {
             OnUnpaused?.Invoke();
+        }
+
+        public void SceneChanged(string sceneName)
+        {
+            OnSceneChanged?.Invoke(sceneName);
         }
 
         public void TimerEnded()
@@ -50,9 +63,14 @@ namespace Scripts.Events
             OnLevelBeaten?.Invoke();
         }
 
-        public void MenuToggled()
+        public void MenuOpen()
         {
-            OnMenuToggled?.Invoke();
+            OnMenuOpen?.Invoke();
+        }
+
+        public void MenuClosed()
+        {
+            OnMenuClosed?.Invoke();
         }
 
         public void DialogueStarted(Dialogue dialogue)
@@ -78,6 +96,11 @@ namespace Scripts.Events
         {
             OnGameOver?.Invoke();
         }
+
+        public void GameWon()
+        {
+            OnGameWon?.Invoke();
+        }
         
         #endregion
 
@@ -93,6 +116,8 @@ namespace Scripts.Events
             {
                 Instance = this;
             }
+
+            DontDestroyOnLoad(gameObject);
         }
 
         #endregion

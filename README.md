@@ -13,6 +13,18 @@ rural que busca desmitificar la salud mental en un pueblo.
 - The fantasy tileset - Ventiratore https://ventilatore.itch.io/the-fantasy-tileset
 - Pipoya Free RPG Tileset 32x32 Pixel - Pipoya https://pipoya.itch.io/pipoya-rpg-tileset-32x32
 - Harmonious Seasons - Foxtale Studios https://foxtalestudios.itch.io/harmonious-seasons
+- Mobile Power Ups Free Vol.1 / VisCircle https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106
+- Hyper Casual FX / Lana Studio https://assetstore.unity.com/packages/vfx/particles/hyper-casual-fx-200333
+- Piloto Studio Shaders / Piloto Studio https://assetstore.unity.com/packages/vfx/shaders/piloto-studio-shaders-258376
+- Ultimate Loot VFX Pack ⚜ 175 Effects / piloto Studio https://assetstore.unity.com/packages/vfx/particles/ultimate-loot-vfx-pack-175-effects-242936
+- RPG Essentials Sound Effects / leohpaz https://assetstore.unity.com/packages/audio/sound-fx/rpg-essentials-sound-effects-free-227708
+- Monster SFX - 111518 / GWriterStudio https://assetstore.unity.com/packages/audio/sound-fx/monster-sfx-111518-132868
+- Jungle Animal Sound FX / Laali Unit https://assetstore.unity.com/packages/audio/sound-fx/animals/jungle-animal-sound-fx-13491
+- Fanfare: Grand Entrance / Band of the Royal Irish Regiment https://www.youtube.com/watch?v=HtKsV-HO82U&ab_channel=BandoftheRoyalIrishRegiment-Topic
+- Tema Aggressive epic ROCK Track | music no copyright RPm 99 https://www.youtube.com/watch?v=qycUwwI43bY&ab_channel=RPm99
+- EPIC BOSS BATTLE / Epic Cinematic Music / Emotional Dramatic Background Music / No Copyright / NORTH-7 Epic Music https://www.youtube.com/watch?v=iBkJz38wQMw&ab_channel=NORTH-7EpicMusic
+- 2D Monster Wizard / JKTimmons https://assetstore.unity.com/packages/2d/characters/2d-monster-wizard-184692
+- 100 Fantasy Characters Mega Pack / Blackthornprod https://assetstore.unity.com/packages/2d/characters/100-fantasy-characters-mega-pack-222143
 
 ## Integrantes
 - Emmanuel Vanegas Carmona (ximandiv@gmail.com)

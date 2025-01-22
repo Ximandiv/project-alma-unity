@@ -1,4 +1,3 @@
-using UnityEngine;
 using Scripts.Scriptables;
 
 namespace Scripts.UI
