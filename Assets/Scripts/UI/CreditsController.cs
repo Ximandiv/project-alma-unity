@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Scripts.Events;
 using System.Collections;
 
 namespace Scripts.UI
@@ -9,8 +9,9 @@ namespace Scripts.UI
         #region Private Variables
 
         [SerializeField] private KeyCode keyToSkip = KeyCode.Escape;
-        [SerializeField] private float scrollSpeed = 0.6f;
-        [SerializeField] private float waitingTime = 2f;
+        [SerializeField] private float scrollSpeed = 1f;
+        [SerializeField] private float skipSpeed = 8f;
+        [SerializeField] private float waitingTime = 1f;
         private bool isScrolling = true;
         private GameObject creditsPanel;
         private RectTransform panelRectTransform;
@@ -36,7 +37,7 @@ namespace Scripts.UI
 
             if (Input.GetKeyDown(keyToSkip))
             {
-                scrollSpeed = 4f;
+                scrollSpeed = skipSpeed;
             }
         }
 
@@ -69,7 +70,7 @@ namespace Scripts.UI
 
         private void returnToMenu()
         {
-            SceneManager.LoadScene("StartMenu");
+            GameEvents.Instance.SceneChanged("StartMenu");
         }
 
         #endregion

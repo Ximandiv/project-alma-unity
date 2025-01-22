@@ -380,7 +380,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<size=40>BASADO EN</size>\r\nAlm\xE1cigo de Ruralmente\r\n\r\n<size=40>PROGRAMACI\xD3N
     Y DISE\xD1O DE JUEGO</size>\r\nEmmanuel Vanegas\r\nFelipe Bedoya\r\nJonathan
-    Albert\r\nJuana Rodas\r\nSantiago Luna\r\nSantiago Quintero\r\nSergio P\xE9rez\r\n\r\n<size=40>RECURSOS
+    Albert\r\nJuana Rodas\r\nLuna Salazar\r\nSantiago Quintero\r\nSergio P\xE9rez\r\n\r\n<size=40>RECURSOS
     DE TERCEROS</size>\r\nStardew Farm Game Assets | Top-Down Pixel Art por nogardev
     en Itch.io\r\nThe Fantasy Tileset por Ventiratore en Itch.io\r\nPipoya Free RPG
     Tileset 32x32 Pixel por Pipoya en Itch.io\r\nHarmonious Seasons por Foxtale Studios
@@ -762,5 +762,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToSkip: 27
-  scrollSpeed: 0.6
-  waitingTime: 2
+  scrollSpeed: 1
+  skipSpeed: 8
+  waitingTime: 1

@@ -1,20 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using Scripts.Events;
 
 namespace Scripts.UI
 {
     public class GameOverUIController : MonoBehaviour
 {
-    public void OpenGameOverScreen()
-    {
-        GameEvents.Instance.Paused();
-        gameOverPanel.SetActive(true);
-        StartCoroutine(returnToMenu());
-    }
-    
-    [SerializeField] private float gameOverScreenTime = 3f;
+    [SerializeField] private float gameOverScreenTime = 2f;
     private GameObject gameOverPanel;
 
     private void Awake()
@@ -23,11 +15,28 @@ namespace Scripts.UI
         gameOverPanel.SetActive(false);
     }
 
+    private void OnEnable()
+    {
+        GameEvents.Instance.OnGameOver += openGameOverScreen;
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.Instance.OnGameOver -= openGameOverScreen;
+    }
+
+    private void openGameOverScreen()
+    {
+        GameEvents.Instance.Paused();
+        gameOverPanel.SetActive(true);
+        StartCoroutine(returnToMenu());
+    }
+
     private IEnumerator returnToMenu()
     {
         yield return new WaitForSeconds(gameOverScreenTime);
         GameEvents.Instance.Unpaused();
-        SceneManager.LoadScene("StartMenu");
+        GameEvents.Instance.SceneChanged("StartMenu");
     }
 
 }

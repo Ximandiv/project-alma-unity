@@ -1,5 +1,5 @@
+using Scripts.Events;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Scripts.UI
 {
@@ -7,7 +7,7 @@ namespace Scripts.UI
     {
         public void ChangeScene(string sceneName)
         {
-            SceneManager.LoadScene(sceneName);
+            GameEvents.Instance.SceneChanged(sceneName);
         }
 
         public void QuitApp()

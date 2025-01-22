@@ -22,7 +22,7 @@ namespace Scripts.Events
         private void OnDestroy()
         {
             GameEvents.Instance.OnDialogueEnded -= handleDialogueEnded;
-            GameEvents.Instance.OnLevelBeaten += handleLevelBeaten;
+            GameEvents.Instance.OnLevelBeaten -= handleLevelBeaten;
         }
 
         #endregion
