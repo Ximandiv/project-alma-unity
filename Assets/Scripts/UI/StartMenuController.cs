@@ -5,9 +5,9 @@ namespace Scripts.UI
 {
     public class StartMenuController : MonoBehaviour
     {
-        public void ChoosePlay()
+        public void ChangeScene(string sceneName)
         {
-            GameEvents.Instance.SceneChanged("Village"); //Poner el nombre que va a tener la escena de la vereda
+            GameEvents.Instance.SceneChanged(sceneName);
         }
 
         public void QuitApp()

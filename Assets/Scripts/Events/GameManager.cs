@@ -1,6 +1,5 @@
 using UnityEngine;
 using Scripts.Scriptables;
-using UnityEngine.SceneManagement;
 
 namespace Scripts.Events
 {
@@ -9,22 +8,15 @@ namespace Scripts.Events
         #region Private Variables
         
         [SerializeField] private GameStatus gameStatus;
-        private SceneLoader sceneLoader;
 
         #endregion
 
         #region Unity API Methods
 
-        private void Awake()
-        {
-            sceneLoader = FindFirstObjectByType<SceneLoader>();
-        }
-
         private void Start()
         {
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
-            GameEvents.Instance.OnSceneChanged += handleSceneChanged;
             GameEvents.Instance.OnGameWon += handleGameWon;
         }
 
@@ -32,7 +24,6 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
-            GameEvents.Instance.OnSceneChanged -= handleSceneChanged;
             GameEvents.Instance.OnGameWon -= handleGameWon;
         }
 
@@ -48,11 +39,6 @@ namespace Scripts.Events
         private void handleUnpaused()
         {
             gameStatus.Unpause();
-        }
-
-        private void handleSceneChanged(string sceneName)
-        {
-            sceneLoader.changeScene(sceneName);
         }
 
         private void handleGameWon()

@@ -16,7 +16,8 @@ namespace Scripts.Events
         public event Action OnTimerEnded;
         public event Action OnLevelStarted;
         public event Action OnLevelBeaten;
-        public event Action OnMenuToggled;
+        public event Action OnMenuOpen;
+        public event Action OnMenuClosed;
         public event Action<Dialogue> OnDialogueStarted;
         public event Action<Dialogue> OnDialogueEnded;
         public event Action<String, String> OnPowerupObtained;
@@ -61,9 +62,14 @@ namespace Scripts.Events
             OnLevelBeaten?.Invoke();
         }
 
-        public void MenuToggled()
+        public void MenuOpen()
         {
-            OnMenuToggled?.Invoke();
+            OnMenuOpen?.Invoke();
+        }
+
+        public void MenuClosed()
+        {
+            OnMenuClosed?.Invoke();
         }
 
         public void DialogueStarted(Dialogue dialogue)
@@ -105,6 +111,8 @@ namespace Scripts.Events
             {
                 Instance = this;
             }
+
+            DontDestroyOnLoad(gameObject);
         }
 
         #endregion
