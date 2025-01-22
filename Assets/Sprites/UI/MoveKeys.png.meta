@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: ff715dbf9f8e0f141bda50121b323e97
+guid: 0c73dafe8b1d973409c6b04a38d67f11
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8078966772632430244
-    second: Buildings_0
+      213: 5412393982709830737
+    second: keyboard-button_0
   - first:
-      213: -3985759516408998331
-    second: Buildings_1
+      213: 7558323101213133718
+    second: keyboard-button_1
   - first:
-      213: -7011020414044352858
-    second: Buildings_2
+      213: -455822197020751543
+    second: keyboard-button_2
   - first:
-      213: -5075879681021990956
-    second: Buildings_3
+      213: -6716422831233982575
+    second: keyboard-button_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,7 +83,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -122,103 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Houses_0
+      name: keyboard-button_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 448
-        width: 89
-        height: 91
-      alignment: 9
-      pivot: {x: 0.48314607, y: 0.043956045}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -44.5, y: -44.5}
-        - {x: 41.5, y: -44.5}
-        - {x: 41.5, y: 22.5}
-        - {x: -44.5, y: 22.5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40e32762ec66e3e4e933743dacfa06dd
-      internalID: -670372362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Houses_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 320
-        width: 157
-        height: 112
-      alignment: 9
-      pivot: {x: 0.4968153, y: 0.3482143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -76.5, y: -22}
-        - {x: -8.720322, y: -21.99997}
-        - {x: -8.5, y: -55}
-        - {x: 76.5, y: -55}
-        - {x: 76.5, y: 40}
-        - {x: -76.5, y: 40}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 109417ee11954934eac7e78e4bf1017c
-      internalID: -627133970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Houses_2
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 176
-        width: 175
-        height: 128
-      alignment: 9
-      pivot: {x: 0.50285715, y: 0.421875}
+        x: 44
+        y: 66
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5833582bf8274e04c8603d0e32cf5684
-      internalID: 7406481
+      spriteID: 15491e3b6afac1b40800000000000000
+      internalID: 5412393982709830737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Houses_3
+      name: keyboard-button_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.0625}
+        x: 0
+        y: 14
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -64, y: -63}
-        - {x: 64, y: -63}
-        - {x: 64, y: 45}
-        - {x: -64, y: 45}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 550c14179565187408bd4e916279df0e
-      internalID: 866217582
+      spriteID: 69b007990de84e860800000000000000
+      internalID: 7558323101213133718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-button_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 14
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94907d970289ca9f0800000000000000
+      internalID: -455822197020751543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyboard-button_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 14
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f99f625097ac2a0800000000000000
+      internalID: -6716422831233982575
       vertices: []
       indices: 
       edges: []
@@ -227,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1d0a08feeac08bf48bc17d1dec3a87cd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -237,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Houses_0: -670372362
-      Houses_1: -627133970
-      Houses_2: 7406481
-      Houses_3: 866217582
+      keyboard-button_0: 5412393982709830737
+      keyboard-button_1: 7558323101213133718
+      keyboard-button_2: -455822197020751543
+      keyboard-button_3: -6716422831233982575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

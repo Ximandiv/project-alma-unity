@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: ff715dbf9f8e0f141bda50121b323e97
+guid: 4d3c79c82c41d314d8e1e7e9d1e02a0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8078966772632430244
-    second: Buildings_0
-  - first:
-      213: -3985759516408998331
-    second: Buildings_1
-  - first:
-      213: -7011020414044352858
-    second: Buildings_2
-  - first:
-      213: -5075879681021990956
-    second: Buildings_3
+      213: -5828816846346494190
+    second: letter-e_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 192
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -122,103 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Houses_0
+      name: letter-e_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 448
-        width: 89
-        height: 91
-      alignment: 9
-      pivot: {x: 0.48314607, y: 0.043956045}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -44.5, y: -44.5}
-        - {x: 41.5, y: -44.5}
-        - {x: 41.5, y: 22.5}
-        - {x: -44.5, y: 22.5}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40e32762ec66e3e4e933743dacfa06dd
-      internalID: -670372362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Houses_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 320
-        width: 157
-        height: 112
-      alignment: 9
-      pivot: {x: 0.4968153, y: 0.3482143}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -76.5, y: -22}
-        - {x: -8.720322, y: -21.99997}
-        - {x: -8.5, y: -55}
-        - {x: 76.5, y: -55}
-        - {x: 76.5, y: 40}
-        - {x: -76.5, y: 40}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 109417ee11954934eac7e78e4bf1017c
-      internalID: -627133970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Houses_2
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 176
-        width: 175
-        height: 128
-      alignment: 9
-      pivot: {x: 0.50285715, y: 0.421875}
+        x: 0
+        y: 1
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5833582bf8274e04c8603d0e32cf5684
-      internalID: 7406481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Houses_3
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 128
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.0625}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -64, y: -63}
-        - {x: 64, y: -63}
-        - {x: 64, y: 45}
-        - {x: -64, y: 45}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 550c14179565187408bd4e916279df0e
-      internalID: 866217582
+      spriteID: 21f54bce5f1eb1fa0800000000000000
+      internalID: -5828816846346494190
       vertices: []
       indices: 
       edges: []
@@ -227,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1d0a08feeac08bf48bc17d1dec3a87cd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -237,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Houses_0: -670372362
-      Houses_1: -627133970
-      Houses_2: 7406481
-      Houses_3: 866217582
+      letter-e_0: -5828816846346494190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
