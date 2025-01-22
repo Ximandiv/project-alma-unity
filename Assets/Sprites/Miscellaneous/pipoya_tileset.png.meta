@@ -20992,7 +20992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_960
+      name: pip_dish_0
       rect:
         serializedVersion: 2
         x: 0
@@ -21014,7 +21014,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_961
+      name: pip_dish_1
       rect:
         serializedVersion: 2
         x: 32
@@ -21036,7 +21036,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_962
+      name: pip_dish_2
       rect:
         serializedVersion: 2
         x: 64
@@ -21058,7 +21058,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_963
+      name: pip_dish_3
       rect:
         serializedVersion: 2
         x: 96
@@ -21080,7 +21080,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_964
+      name: pip_dish_4
       rect:
         serializedVersion: 2
         x: 128
@@ -21102,7 +21102,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_965
+      name: pip_dish_5
       rect:
         serializedVersion: 2
         x: 160
@@ -21124,7 +21124,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_966
+      name: pip_dish_6
       rect:
         serializedVersion: 2
         x: 192
@@ -21146,7 +21146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_967
+      name: pip_dish_7
       rect:
         serializedVersion: 2
         x: 224
@@ -21432,7 +21432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_980
+      name: pip_chesse
       rect:
         serializedVersion: 2
         x: 128
@@ -21476,7 +21476,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_982
+      name: pip_bread
       rect:
         serializedVersion: 2
         x: 192
@@ -21498,7 +21498,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipoya_tileset_983
+      name: pip_meat
       rect:
         serializedVersion: 2
         x: 224
@@ -23571,6 +23571,7 @@ TextureImporter:
       pip_bookshelf_1: 1785001650
       pip_box_0: -1033012355
       pip_box_1: -1288395985
+      pip_bread: 1803704900
       pip_bundle: -608387612
       pip_cabbage: 2081489699446812023
       pip_cane: 7804057342092623816
@@ -23584,6 +23585,7 @@ TextureImporter:
       pip_carpet_7: 744355427
       pip_carpet_8: 772845666
       pip_carrot: -8587326332247892175
+      pip_chesse: -821115347
       pip_clothesline_0: 1414332100
       pip_clothesline_1: -1297382982
       pip_clothesline_2: 1285153374
@@ -23592,6 +23594,14 @@ TextureImporter:
       pip_dead_bush_1: -4370529895679386306
       pip_dead_bush_2: -529953730132907890
       pip_directional_sign: -1782484102
+      pip_dish_0: -182829540
+      pip_dish_1: 1012183688
+      pip_dish_2: 1732041427
+      pip_dish_3: 1154958283
+      pip_dish_4: 944657204
+      pip_dish_5: 975290435
+      pip_dish_6: 139585711
+      pip_dish_7: 326495742
       pip_double_bed: -633290002
       pip_farmland_0: -298107946392860649
       pip_farmland_1: -1827265010103040439
@@ -23664,6 +23674,7 @@ TextureImporter:
       pip_lettuche: 527519027727709555
       pip_lump: -1385914236
       pip_lump_stack: 1915725375
+      pip_meat: 1432186880
       pip_nightstand_0: 710783266
       pip_nightstand_1: 969806616
       pip_planks_stack: -2076085184
@@ -24590,14 +24601,6 @@ TextureImporter:
       pipoya_tileset_958: 745708534
       pipoya_tileset_959: 1121754710
       pipoya_tileset_96: 687605165565792101
-      pipoya_tileset_960: -182829540
-      pipoya_tileset_961: 1012183688
-      pipoya_tileset_962: 1732041427
-      pipoya_tileset_963: 1154958283
-      pipoya_tileset_964: 944657204
-      pipoya_tileset_965: 975290435
-      pipoya_tileset_966: 139585711
-      pipoya_tileset_967: 326495742
       pipoya_tileset_968: -1322000770
       pipoya_tileset_969: -221155831
       pipoya_tileset_97: 5041578739860192464
@@ -24612,10 +24615,7 @@ TextureImporter:
       pipoya_tileset_978: 1004061967
       pipoya_tileset_979: 1434907140
       pipoya_tileset_98: 245370715304754099
-      pipoya_tileset_980: -821115347
       pipoya_tileset_981: 914564784
-      pipoya_tileset_982: 1803704900
-      pipoya_tileset_983: 1432186880
       pipoya_tileset_984: 1225740288
       pipoya_tileset_985: 2037154443
       pipoya_tileset_986: 1316251639
