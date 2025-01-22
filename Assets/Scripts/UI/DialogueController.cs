@@ -40,7 +40,7 @@ namespace Scripts.UI
         public void ChooseHelp()
         {
             CloseChoices();
-            GameEvents.Instance.SceneChanged("NPCMindLevel"); //Poner el nombre que va a tener la escena de la mente.
+            GameEvents.Instance.SceneChanged("MindLevel");
         }
         
         public void CloseChoices()

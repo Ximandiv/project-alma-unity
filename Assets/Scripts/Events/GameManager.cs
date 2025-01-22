@@ -1,5 +1,6 @@
 using UnityEngine;
 using Scripts.Scriptables;
+using UnityEngine.SceneManagement;
 
 namespace Scripts.Events
 {
@@ -17,6 +18,7 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused += handlePaused;
             GameEvents.Instance.OnUnpaused += handleUnpaused;
+            SceneManager.sceneLoaded += handleSceneLoaded;
             GameEvents.Instance.OnGameWon += handleGameWon;
         }
 
@@ -24,6 +26,7 @@ namespace Scripts.Events
         {
             GameEvents.Instance.OnPaused -= handlePaused;
             GameEvents.Instance.OnUnpaused -= handleUnpaused;
+            SceneManager.sceneLoaded -= handleSceneLoaded;
             GameEvents.Instance.OnGameWon -= handleGameWon;
         }
 
@@ -39,6 +42,19 @@ namespace Scripts.Events
         private void handleUnpaused()
         {
             gameStatus.Unpause();
+        }
+
+        private void handleSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.name == "Village" && !gameStatus.HasStarted)
+            {
+                GameEvents.Instance.GameStarted();
+                gameStatus.HasStarted = true;
+            }
+            else if (scene.name == "MindLevel")
+            {
+                GameEvents.Instance.LevelStarted();
+            }
         }
 
         private void handleGameWon()
