@@ -25,15 +25,23 @@ namespace Scripts.Common
 
         #endregion
 
+        #region Private Methods
+            private void onSceneChanged(string sceneName) => SaveStatus();
+    
+        #endregion
         #region Unity API Methods
             private void Start()
             {
                 if (status == null) return;
 
                 if (autoSave != AutoSave.None)
-                    GameEvents.Instance.OnSceneChanged +=  _=> SaveStatus();
+                    GameEvents.Instance.OnSceneChanged += onSceneChanged;
     
                 RestoreStatus();
+            }
+            private void OnDisable() 
+            {
+                GameEvents.Instance.OnSceneChanged -=  onSceneChanged;
             }
         #endregion
 
