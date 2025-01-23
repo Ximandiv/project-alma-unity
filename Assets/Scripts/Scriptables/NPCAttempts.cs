@@ -16,7 +16,7 @@ namespace Scripts.Scriptables
             set { currentAttempts = value; }
         }
 
-        [SerializeField] private int minAttempts = 0;
+        [SerializeField] private int minAttempts = 1;
         public int MinAttempts { get { return minAttempts; } }
 
         [SerializeField] private int maxAttempts = 3;

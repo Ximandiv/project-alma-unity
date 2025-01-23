@@ -1,4 +1,5 @@
 using Scripts.Scriptables;
+using Scripts.UI;
 using UnityEngine;
 
 namespace Scripts.Common
@@ -47,6 +48,15 @@ namespace Scripts.Common
         #region Private Variables
 
         [SerializeField] private NPCAttempts NPCAttempts;
+
+        #endregion
+
+        #region Private Methods
+
+        private void Awake()
+        {
+            if (NPCAttempts.CurrentAttempts == 0) NPCAttempts.CurrentAttempts = NPCAttempts.MaxAttempts;
+        }
 
         #endregion
     }

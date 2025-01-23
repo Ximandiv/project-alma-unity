@@ -1,5 +1,6 @@
 using Scripts.Common;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Scripts.Player
 {
@@ -63,6 +64,18 @@ namespace Scripts.Player
             status.SetIsDead(true);
 
             transform.parent.gameObject.SetActive(false);
+
+            NPCAttemptsController NPCAttempts = GameObject.FindWithTag("TroubledNPC").GetComponent<NPCAttemptsController>();
+            NPCAttempts.SumCurrentAttempts(-1);
+
+            ReiniciarEscena(); // TEMPORAL
+        }
+
+        // metodo de PRUEBA, esto se borra cuando se tenga el metodo para reiniciar la esena correcto
+        public void ReiniciarEscena()
+        {
+            string escenaActual = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(escenaActual);
         }
     }
 }
