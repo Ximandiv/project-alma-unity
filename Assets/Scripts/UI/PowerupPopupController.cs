@@ -8,15 +8,6 @@ namespace Scripts.UI
     {
         #region Public Methods
 
-        public void OpenPowerupPopup(string powerupName, string powerupDescription)
-        {
-            GameEvents.Instance.Paused();
-            powerupPopupPanel.SetActive(true);
-            displayedName.text = powerupName;
-            displayedDescription.text = powerupDescription;
-
-        }
-
         public void ClosePowerupPopup()
         {
             GameEvents.Instance.Unpaused();
@@ -38,6 +29,29 @@ namespace Scripts.UI
         private void Awake()
         {
             powerupPopupPanel.SetActive(false);
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.Instance.OnPowerupObtained += openPowerupPopup;
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.Instance.OnPowerupObtained -= openPowerupPopup;
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void openPowerupPopup(string powerupName, string powerupDescription)
+        {
+            GameEvents.Instance.Paused();
+            powerupPopupPanel.SetActive(true);
+            displayedName.text = powerupName;
+            displayedDescription.text = powerupDescription;
+
         }
 
         #endregion

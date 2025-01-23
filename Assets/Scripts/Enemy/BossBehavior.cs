@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Scripts.Player;
+using Scripts.Events;
 
 public class BossBehavior : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class BossBehavior : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private ParticleEffectWinner particleEffectWinner;
+    private GameEvents gameEvents;
 
     private bool isIdle = false;             
     private bool isPerformingAttack = false; 
@@ -62,6 +64,7 @@ public class BossBehavior : MonoBehaviour
 
     void Start()
     {
+        gameEvents = GameEvents.Instance;
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -237,6 +240,8 @@ public class BossBehavior : MonoBehaviour
         }
 
         particleEffectWinner.SpawnWinnerParticle(player.transform.position);
+
+        gameEvents.LevelBeaten();
 
         Destroy(gameObject);
     }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Ferney_Attempts
   m_EditorClassIdentifier: 
   currentAttempts: 3
-  minAttempts: 0
+  minAttempts: 1
   maxAttempts: 3

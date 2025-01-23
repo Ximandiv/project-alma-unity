@@ -13,6 +13,7 @@ rural que busca desmitificar la salud mental en un pueblo.
 - The fantasy tileset - Ventiratore https://ventilatore.itch.io/the-fantasy-tileset
 - Pipoya Free RPG Tileset 32x32 Pixel - Pipoya https://pipoya.itch.io/pipoya-rpg-tileset-32x32
 - Harmonious Seasons - Foxtale Studios https://foxtalestudios.itch.io/harmonious-seasons
+- Solaria Farm Animal Sprites Free Version - Jamiebrownhill https://jamiebrownhill.itch.io/solaria-farm-animal-sprites
 - Mobile Power Ups Free Vol.1 / VisCircle https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106
 - Hyper Casual FX / Lana Studio https://assetstore.unity.com/packages/vfx/particles/hyper-casual-fx-200333
 - Piloto Studio Shaders / Piloto Studio https://assetstore.unity.com/packages/vfx/shaders/piloto-studio-shaders-258376

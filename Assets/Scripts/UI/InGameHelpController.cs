@@ -1,26 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using Scripts.Events;
 
 namespace Scripts.UI
 {
     public class InGameHelpController : MonoBehaviour
     {
-        #region Public Methods
-
-        public void OpenVillageHelp()
-        {
-            villageHelpPanel.SetActive(true);
-            StartCoroutine(waitBeforeClosing());
-        }
-
-        public void OpenMindHelp()
-        {
-            mindHelpPanel.SetActive(true);
-            StartCoroutine(waitBeforeClosing());
-        }
-
-        #endregion
-
         #region Private Variables
 
         [SerializeField] private float helpTime = 6f;
@@ -43,6 +28,18 @@ namespace Scripts.UI
             canSkipHelp = false;
         }
 
+        private void OnEnable()
+        {
+            GameEvents.Instance.OnGameStarted += openVillageHelp;
+            GameEvents.Instance.OnLevelStarted += openMindHelp;
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.Instance.OnGameStarted -= openVillageHelp;
+            GameEvents.Instance.OnLevelStarted -= openMindHelp;
+        }
+
         void Update()
         {
             if (canSkipHelp)
@@ -58,6 +55,18 @@ namespace Scripts.UI
         #endregion
 
         #region Private Methods
+
+        private void openVillageHelp()
+        {
+            villageHelpPanel.SetActive(true);
+            StartCoroutine(waitBeforeClosing());
+        }
+
+        private void openMindHelp()
+        {
+            mindHelpPanel.SetActive(true);
+            StartCoroutine(waitBeforeClosing());
+        }
 
         private IEnumerator waitBeforeClosing()
         {

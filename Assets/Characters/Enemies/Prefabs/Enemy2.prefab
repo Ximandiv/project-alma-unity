@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 619223149, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
-  m_Color: {r: 1, g: 0.45346177, b: 0.4481132, a: 1}
+  m_Color: {r: 0.5768442, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: -1495839720, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
-  m_Color: {r: 1, g: 0.45346177, b: 0.4481132, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.99777555, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -249,15 +249,13 @@ MonoBehaviour:
   maxHealth: 10
   damageToPlayer: -1
   attackRange: 1
-  color: red
+  color: purple
   distanceToApproach: 5
   circleDuration: 5
   circleRadius: 2
   deathParticles: {fileID: 2015303338481677235, guid: 17d1039496044be419303fb3623e32ff, type: 3}
   deathParticles2: {fileID: 1647306050541595280, guid: 21029c8d7b90c3f419dc92e0abf1b2b8, type: 3}
   powerUps:
-  - {fileID: 134674, guid: 8a2b9fe17763d2946ad000498978f6c7, type: 3}
-  - {fileID: 110512, guid: b0fddd132a921e449b42a01f6f4315b3, type: 3}
   - {fileID: 191076, guid: d2bb8296c2fea4f44a9d151466f87b4c, type: 3}
   deadClip: {fileID: 8300000, guid: 41bfcb5bd1f04f640b95a291fdd63784, type: 3}
   attackClip: {fileID: 8300000, guid: f39f25edf39e07f42a7a8510ece52d07, type: 3}

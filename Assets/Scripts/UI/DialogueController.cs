@@ -15,28 +15,21 @@ namespace Scripts.UI
         #endregion
         
         #region Public Methods
-        
-        public void OpenDialogue(Dialogue dialogue)
-        {
-            currentDialogue = dialogue;
-            currentMessages = dialogue.Messages;
-            currentActors = dialogue.Actors;
-            activeMessageIndex = 0;
-
-            GameEvents.Instance.Paused();
-            IsOpen = true;
-            dialoguePanel.SetActive(true);
-
-            displayMessage();
-        }
 
         public void NextMessage()
         {
             AudioManager.Instance.PlaySFX(clickClip, clickSFXVolumen);
+            if (typeWriter.IsTyping)
+            {
+                typeWriter.CompleteType();
+                return;
+            }
+
             activeMessageIndex++;
             if (activeMessageIndex < currentMessages.Length) 
             {
                 displayMessage();
+                GameEvents.Instance.DialogueAdvance(currentDialogue,activeMessageIndex);
             } else
             {
                 GameEvents.Instance.DialogueEnded(currentDialogue);
@@ -52,6 +45,12 @@ namespace Scripts.UI
             }
         }
 
+        public void ChooseHelp()
+        {
+            CloseChoices();
+            GameEvents.Instance.SceneChanged("MindLevel");
+        }
+        
         public void CloseChoices()
         {
             AudioManager.Instance.PlaySFX(clickClip, clickSFXVolumen);
@@ -60,20 +59,6 @@ namespace Scripts.UI
             afterButton.gameObject.SetActive(false);
 
             closeDialogue();
-        }
-
-        public void DisableDialogue()
-        {
-            continueButton.interactable = false;
-            helpButton.interactable = false;
-            afterButton.interactable = false;
-        }
-
-        public void EnableDialogue()
-        {
-            continueButton.interactable = true;
-            helpButton.interactable = true;
-            afterButton.interactable = true;
         }
 
         #endregion
@@ -95,6 +80,8 @@ namespace Scripts.UI
         [Header("Choices Dialogue")]
         [SerializeField] private Dialogue choicesDialogue;
         
+
+        private Typewriter typeWriter;
         private Dialogue currentDialogue;
         private Dialogue.Message[] currentMessages;
         private Dialogue.Actor[] currentActors;
@@ -110,12 +97,27 @@ namespace Scripts.UI
 
         private void Awake()
         {
+            typeWriter = displayedText.GetComponent<Typewriter>();
             IsOpen = false;
 
             continueButton.gameObject.SetActive(true);
             helpButton.gameObject.SetActive(false);
             afterButton.gameObject.SetActive(false);
             dialoguePanel.SetActive(false);
+        }
+
+        private void OnEnable()
+        {
+            GameEvents.Instance.OnDialogueStarted += openDialogue;
+            GameEvents.Instance.OnMenuOpen += disableDialogue;
+            GameEvents.Instance.OnMenuClosed += enableDialogue;
+        }
+
+        private void OnDestroy()
+        {
+            GameEvents.Instance.OnDialogueStarted -= openDialogue;
+            GameEvents.Instance.OnMenuOpen -= disableDialogue;
+            GameEvents.Instance.OnMenuClosed -= enableDialogue;
         }
         
         private void Update()
@@ -130,13 +132,26 @@ namespace Scripts.UI
 
         #region Private Methods
 
+        private void openDialogue(Dialogue dialogue)
+        {
+            currentDialogue = dialogue;
+            currentMessages = dialogue.Messages;
+            currentActors = dialogue.Actors;
+            activeMessageIndex = 0;
+
+            GameEvents.Instance.Paused();
+            IsOpen = true;
+            dialoguePanel.SetActive(true);
+
+            displayMessage();
+        }
+
         private void displayMessage()
         {
             Dialogue.Message activeMessage = currentMessages[activeMessageIndex];
 
             //Uses the TMP's Typewriter to type the text from active message
-            Typewriter typewriter = displayedText.GetComponent<Typewriter>();
-            typewriter.SetText(activeMessage.MessageText);
+            typeWriter.SetText(activeMessage.MessageText);
 
             Dialogue.Actor activeActor = currentActors[activeMessage.ActorId];
 
@@ -164,6 +179,20 @@ namespace Scripts.UI
             GameEvents.Instance.Unpaused();
             IsOpen = false;
             dialoguePanel.SetActive(false);
+        }
+
+        private void disableDialogue()
+        {
+            continueButton.interactable = false;
+            helpButton.interactable = false;
+            afterButton.interactable = false;
+        }
+
+        private void enableDialogue()
+        {
+            continueButton.interactable = true;
+            helpButton.interactable = true;
+            afterButton.interactable = true;
         }
 
         #endregion

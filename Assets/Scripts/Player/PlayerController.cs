@@ -1,4 +1,5 @@
 using Scripts.Common;
+using Scripts.Events;
 using Scripts.Scriptables;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ namespace Scripts.Player
         #region Private Variables
 
         [SerializeField] private GameStatus gameStatus;
+        [SerializeField] private GameEvents gameEvents;
 
         private Transform flashlight;
 
@@ -39,7 +41,12 @@ namespace Scripts.Player
 
         [ContextMenu("Exit Combat")]
         public void ExitCombat()
-            => flashlight.gameObject.SetActive(false);
+        {
+            flashlight.gameObject.SetActive(false);
+
+            hitpoints.ReturnCurrentToInitial();
+            speed.ReturnCurrentToInitial();
+        }
 
         #endregion
 
@@ -47,6 +54,9 @@ namespace Scripts.Player
 
         private void Awake()
         {
+            gameEvents = GameEvents.Instance;
+            gameEvents.OnLevelBeaten += ExitCombat;
+
             rbCollider = GetComponent<Rigidbody2D>();
             rbHitbox = transform.GetChild(1).GetComponent<Rigidbody2D>();
             status = GetComponent<CharacterStatus>();
@@ -63,6 +73,9 @@ namespace Scripts.Player
             status.SetCanMoveStatus(true);
 
             flashlight = GameObject.FindWithTag("Flashlight").transform;
+
+            hitpoints.ReturnCurrentToInitial();
+            speed.ReturnCurrentToInitial();
         }
 
         #endregion

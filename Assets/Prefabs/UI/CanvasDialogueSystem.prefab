@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8265294859941561088}
         m_TargetAssemblyTypeName: Scripts.UI.DialogueController, Assembly-CSharp
-        m_MethodName: CloseChoices
+        m_MethodName: ChooseHelp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d6332926adff14c96c2e392c3dc19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
+  IsOpen: 0
   displayedName: {fileID: 452217935343935196}
   displayedSprite: {fileID: 7034758710692100715}
   displayedText: {fileID: 147363202194184073}
