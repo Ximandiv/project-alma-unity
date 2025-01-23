@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2334674}
   - component: {fileID: 6539768472532476567}
   - component: {fileID: 4269055480026188402}
-  m_Layer: 21
+  m_Layer: 7
   m_Name: Heart Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}

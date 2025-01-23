@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2310512}
   - component: {fileID: 209854491806165589}
   - component: {fileID: 6644486035928320989}
-  m_Layer: 21
+  m_Layer: 0
   m_Name: Poison Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
