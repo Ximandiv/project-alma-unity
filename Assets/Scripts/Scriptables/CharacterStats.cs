@@ -16,6 +16,13 @@ namespace Scripts.Scriptables
             set { currentSpeed = value; }
         }
 
+        [SerializeField] private float initialSpeed = 5f;
+        public float InitialSpeed
+        {
+            get { return initialSpeed; }
+            set { initialSpeed = value; }
+        }
+
         [SerializeField] private float minSpeed = 1f;
         public float MinSpeed { get { return minSpeed; } }
 
@@ -37,6 +44,13 @@ namespace Scripts.Scriptables
         {
             get { return currentHitPoints; }
             set { currentHitPoints = value; }
+        }
+
+        [SerializeField] private int initialHitPoints = 2;
+        public int InitialHitPoints
+        {
+            get { return initialHitPoints; }
+            set { initialHitPoints = value; }
         }
 
         [SerializeField] private int minHitPoints = 1;

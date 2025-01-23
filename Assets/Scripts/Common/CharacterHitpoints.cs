@@ -42,6 +42,16 @@ namespace Scripts.Common
                 characterStats.CurrentHitPoints = characterStats.MaxHitPoints;
         }
 
+        public void ReturnCurrentToInitial()
+        {
+            characterStats.CurrentHitPoints = characterStats.InitialHitPoints;
+
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinHitPoints, characterStats.CurrentHitPoints))
+                characterStats.CurrentHitPoints = characterStats.MinHitPoints;
+            else if (!RangeHelper.IsMaxRangeCorrect(characterStats.MaxHitPoints, characterStats.CurrentHitPoints))
+                characterStats.CurrentHitPoints = characterStats.MaxHitPoints;
+        }
+
         #region Get Methods
 
         public int GetCurrentHitPoints() => characterStats.CurrentHitPoints;

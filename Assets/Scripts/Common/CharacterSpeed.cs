@@ -41,6 +41,16 @@ namespace Scripts.Common
                 characterStats.CurrentSpeed = characterStats.MaxSpeed;
         }
 
+        public void ReturnCurrentToInitial()
+        {
+            characterStats.CurrentSpeed = characterStats.InitialSpeed;
+
+            if (!RangeHelper.IsMinRangeCorrect(characterStats.MinSpeed, characterStats.CurrentSpeed))
+                characterStats.CurrentSpeed = characterStats.MinSpeed;
+            else if (!RangeHelper.IsMaxRangeCorrect(characterStats.MaxSpeed, characterStats.CurrentSpeed))
+                characterStats.CurrentSpeed = characterStats.MaxSpeed;
+        }
+
         #region Get Methods
 
         public float GetCurrentSpeed() => characterStats.CurrentSpeed;
