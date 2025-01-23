@@ -38,6 +38,7 @@ namespace Scripts.UI
         private RectTransform fillBar;
         private CharacterHitpoints characterHitpoints;
         private GameObject player;
+        private Health playerHealth;
 
         #endregion
 
@@ -48,6 +49,7 @@ namespace Scripts.UI
         {
             player = GameObject.FindWithTag("Player");
             characterHitpoints = player.GetComponent<CharacterHitpoints>();
+            playerHealth = player.GetComponent<Health>();
             healthBar = gameObject.transform.Find("HealthBar").GetComponent<RectTransform>();
             fillBar = gameObject.transform.Find("HealthBar/Fill").GetComponent<RectTransform>();
         }
@@ -64,7 +66,7 @@ namespace Scripts.UI
 
         private void OnDestroy()
         {
-            player.GetComponent<Health>().OnPlayerDamaged -= UpdateHealthBar;
+            playerHealth.OnPlayerDamaged -= UpdateHealthBar;
         }
 
         private bool characterVariablesAreIncorrect()

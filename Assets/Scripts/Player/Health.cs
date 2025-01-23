@@ -1,4 +1,5 @@
 using Scripts.Common;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -62,13 +63,18 @@ namespace Scripts.Player
             controller.ExitCombat();
 
             status.SetIsDead(true);
-
-            transform.parent.gameObject.SetActive(false);
-
             NPCAttemptsController NPCAttempts = GameObject.FindWithTag("TroubledNPC").GetComponent<NPCAttemptsController>();
             NPCAttempts.SumCurrentAttempts(-1);
 
+            StartCoroutine(WaitSeconds(3));
+
             ReiniciarEscena(); // TEMPORAL
+        }
+
+        private IEnumerator WaitSeconds(int seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            transform.parent.gameObject.SetActive(false);
         }
 
         // metodo de PRUEBA, esto se borra cuando se tenga el metodo para reiniciar la esena correcto

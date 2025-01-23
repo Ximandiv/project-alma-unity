@@ -16,7 +16,6 @@ namespace Scripts.Player
         #region Private Variables
 
         [SerializeField] private GameStatus gameStatus;
-        [SerializeField] private GameEvents gameEvents;
 
         private Transform flashlight;
 
@@ -54,8 +53,7 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            gameEvents = GameEvents.Instance;
-            gameEvents.OnLevelBeaten += ExitCombat;
+            GameEvents.Instance.OnLevelBeaten += ExitCombat;
 
             rbCollider = GetComponent<Rigidbody2D>();
             rbHitbox = transform.GetChild(1).GetComponent<Rigidbody2D>();
