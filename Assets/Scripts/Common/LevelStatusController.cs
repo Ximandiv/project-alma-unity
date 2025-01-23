@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Scripts.Events;
 using Scripts.Scriptables;
 using UnityEditor.PackageManager;
 using UnityEngine;
@@ -13,14 +14,37 @@ namespace Scripts.Common
             [SerializeField] private Transform player;
             [SerializeField] private Behaviour[] saveableComponents;
             [SerializeField] private GameObject[] saveableGameObjects;
+            [SerializeField] private AutoSave autoSave = AutoSave.OnlyObjects;
+
+            private enum AutoSave {
+                None,
+                OnlyPosition,
+                OnlyObjects,
+                All
+            }
+
         #endregion
 
+        #region Private Methods
+            private void onSceneChanged(string sceneName) => SaveStatus();
+    
+        #endregion
         #region Unity API Methods
             private void Start()
             {
                 if (status == null) return;
     
                 RestoreStatus();
+            }
+
+            private void OnEnable() 
+            {
+                 if (autoSave != AutoSave.None)
+                    GameEvents.Instance.OnSceneChanged += onSceneChanged;
+            }
+            private void OnDisable() 
+            {
+                GameEvents.Instance.OnSceneChanged -=  onSceneChanged;
             }
         #endregion
 
@@ -54,8 +78,20 @@ namespace Scripts.Common
             }
             public void SaveStatus()
             {
-                SaveEnabledStatus();
-                SavePlayerPosition(player);
+                switch (autoSave)
+                {
+                    case AutoSave.OnlyPosition:
+                        SavePlayerPosition(player);
+                        break;
+                    case AutoSave.OnlyObjects:
+                        SaveEnabledStatus();
+                        break;
+                    case AutoSave.All:
+                        SaveEnabledStatus();
+                        SavePlayerPosition(player);
+                        break;
+                }
+                
             }
     
             public void ClearLevelStatus() 

@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2a52d6bf2637146add311580ec3b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStatus: {fileID: 11400000, guid: ee0d77ab62d6e3746a738852027b9d50, type: 2}
   transition: {fileID: 753643784054516503}
   transitionTime: 1
 --- !u!1 &9159236052406703740
