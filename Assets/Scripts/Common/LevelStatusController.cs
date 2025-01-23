@@ -33,11 +33,14 @@ namespace Scripts.Common
             private void Start()
             {
                 if (status == null) return;
-
-                if (autoSave != AutoSave.None)
-                    GameEvents.Instance.OnSceneChanged += onSceneChanged;
     
                 RestoreStatus();
+            }
+
+            private void OnEnable() 
+            {
+                 if (autoSave != AutoSave.None)
+                    GameEvents.Instance.OnSceneChanged += onSceneChanged;
             }
             private void OnDisable() 
             {
