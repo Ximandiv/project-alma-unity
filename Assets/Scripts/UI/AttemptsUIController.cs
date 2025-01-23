@@ -35,7 +35,7 @@ namespace Scripts.UI
             attemptsText = gameObject.transform.Find("AttemptsText").GetComponent<TextMeshProUGUI>();
         }
 
-        private void Start()
+        private void Update()
         {
             UpdateAttemptsUI();
         }

@@ -1047,6 +1047,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3251656501618861989, guid: 6a9d0eefe85a8f546af4cd3fe632dc22, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4226816544700093114, guid: 6a9d0eefe85a8f546af4cd3fe632dc22, type: 3}
       propertyPath: m_Name
       value: Ferney
@@ -1111,6 +1115,10 @@ PrefabInstance:
     - target: {fileID: 3464376383844761595, guid: eed717e119303d347957dfa5a2853c6f, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012698444715179289, guid: eed717e119303d347957dfa5a2853c6f, type: 3}
+      propertyPath: Mute
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
