@@ -39,7 +39,12 @@ namespace Scripts.Player
 
         [ContextMenu("Exit Combat")]
         public void ExitCombat()
-            => flashlight.gameObject.SetActive(false);
+        {
+            flashlight.gameObject.SetActive(false);
+
+            hitpoints.ReturnCurrentToInitial();
+            speed.ReturnCurrentToInitial();
+        }
 
         #endregion
 

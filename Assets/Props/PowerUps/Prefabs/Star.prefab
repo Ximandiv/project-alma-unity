@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3010340232339476305}
   - component: {fileID: 8162118082398500257}
   m_Layer: 21
-  m_Name: Star Red
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33deb912548e8e4d8e8e150086c4d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerType: 3
+  powerType: 1
+  increaseAmount: 1.5
   sfxClip: {fileID: 8300000, guid: 6cf9c85b5a3b88c468b21b9d21250adf, type: 3}
   sfxVolumen: 0.5

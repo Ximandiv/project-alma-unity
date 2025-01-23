@@ -55,7 +55,7 @@ namespace Scripts.Enemy
             }
             else
             {
-                Debug.LogError("No se encontró un objeto con la etiqueta 'Player'");
+                Debug.LogError("No se encontrï¿½ un objeto con la etiqueta 'Player'");
             }
 
             StartCoroutine(ApproachAndCirclePlayer());
@@ -212,7 +212,7 @@ namespace Scripts.Enemy
         {
             int randomValue = Random.Range(0, 10);
 
-            if (randomValue > 1)
+            if (randomValue < 1)
             {
                 if (powerUps == null || powerUps.Count == 0)
                 {

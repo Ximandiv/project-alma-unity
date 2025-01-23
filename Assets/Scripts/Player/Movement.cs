@@ -38,6 +38,9 @@ namespace Scripts.Player
             rbCollider = newRb;
         }
 
+        public void IncreaseSpeed(float amount)
+            => speed.SumCurrentSpeed(amount);
+
         #region Unity API Methods
 
         private void Update()
