@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using Scripts.Events;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossManager : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class BossManager : MonoBehaviour
     public AudioClip bossClip;
     public float sfxVolumen;
 
+    public bool bossIsDead;
+
     private float timer;  
     private bool bossIsActive = false;
     private float remainingTime;    
@@ -31,7 +35,9 @@ public class BossManager : MonoBehaviour
 
     private void Update()
     {
-        if (!bossIsActive)
+        checkDead();
+
+        if (!bossIsActive && !bossIsDead)
         {
             timer -= Time.deltaTime;
 
@@ -48,6 +54,20 @@ public class BossManager : MonoBehaviour
                 DestroyObjects();
             }
         }
+    }
+
+    private void checkDead() 
+    {
+        if (bossIsDead) 
+        {
+            StartCoroutine(PlayerVictory());
+        }
+    }
+
+    IEnumerator PlayerVictory() 
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene("FerneyHomeWinner");
     }
 
     private void DestroyObjects()

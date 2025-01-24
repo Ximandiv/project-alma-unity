@@ -2,6 +2,7 @@
 using System.Collections;
 using Scripts.Player;
 using Scripts.Events;
+using UnityEngine.SceneManagement;
 
 public class BossBehavior : MonoBehaviour
 {
@@ -59,7 +60,9 @@ public class BossBehavior : MonoBehaviour
     private bool isTakingDamage = false;     
 
     private float nextCloseAttackTime = 0f; 
-    private float nextFarAttackTime = 0f;   
+    private float nextFarAttackTime = 0f;
+
+    public bool bossIsDead = false;
 
     void Start()
     {
@@ -218,6 +221,12 @@ public class BossBehavior : MonoBehaviour
 
     IEnumerator Die()
     {
+
+        GameObject bossManager = GameObject.FindWithTag("BossManager");
+
+        bossManager.GetComponent<BossManager>().bossIsDead = true;
+        bossIsDead = true;
+
         AudioManager.Instance.PlaySFX(deadClip, sfxVolumen);
         animator.SetTrigger("damage");
 
@@ -238,9 +247,6 @@ public class BossBehavior : MonoBehaviour
         }
 
         particleEffectWinner.SpawnWinnerParticle(player.transform.position);
-
-        GameEvents.Instance.LevelBeaten();
-
         Destroy(gameObject);
     }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2982597905421310577}
   m_Layer: 0
   m_Name: BossManager
-  m_TagString: Untagged
+  m_TagString: BossManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossPrefab: {fileID: 30303697660199139, guid: 78a310e0dea481042881edfc76a2e280, type: 3}
   spawnTimer: 10
-  spawnDistance: 5
+  spawnDistance: 10
   player: {fileID: 0}
   enemySpawners:
   - {fileID: 0}
@@ -55,4 +55,4 @@ MonoBehaviour:
   - {fileID: 0}
   bossClip: {fileID: 8300000, guid: e6eaf149f82d4514cab0666fd7cb662e, type: 3}
   sfxVolumen: 0.4
-  timerText: {fileID: 0}
+  bossIsDead: 0
