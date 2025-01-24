@@ -12,14 +12,14 @@ namespace Scripts.UI
 
         private void OnEnable()
         {
-            GameEvents.Instance.OnLevelStarted += startDialogue;
-            GameEvents.Instance.OnTimerEnded += startDialogue;
+            //GameEvents.Instance.OnLevelStarted += startDialogue;
+            //GameEvents.Instance.OnTimerEnded += startDialogue;
         }
 
         private void OnDestroy()
         {
-            GameEvents.Instance.OnLevelStarted -= startDialogue;
-            GameEvents.Instance.OnTimerEnded -= startDialogue;
+            //GameEvents.Instance.OnLevelStarted -= startDialogue;
+            //GameEvents.Instance.OnTimerEnded -= startDialogue;
         }
 
         private void startDialogue()

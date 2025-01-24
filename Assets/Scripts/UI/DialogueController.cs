@@ -166,6 +166,8 @@ namespace Scripts.UI
             afterButton.gameObject.SetActive(true);
 
             displayMessage();
+
+            GameEvents.Instance.LevelStarted();
         }
 
         private void closeDialogue()
