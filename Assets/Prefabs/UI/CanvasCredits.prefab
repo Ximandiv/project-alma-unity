@@ -378,13 +378,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<size=40>BASADO EN</size>\r\nAlm\xE1cigo de Ruralmente\r\n\r\n<size=40>PROGRAMACI\xD3N
-    Y DISE\xD1O DE JUEGO</size>\r\nEmmanuel Vanegas\r\nFelipe Bedoya\r\nJonathan
-    Albert\r\nJuana Rodas\r\nLuna Salazar\r\nSantiago Quintero\r\nSergio P\xE9rez\r\n\r\n<size=40>RECURSOS
-    DE TERCEROS</size>\r\nStardew Farm Game Assets | Top-Down Pixel Art por nogardev
-    en Itch.io\r\nThe Fantasy Tileset por Ventiratore en Itch.io\r\nPipoya Free RPG
-    Tileset 32x32 Pixel por Pipoya en Itch.io\r\nHarmonious Seasons por Foxtale Studios
-    en Itch.io\r\n\r\n<size=40>AUDIO</size>\r\n...\r\n\r\n<size=40>DESARROLLADO EN</size>\r\nUnity"
+  m_text: "<size=40>BASADO EN</size>\r\nAlm\xE1cigo de Ruralmente\r\n\r\n<size=40>DISE\xD1O
+    DE JUEGO</size>\r\nEmmanuel Vanegas\r\nFelipe Bedoya\r\nJonathan Albert\r\nJuana
+    Rodas\r\nLuna Salazar\r\nSantiago Quintero\r\nSergio P\xE9rez\r\n\r\n<size=40>PROGRAMACI\xD3N</size>\r\nEmmanuel
+    Vanegas\r\nFelipe Bedoya\r\nJonathan Albert\r\nJuana Rodas\r\nSantiago Quintero\r\nSergio
+    P\xE9rez\r\n\r\n<size=40>RECURSOS DE TERCEROS</size>\r\nStardew Farm Game Assets
+    | Top-Down Pixel Art por nogardev\r\nThe Fantasy Tileset por Ventiratore\r\nPipoya
+    Free RPG Tileset 32x32 Pixel por Pipoya\r\nHarmonious Seasons por Foxtale Studios\r\nSolaria
+    Farm Animal Sprites Free Version por Jamiebrownhill\r\n2D Monster Wizard por
+    JKTimmons\r\n100 Fantasy Characters Mega Pack por Blackthornprod\r\nMobile Power
+    Ups Free Vol.1 por VisCircle\r\nHyper Casual FX por Lana Studio\r\nPiloto Studio
+    Shaders por Piloto Studio\r\nUltimate Loot VFX Pack por Piloto Studio\r\n\r\n<size=40>AUDIO</size>\r\nI
+    Can't Stop por Punch Deck\r\nEpic Boss Battle por Rafael Krux\r\nRPG Essentials
+    Sound Effects por leohpaz\r\nMonster SFX - 111518 por GWriterStudio\r\nJungle
+    Animal Sound FX por Laali Unit\r\nFanfare: Grand Entrance por Band of the Royal
+    Irish Regiment\r\n\r\n<size=40>DESARROLLADO EN</size>\r\nUnity"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -493,7 +501,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -300}
-  m_SizeDelta: {x: 1500, y: 1500}
+  m_SizeDelta: {x: 1500, y: 2250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1274124657184028886
 CanvasRenderer:
@@ -762,6 +770,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToSkip: 27
-  scrollSpeed: 1
-  skipSpeed: 8
+  scrollSpeed: 0.5
+  skipSpeed: 10
   waitingTime: 1

@@ -581,52 +581,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasCredits
       objectReference: {fileID: 0}
-    - target: {fileID: 4723928645273194420, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_text
-      value: "<size=40>BASADO EN</size>\r\nAlm\xE1cigo de Ruralmente\r\n\r\n<size=40>PROGRAMACI\xD3N
-        Y DISE\xD1O DE JUEGO</size>\r\nEmmanuel Vanegas\r\nFelipe Bedoya\r\nJonathan
-        Albert\r\nJuana Rodas\r\nLuna Salazar\r\nSantiago Quintero\r\nSergio P\xE9rez\r\n\r\n<size=40>RECURSOS
-        DE TERCEROS</size>\r\nStardew Farm Game Assets | Top-Down Pixel Art por nogardev
-        en Itch.io\r\nThe Fantasy Tileset por Ventiratore en Itch.io\r\nPipoya Free
-        RPG Tileset 32x32 Pixel por Pipoya en Itch.io\r\nHarmonious Seasons por Foxtale
-        Studios en Itch.io\r\r\n\r\n<size=40>DESARROLLADO EN</size>\r\nUnity"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939220676087175228, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: scrollSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5283517417836841208, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5283517417836841208, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5283517417836841208, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5283517417836841208, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331084077530160218, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331084077530160218, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331084077530160218, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331084077530160218, guid: 63e136d1e8cdd7f4db7a817ff02b312c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
