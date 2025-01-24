@@ -67,6 +67,7 @@ public class BossManager : MonoBehaviour
     IEnumerator PlayerVictory() 
     {
         yield return new WaitForSeconds(6f);
+        GameEvents.Instance.LevelBeaten();
         SceneManager.LoadScene("FerneyHomeWinner");
     }
 
