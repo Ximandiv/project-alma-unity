@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Messages:
   - actorId: 0
-    messageText: Gracias, Alma.
+    messageText: "Quiz\xE1\u2026 quiz\xE1 descansar un poco no sea tan malo despu\xE9s
+      de todo. Gracias, Alma."
   Actors:
   - actorName: Ferney
     actorSprite: {fileID: 21300000, guid: c00c2931916962944969533097c0b0ba, type: 3}
+  IsLevelStarter: 0

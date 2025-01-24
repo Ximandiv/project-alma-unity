@@ -53,7 +53,7 @@ namespace Scripts.Player
 
         private void Awake()
         {
-            GameEvents.Instance.OnLevelBeaten += ExitCombat;
+            //GameEvents.Instance.OnLevelBeaten += ExitCombat;
 
             rbCollider = GetComponent<Rigidbody2D>();
             rbHitbox = transform.GetChild(1).GetComponent<Rigidbody2D>();
