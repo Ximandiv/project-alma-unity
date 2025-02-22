@@ -33,7 +33,7 @@ rural que busca desmitificar la salud mental en un pueblo.
 - Santiago Quintero Hincapié (sanquih01@gmail.com)
 - Felipe Bedoya Pizarro (raventekto@proton.me)
 - Jonathan Martin Albert Silva (albertcorp@gmail.com)
-- Sergio Alejandro Pérez Muñoz (alejoperez3000@hotmail.com)
+- Sergio Alejandro Pérez Muñoz (saperezm1@eafit.edu.co)
 - Santiago Luna (lunita0239@gmail.com)
 
 ## Documentos
