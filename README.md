@@ -31,7 +31,7 @@ rural que busca desmitificar la salud mental en un pueblo.
 - Emmanuel Vanegas Carmona (ximandiv@gmail.com)
 - Juana María Rodas Álvarez (jrodas033@gmail.com)
 - Santiago Quintero Hincapié (sanquih01@gmail.com)
-- Felipe Bedoya Pizarro (raventekto@proton.me)
+- Felipe Bedoya Pizarro (fbedoyap@eafit.edu.co)
 - Jonathan Martin Albert Silva (albertcorp@gmail.com)
 - Sergio Alejandro Pérez Muñoz (saperezm1@eafit.edu.co)
 - Santiago Luna (lunita0239@gmail.com)
